@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGIRN</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="../assets/digirn.png"
+        width="150"
+        heighht="150"
+        alt="digirn logo"
+      />
+      <h2>DIGIRN</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Glavna</a></li>
+          <li><a href="lista.html">Nalozi</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Unos Naloga</h1>
+      </section>
+      <section>
+        <form action="" method="">
+          <hr />
+          <label for="broj_naloga">Broj naloga:</label>
+          <input
+            type="text"
+            name="broj_naloga"
+            id="broj_naloga"
+            maxlength="10"
+            size="10"
+            required
+          />
+          <label for="narudzbenica">Narudžbenica:</label>
+          <input
+            type="text"
+            name="narudzbenica"
+            id="narudzbenica"
+            maxlength="10"
+            size="10"
+            required
+          />
+          <label for="datum_naloga">Datum otvaranja:</label>
+          <input type="date" name="datum_naloga" id="datum_naloga" required />
+          <hr />
+          <label for="narucitelj">Naručitelj:</label>
+          <input
+            type="text"
+            name="narucitelj"
+            id="narucitelj"
+            maxlength="15"
+            size="15"
+          />
+          <label for="izvrsitelj">Izvršitelj:</label>
+          <input
+            type="text"
+            name="izvrsitelj"
+            id="izvrsitelj"
+            maxlength="15"
+            size="15"
+            required
+          />
+          <br />
+          <label for="mjesto_troska">Mjesto troška:</label>
+          <input
+            type="text"
+            name="mjesto_troska"
+            id="mjesto_troska"
+            maxlength="15"
+            size="15"
+          />
+          <label for="nositelj_troska">Nositelj troška:</label>
+          <input
+            type="text"
+            name="nositelj_troska"
+            id="nositelj_troska"
+            maxlength="15"
+            size="15"
+          />
+          <hr />
+          <label for="datum_pocetka">Datum početka:</label>
+          <input type="date" name="datum_pocetka" id="datum_pocetka" required />
+          <label for="vrijeme_pocetka">Vrijeme početka:</label>
+          <input
+            type="time"
+            name="vrijeme_pocetka"
+            id="vrijeme_pocetka"
+            required
+          />
+          <br />
+          <label for="datum_zavrsetka">Datum završetka:</label>
+          <input
+            type="date"
+            name="datum_zavrsetka"
+            id="datum_zavrsetka"
+            required
+          />
+          <label for="vrijeme_zavrsetka">Vrijeme završetka:</label>
+          <input
+            type="time"
+            name="vrijeme_zavrsetka"
+            id="vrijeme_zavrsetka"
+            required
+          />
+          <hr />
+          <label for="naslov">Naslov:</label>
+          <input
+            type="text"
+            name="naslov"
+            id="naslov"
+            maxlength="20"
+            size="20"
+            required
+          />
+          <hr />
+          <label for="opis">Opis rada:</label>
+          <textarea
+            name="opis"
+            id="opis"
+            maxlength="50"
+            cols="20"
+            rows="5"
+          ></textarea>
+          <hr />
+          <button type="submit">U redu</button>
+          <button type="reset">Poništi</button>
+          <hr />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

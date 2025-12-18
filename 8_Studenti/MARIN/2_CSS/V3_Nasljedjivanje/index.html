@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasljedjivanje CSS svojstava 2</title> 
+    <style> 
+
+        :root { 
+            color: orange;
+        }
+        body { 
+            color: #333; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            font-size: 20px; 
+            text-align: center;
+        } 
+
+        p { 
+            color: #060;
+        } 
+        strong { 
+            text-decoration: underline wavy red;
+        } 
+
+        span { 
+            font-weight: normal;
+        } 
+        
+        div { 
+            width: 300px; 
+            height: 300px;
+         } 
+
+         .myclass.myclass2 { 
+            padding: 50px;
+         } 
+         #myid { 
+            margin: 100px;
+         }
+    </style>
+</head>
+<body>
+    <h1>Naslov 1.razine</h1> 
+    <h2>Naslov 2.razine</h2> 
+    <h3>Naslov 3.razine</h3> 
+    <h4>Naslov 4.razine</h4> 
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit recusandae beatae neque animi voluptas eligendi quo vitae iste ipsa iusto suscipit fugiat placeat pariatur adipisci possimus quae, illum in aut?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span>Sunt rerum,</span> quibusdam harum a nam, nulla velit dolore quasi debitis laborum minima eos distinctio consectetur eius. Reprehenderit laboriosam laborum illo exercitationem.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong> Illo harum, obcaecati accusamus illum id maiores aliquid nemo fugiat nulla totam asperiores itaque aspernatur at perferendis sit provident,</strong><em> consectetur doloremque</em> magni?</p> 
+    <div id="myid" class="myclass myclass2" style="background-color: blue;">
+
+    </div>
+</body>
+</html>

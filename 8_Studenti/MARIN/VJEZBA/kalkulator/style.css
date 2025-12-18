@@ -1,0 +1,207 @@
+* { 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    font-size: 20px;
+} 
+
+body { 
+    position: relative; 
+    line-height: 150px;
+}
+
+h1 { 
+     text-align: center; 
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 32px;
+}
+
+.calc { 
+    display: block; 
+    width: 350px; 
+    height: 500px; 
+    background-color: #2C3930; 
+    position: relative; 
+    left: 37%; 
+    border: 9px solid darkgray; 
+    border-right: 16px solid darkgray; 
+    border-bottom: 13px solid darkgray; 
+    border-radius: 10%;
+    
+}   
+
+
+#display { 
+    width: 330px; 
+    height: 130px; 
+    background-color: grey; 
+    position: relative; 
+    left: 3.5%; 
+    top: 2%; 
+    
+    border-radius: 10%;
+}
+
+#display2 { 
+    display: block;
+    width: 290px; 
+    height: 100px; 
+    background-color: #739473; 
+    border: 2px solid black; 
+    position: relative; 
+    left: 9%; 
+    top: -22%; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px; 
+    align-content: center; 
+    text-align: center; 
+    color: black; 
+    border-radius: 0; 
+    border: 2px solid black;
+    
+   
+
+}
+
+button { 
+width: 80px; 
+height: 80px; 
+background-color: #AAB99A; 
+border-radius: 15%; 
+border-bottom: 12px solid #D0DDD0; 
+border-right: 12px solid #D0DDD0; 
+border-top: 5.5px solid #D0DDD0;
+border-left: 5.5px solid #D0DDD0; 
+margin-bottom: 8px solid #D0DDD0; 
+} 
+
+ button:active {
+            transform: scale(0.98);
+            /* Scaling button to 0.98 to its original size */
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+            /* Lowering the shadow */ 
+ }
+
+
+
+
+
+
+.firstrow { 
+    display: inline-block; 
+    justify-content: space-between 15px; 
+    position: relative;
+    left: 2%; 
+    margin: 3px; 
+    top: -25%; 
+    cursor: pointer;
+    
+}
+.secondrow { 
+    display: inline-block; 
+    justify-content: space-between 15px; 
+    position: relative; 
+    margin: 3px;
+    top: -37%; 
+    left: 2%; 
+    cursor: pointer;
+    
+}
+.thirdrow { 
+    display: inline-block; 
+    justify-content: space-between 15px; 
+    position: relative;
+    left: 2%; 
+    margin: 3px;  
+    top: -49%; 
+    cursor: pointer;
+    
+} 
+
+.zero { 
+    width: 160px; 
+    height: 60px; 
+    position: relative; 
+    margin: 3px; 
+    left: 3%; 
+    top: -62%; 
+    cursor: pointer;
+}
+
+.comma { 
+    width: 80px; 
+    height: 60px;
+    margin: 3px;
+    position: relative; 
+    top: -62%; 
+    left: 5%;
+    cursor: pointer;
+
+} 
+
+.enter { 
+    width: 60px; 
+    height: 72px; 
+    position: relative;
+    left: 5.5%; 
+    top: -63%; 
+    cursor: pointer;
+} 
+
+.c { 
+    width: 60px; 
+    height: 72px;
+    display: block; 
+    position: relative; 
+    left: 80%; 
+    top: -135.5%; 
+    cursor: pointer;
+}
+ 
+
+
+.operacije { 
+  display: flex;
+  justify-content: center; 
+  align-content: center; 
+  margin: 2.5px;
+  width: 60px; 
+  height: 40px; 
+  position:  relative; 
+  left: 79%; 
+  top: -137.5%; 
+  border-bottom: 6px solid #D0DDD0; 
+  border-right: 6px solid #D0DDD0; 
+  border-top: 3px solid #D0DDD0; 
+  border-left: 3px solid #D0DDD0; 
+  text-align: center; 
+  cursor: pointer;
+} 
+
+
+
+
+
+.display3 {
+  background: white; 
+  opacity: 0%; /* keep background visible */
+  color: rgba(0, 0, 0, 0); /* start fully transparent text */
+  animation: fadeTextColorSmooth 6s forwards; 
+  position: relative; 
+  top: -26%;
+
+}
+
+@keyframes lunaFade {
+  0%, 49% {
+    color: transparent;
+  }
+  50%, 89% {
+    color: #000000; /* svijetlo siva */
+  }
+  90%, 100% {
+    color: transparent;
+  }
+}
+
+.show-luna {
+  animation: lunaFade 2s  ease-in-out forwards;
+}

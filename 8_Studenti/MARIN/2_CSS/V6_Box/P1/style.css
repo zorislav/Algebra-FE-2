@@ -1,0 +1,59 @@
+body { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 16px; 
+    color: #333;
+} 
+
+
+h1 { 
+    text-align: center;
+} 
+
+div { 
+    background-color: #f93;
+} 
+.width1 { 
+    width: 50%;
+} 
+
+.width2 { 
+    width: 500px;
+} 
+
+.width3 { 
+    width: 25em;
+} 
+
+.height1 { 
+    height: 50%;
+}  
+
+
+.height2 { 
+    height: 150px;
+} 
+
+.blue { 
+    background-color: lightblue;
+} 
+
+.height3 { 
+    height: 5em;
+} 
+
+.border { 
+    border: 2px solid #333;
+} 
+
+.border-width { 
+    border: 6px solid #333;
+}
+
+.border-style { 
+    border: 6px dashed #333;
+}
+.border-color { 
+    border: 6px dotted #333;
+}
+
+

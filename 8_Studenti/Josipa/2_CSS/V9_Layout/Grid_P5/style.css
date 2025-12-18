@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer, main, section, aside, article {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+header, footer {
+    background: #ccc;
+    height: 10vh;
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    flex-basis: 66%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+aside {
+    flex-basis: 33%;
+}
+
+article {
+    width: 49%;
+    flex-basis: 24%;
+}

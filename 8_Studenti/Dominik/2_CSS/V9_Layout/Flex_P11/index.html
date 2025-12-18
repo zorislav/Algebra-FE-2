@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex11</title>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-size: 16px;
+      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrapper {
+      border: 1px dashed #666;
+      padding: 1em;
+    }
+
+    .wrapper div {
+      border: 1px solid #666;
+      width: 50px;
+      margin: 1em;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .flex-item {
+      flex-grow: 1;
+    }
+
+    .flex-item:nth-child(3) {
+      background-color: red;
+      /* flex-shrink: 3; */
+      flex-basis: 100px;
+      max-width: 200px;
+      /* flex: 1 0 100px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container wrapper">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Leonard" />
+    <meta name="description" content="Exercise 2. Working with text." />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+      }
+
+      body {
+        padding: 2.5rem 5rem;
+        font-family: sans-serif;
+      }
+
+      td {
+        padding: 1rem;
+      }
+
+      tr:nth-child(even) {
+        background-color: salmon;
+      }
+
+      table {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">Opcija 1</a></li>
+          <li><a href="">Opcija 2</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Ovo je moj komentar -->
+    <h1 title="Heading 1">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p lang="hr">This is the content<br />of the first document.</p>
+    <p hidden>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, id!
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem,
+      in? Possimus numquam eos vel sed!
+    </p>
+    <pre>
+        Lorem ipsum
+        dolor sit amet consectetur adipisicing elit.
+        Fuga delectus quos quis, mollitia tempore
+        odit ipsa maiores soluta et, quia dicta 
+        suscipit rem fugiat voluptatibus. Veniam
+        aliquam fugiat at repellendus.
+    </pre>
+    <h2>Primjer 5</h2>
+    <p>
+      Lorem ipsum <em>Emphasized text</em> dolor, sit <b>Bold text</b> amet
+      consectetur adipisicing elit. Veritatis alias sequi laborum
+      <i>Italics text</i> provident <strong>Strong text</strong> voluptates ab.
+    </p>
+    <p><mark>Marked text.</mark></p>
+    <p><small>Small text.</small></p>
+    <p><del>Deleted text.</del></p>
+    <p><ins>Underlined text.</ins></p>
+    <p>Text <sub>Under</sub> other text.</p>
+    <p>Text <sup>Over</sup> other text.</p>
+  </body>
+  <h2>Vježba 3 - liste u HTML-u</h2>
+  <h3>Redne liste</h3>
+  <ol type="I">
+    <li>Italy</li>
+    <li>France</li>
+    <li>Spain</li>
+    <li>Portugal</li>
+    <li>Greece</li>
+    <li>Malta</li>
+  </ol>
+  <ol type="i">
+    <li>Italy</li>
+    <li>France</li>
+    <li>Spain</li>
+    <li>Portugal</li>
+    <li>Greece</li>
+    <li>Malta</li>
+  </ol>
+  <ol type="1">
+    <li>Italy</li>
+    <li>France</li>
+    <li>Spain</li>
+    <li>Portugal</li>
+    <li>Greece</li>
+    <li>Malta</li>
+  </ol>
+  <ol type="A" reversed>
+    <li>Italy</li>
+    <li>France</li>
+    <li>Spain</li>
+    <li>Portugal</li>
+    <li>Greece</li>
+    <li>Malta</li>
+  </ol>
+  <ol type="a" start="2">
+    <li>Italy</li>
+    <li>France</li>
+    <li type="1">Spain</li>
+    <li>Portugal</li>
+    <li>Greece</li>
+    <li>Malta</li>
+  </ol>
+  <h3>Neuredjena lista</h3>
+  <ul>
+    <li>Italy</li>
+    <li>France</li>
+    <li>Spain</li>
+    <li>Portugal</li>
+    <li>Greece</li>
+    <li>Malta</li>
+  </ul>
+  <h3>Opisne liste</h3>
+  <dl>
+    <dt>London</dt>
+    <dd>Capital of England</dd>
+    <dt>Paris</dt>
+    <dd>Capital of France</dd>
+    <dt>Madrid</dt>
+    <dd>Capital of Spain</dd>
+    <dt>Roma</dt>
+    <dd>Capital of Italy</dd>
+  </dl>
+  <h3>Ugnjezdene liste</h3>
+  <ul>
+    <li>Africa</li>
+    <li>Asia</li>
+    <li>
+      Europe
+      <ol>
+        <li>France</li>
+        <li>
+          Spain
+          <ol>
+            <li>Madrid</li>
+            <li>Barcelona</li>
+            <li>Bilbao</li>
+          </ol>
+        </li>
+        <li>Italy</li>
+      </ol>
+    </li>
+    <li>Australia</li>
+  </ul>
+  <h2>Multimedia</h2>
+  <img
+    src="../../../../2_HTML/Vjezba4_Grafika/Primjer1_img/london.jpg"
+    alt="London"
+    height="430px"
+    width="760px"
+    title="London"
+  />
+  <img
+    src="../../../../2_HTML/Vjezba4_Grafika/Primjer1_img/na-ulici.jpg"
+    alt="Na ulici"
+    height="430px"
+    width="760px"
+    title="Na ulici"
+  />
+  <img
+    src="../../../../2_HTML/Vjezba4_Grafika/Primjer1_img/html-css.svg"
+    alt="HTML CSS"
+    height="430px"
+    width="760px"
+    title="HTML CSS"
+  />
+  <h3>Primjer 2</h3>
+  <svg width="400px" height="200px">
+    <rect
+      x="100"
+      y="50"
+      width="200px"
+      height="100px"
+      stroke="black"
+      fill="salmon"
+      stroke-width="2px"
+    />
+  </svg>
+  <hr />
+  <svg width="400px" height="200px">
+    <circle
+      cx="200"
+      cy="100"
+      r="85"
+      stroke="black"
+      fill="salmon"
+      stroke-width="2px"
+    />
+  </svg>
+  <hr />
+  <svg width="400px" height="200px">
+    <ellipse
+      cx="200"
+      cy="100"
+      rx="185"
+      ry="85"
+      stroke="black"
+      fill="salmon"
+      stroke-width="2px"
+    />
+  </svg>
+  <hr />
+  <svg width="400px" height="200px">
+    <line x1="400" y1="100" x2="0" y2="0" stroke="black" stroke-width="2px" />
+  </svg>
+  <hr />
+  <svg width="400px" height="200px">
+    <polygon
+      points="200, 20, 380, 180, 20, 180"
+      stroke="black"
+      stroke-width="2px"
+      fill="salmon"
+    />
+  </svg>
+  <hr />
+  <svg width="400px" height="200px">
+    <polyline
+      points="20, 20, 60, 20, 60, 40, 100, 40, 100, 60, 140, 60, 140, 80"
+      stroke="black"
+      stroke-width="2px"
+      fill="salmon"
+    />
+  </svg>
+  <hr />
+  <svg width="400px" height="200px">
+    <text x="0" y="30" fill="black">My text</text>
+    <line x1="0" y1="38" x2="160" y2="38" stroke="black" stroke-width="2px" />
+  </svg>
+  <h2>Primjer 3 - Working with canvas</h2>
+  <canvas
+    id="myCanvas1"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <canvas
+    id="myCanvas2"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <canvas
+    id="myCanvas3"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <canvas
+    id="myCanvas4"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <canvas
+    id="myCanvas5"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <canvas
+    id="myCanvas6"
+    width="600px"
+    height="200px"
+    style="border: 2px solid black"
+  ></canvas>
+  <h2>Video</h2>
+  <video
+    src="../../../../2_HTML/Vjezba5_AV/mountains.mp4"
+    width="720px"
+    height="400px"
+    controls
+  ></video>
+  <video controls width="720px" height="400px">
+    <source
+      src="../../../../2_HTML/Vjezba5_AV/mountains.mp4"
+      type="video/mp4"
+    />
+    <source
+      src="../../../../2_HTML/Vjezba5_AV/mountains.webm"
+      type="video/webm"
+    />
+    <p>Vas preglednik ne podrzava video</p>
+  </video>
+  <h2>Audio</h2>
+  <audio src="../../../../2_HTML/Vjezba5_AV/in3s.mp3" controls></audio>
+  <audio controls>
+    <source src="../../../../2_HTML/Vjezba5_AV/in3s.mp3" />
+    <p>Ne moze reproducirati</p>
+  </audio>
+  <h2>Links</h2>
+  <nav>
+    <ul>
+      <li><a href="#p1">Section 1</a></li>
+      <li><a href="#p2">Section 2</a></li>
+      <li><a href="#p3">Section 3</a></li>
+    </ul>
+  </nav>
+  <p id="p1">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique corrupti
+    ex optio totam maiores perspiciatis in obcaecati iste mollitia asperiores
+    minus consectetur porro alias deleniti rerum, illum vero tempore. Nam
+    tempora nisi a pariatur officiis distinctio quod, vero perspiciatis,
+    excepturi corrupti doloremque obcaecati aliquam voluptas consequatur
+    numquam, quae rem vitae. Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. Voluptatibus exercitationem numquam necessitatibus nemo porro harum
+    saepe ea, maiores unde libero eum ipsum eos repellendus, voluptate nostrum,
+    a quam architecto repellat quo facere velit quibusdam aperiam. Dolorem optio
+    cumque, consectetur, quos quidem distinctio accusamus dolorum odio tempora
+    ad possimus deleniti nisi!
+  </p>
+  <a href="#">Go to the start</a>
+  <p id="p2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit optio
+    cupiditate quo animi vitae ullam cum molestias veniam, possimus quam
+    impedit! Explicabo beatae ipsam consequatur recusandae dolorum odio cum eius
+    earum ex laudantium, nulla aliquid debitis animi suscipit cupiditate quae
+    vero pariatur laboriosam. Ipsam reprehenderit ullam doloremque ut, dolorum
+    ad fugiat dicta molestiae recusandae modi magni in at! Blanditiis impedit
+    quo nisi corporis tempora iste id placeat dolorum qui laudantium? Ea
+    perspiciatis nemo repudiandae, quibusdam exercitationem odio inventore et?
+    Dolorum?
+  </p>
+  <a href="#">Go to the start</a>
+  <p id="p3">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate
+    delectus tempora eligendi aut asperiores voluptatem natus fugiat
+    accusantium! Et perferendis debitis fugit eaque atque ut suscipit cupiditate
+    quam tempora iusto in amet quia, hic fugiat magni voluptates libero tenetur!
+    Laborum blanditiis repudiandae labore praesentium, vero autem aspernatur
+    beatae aliquid expedita. Dolorem enim autem aperiam ut corporis incidunt
+    repellat veritatis harum quos delectus quis cum molestiae, ratione deserunt
+    voluptatem perferendis fugiat nostrum doloribus alias assumenda quisquam
+    explicabo facilis. Ipsum quisquam eos rerum delectus nam odio distinctio
+    illo sequi dolores facere laudantium porro quos ab, ratione inventore
+    laboriosam deleniti ex numquam itaque. Voluptatem debitis odio culpa ipsa,
+    totam maiores illo iste ex aliquam, modi alias quia non eum cum eaque
+    tempore tempora officia voluptatibus maxime delectus distinctio? Vero sit
+    accusantium tempore suscipit reiciendis odit rerum consequuntur, quaerat
+    totam est tempora commodi facere at soluta maiores error fugiat quae
+    debitis, consequatur nemo! Veritatis sapiente, odit tempore animi hic
+    reprehenderit possimus quam sint laboriosam nihil nesciunt deleniti quidem
+    tempora. A dolores vero sapiente doloremque quam adipisci aspernatur quidem
+    eligendi iste iure labore beatae molestiae sunt et, cum distinctio
+    perspiciatis expedita ex repudiandae impedit magnam quis veniam? Tempore
+    voluptas optio, nisi illum rem exercitationem unde!
+  </p>
+  <a href="#">Go to the start</a>
+  <a href="../../../../2_HTML/Vjezba6_Linkovi/Primjer1/index.html"
+    >Other exercise</a
+  >
+  <p>
+    Find out what
+    <a href="https://www.algebra.hr/sveuciliste/" target="_blank">links</a> are.
+  </p>
+  <h2>Tables</h2>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Redni broj</th>
+        <th>Ime i prezime</th>
+        <th>Zanimanje</th>
+        <th>Osvojeni bodovi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.</td>
+        <td>Maja Majic</td>
+        <td>Web designer</td>
+        <td>98</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Pero Peric</td>
+        <td>Mailman</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Mirko Mirkowski</td>
+        <td>Polititian</td>
+        <td>75</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Ivan Ivancevic</td>
+        <td>Student</td>
+        <td>70</td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <tr>
+      <td colspan="3">Red 1</td>
+    </tr>
+    <tr>
+      <td>2 - 1</td>
+      <td>2 - 2</td>
+      <td>2 - 2</td>
+    </tr>
+    <tr>
+      <td>3 - 1</td>
+      <td>3 - 2</td>
+      <td>3 - 3</td>
+    </tr>
+  </table>
+  <h2>Forms</h2>
+  <form action="" method="">
+    <div>
+      <label for="ime">Ime i prezime:</label>
+      <input
+        type="text"
+        name="ime"
+        id="ime"
+        maxlength="20"
+        size="15"
+        placeholder="Ime i prezime"
+      />
+    </div>
+    <div>
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="mail" />
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="099/123-1234"
+        pattern="[0-9]{3}/[0-9]{3}-[0-9]{4}"
+      />
+    </div>
+    <div>
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" size="10" maxlength="8" />
+    </div>
+    <div>
+      <label for="color">Color</label>
+      <input type="color" name="color" id="color" />
+    </div>
+    <div>
+      <label for="o1">Ocjena firme</label>
+      <input type="radio" name="01" id="o1" value="1" />
+      <input type="radio" name="01" id="o2" value="2" />
+      <input type="radio" name="01" id="o3" value="3" />
+      <input type="radio" name="01" id="o4" value="4" />
+    </div>
+    <div>
+      <label for="doc">Odaberite dokument:</label>
+      <input type="file" name="doc" id="doc" />
+    </div>
+    <div>
+      <label for="date">Odaberite datum:</label>
+      <input type="date" name="date" id="date" />
+    </div>
+  </form>
+  <form action="">
+    <label for="ime"></label>
+    <input type="text" name="ime" id="ime" />
+    <label for="prezime"></label>
+    <input type="text" name="prezime" id="prezime" />
+  </form>
+  <h2>Strukturiranje</h2>
+  <div id="header">Zaglavlje</div>
+  <div id="main">Glavni dio</div>
+  <div id="footer">Podnozje</div>
+  <h2>Strukturiranje 2</h2>
+  <header>Zaglavlje</header>
+  <nav>Navigacija</nav>
+  <main>
+    Glavni dio
+    <section>Sekcija stranice</section>
+    <article>Cjelina neovisnog, samostalnog sadrzaja</article>
+    <aside>Aside</aside>
+  </main>
+  <footer>Podnozje</footer>
+  <script>
+    // canvas1
+    let canvasEl = document.getElementById(`myCanvas1`);
+    let ctx = canvasEl.getContext(`2d`);
+    ctx.fillStyle = `salmon`;
+    ctx.fillRect(10, 10, 100, 100);
+
+    // canvas2
+    let canvasEl2 = document.getElementById(`myCanvas2`);
+    let ctx2 = canvasEl2.getContext(`2d`);
+    ctx2.beginPath();
+    ctx2.moveTo(30, 180);
+    ctx2.lineTo(460, 30);
+    ctx2.lineWidth = 8;
+    ctx2.strokeStyle = `black`;
+    ctx2.stroke();
+
+    // canvas3
+    let canvasEl3 = document.getElementById(`myCanvas3`);
+    let ctx3 = canvasEl3.getContext(`2d`);
+    ctx3.beginPath();
+    ctx3.rect(20, 20, 150, 150);
+    ctx3.strokeStyle = `black`;
+    ctx3.fill();
+    ctx3.stroke();
+
+    // canvas 4
+    let canvasEl4 = document.getElementById(`myCanvas4`);
+    let ctx4 = canvasEl4.getContext(`2d`);
+    let centerX = canvasEl4.width / 2;
+    let centerY = canvasEl4.height / 2;
+    let radius = 80;
+
+    ctx4.beginPath();
+    ctx4.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    ctx4.fillStyle = `salmon`;
+    ctx4.lineWidth = 5;
+    ctx4.fill();
+    ctx4.stroke();
+
+    // canvas 5
+    let canvasEl5 = document.getElementById(`myCanvas5`);
+    let ctx5 = canvasEl5.getContext(`2d`);
+    ctx5.font = `italic bold 60px 'Courier New'`;
+    ctx5.fillStyle = `salmon`;
+    ctx5.fillText(`Pozdrav svima!`, 50, 100);
+
+    ctx5.beginPath();
+    ctx5.moveTo(170, 80);
+    ctx5.bezierCurveTo(130, 100, 130, 150, 230, 150);
+    ctx5.bezierCurveTo(250, 180, 320, 180, 340, 150);
+    ctx5.bezierCurveTo(420, 150, 420, 120, 390, 100);
+    ctx5.bezierCurveTo(430, 40, 370, 30, 340, 50);
+    ctx5.bezierCurveTo(320, 5, 250, 20, 250, 50);
+    ctx5.bezierCurveTo(200, 5, 150, 20, 170, 80);
+    ctx5.fillStyle = `salmon`;
+    ctx5.lineWidth = 5;
+    ctx5.fill();
+    ctx5.stroke();
+
+    // canvas 6
+    let canvasEl6 = document.getElementById(`myCanvas6`);
+    let ctx6 = canvasEl6.getContext(`2d`);
+    let gradient = ctx6.createLinearGradient(0, 0, 400, 0);
+    gradient.addColorStop(0, `rebeccapurple`);
+    gradient.addColorStop(0.5, `salmon`);
+    gradient.addColorStop(1, `#fff`);
+    ctx6.fillStyle = gradient;
+    ctx6.fillRect(0, 0, 400, 200);
+  </script>
+</html>

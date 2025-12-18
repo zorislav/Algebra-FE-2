@@ -1,0 +1,127 @@
+.preprocesori {
+  background-color: salmon;
+}
+
+.preprocesori a {
+  font-family: Tahoma, sans-serif;
+}
+.preprocesori article {
+  border: 2px solid #800;
+  background-color: #800;
+}
+.preprocesori article p {
+  color: #eee;
+}
+.preprocesori div,
+.preprocesori article {
+  margin-bottom: 2rem;
+}
+.preprocesori .header,
+.preprocesori .footer {
+  text-align: center;
+  background-color: #333;
+  color: #eee;
+  padding: 2rem;
+}
+.preprocesori .header p,
+.preprocesori .footer p {
+  font-size: 1.5rem;
+}
+
+.section h1 {
+  font-family: "Courier New", Courier, monospace;
+}
+.section p {
+  text-align: justify;
+}
+
+.footer h1 {
+  color: #f66;
+}
+.footer p {
+  font-size: 1.5rem;
+}
+.footer a {
+  color: navy;
+  font-size: 2rem;
+}
+
+.preprocesori {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em;
+}
+.preprocesori article {
+  flex-basis: 48%;
+  background-color: #1f1f1f;
+}
+.preprocesori article a {
+  display: grid;
+  text-align: end;
+  margin: 2rem;
+}
+
+.footer a {
+  background-color: rebeccapurple;
+  color: #f0f0f0;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  transition: all 100ms ease;
+}
+.footer a:visited {
+  background-color: #f93;
+}
+.footer a:hover {
+  background-color: #1f1f1f;
+}
+
+.header2,
+.footer2,
+.section2,
+.article2 {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+
+.header2 {
+  margin: 20px;
+}
+
+.section2 {
+  margin: 2em auto;
+  max-width: 15rem;
+  border-radius: 20px;
+}
+
+.article2 {
+  margin: 0.5rem;
+}
+.article2:last-child {
+  margin: 0;
+  border-radius: 0 30px;
+  border: 1px solid #000;
+}
+
+.scss-animations div {
+  background-color: #ffff00;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  width: 25%;
+  border: 1px solid #000;
+}
+.scss-animations div:first-of-type {
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=stil.css.map */

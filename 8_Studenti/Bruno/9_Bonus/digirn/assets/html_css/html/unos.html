@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGIRN</title>
+    <link
+      rel="shortcut icon"
+      href="../../digirn-trans.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/osovno.css" />
+    <link rel="stylesheet" href="../css/unos.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header-container">
+        <img src="../../digirn.png" alt="digirn logo" width="150" />
+        <h2>DIGIRN</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Glavna</a></li>
+          <li><a href="lista.html">Nalozi</a></li>
+        </ul>
+        <div id="hamburger-icon">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Glavna</a></li>
+            <li><a href="lista.html">Nalozi</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section>
+        <h1>Unos naloga</h1>
+        <form action="">
+          <hr />
+          <div class="container">
+            <label for="broj_naloga">Broj naloga:</label>
+            <input
+              type="text"
+              id="broj_naloga"
+              name="broj_naloga"
+              maxlength="10"
+              size="10"
+              required
+            />
+            <label for="narudzbenica">Narudzbenica:</label>
+            <input
+              type="text"
+              id="narudzbenica"
+              name="narudzbenica"
+              maxlength="10"
+              size="10"
+              required
+            />
+            <label for="datum_naloga">Datum otvaranja:</label>
+            <input type="date" name="datum_naloga" id="datum_naloga" required />
+          </div>
+          <hr />
+          <div class="container">
+            <label for="narucitelj">Narcuitelj:</label>
+            <input
+              type="text"
+              name="narucitelj"
+              id="narucitelj"
+              maxlength="15"
+              size="15"
+            />
+            <label for="izvrsitelj">Izvrsitelj:</label>
+            <input
+              type="text"
+              name="izvrsitelj"
+              id="izvrsitelj"
+              maxlength="15"
+              size="15"
+              required
+            />
+
+            <label for="mjesto_troska">Mjesto troska:</label>
+            <input
+              type="text"
+              name="mjesto_troska"
+              id="mjesto_troska"
+              maxlength="15"
+              size="15"
+            />
+            <label for="nositelj_troska">Noistelj troska:</label>
+            <input
+              type="text"
+              name="nositelj_troska"
+              id="nositelj_troska"
+              maxlength="15"
+              size="15"
+            />
+          </div>
+          <hr />
+          <div class="container">
+            <label for="datum_pocetka">Datum pocetka:</label>
+            <input
+              type="date"
+              name="datum_pocetka"
+              id="datum_pocetka"
+              required
+            />
+            <label for="vrijeme_pocetka">Vrijeme pocetka:</label>
+            <input
+              type="time"
+              name="vrijeme_pocetka"
+              id="vrijeme_pocetka"
+              required
+            />
+            <label for="datum_zavrsetka">Datum zavrsetka:</label>
+            <input
+              type="date"
+              name="datum_zavrsetka"
+              id="datum_zavrsetka"
+              required
+            />
+            <label for="vrijeme_zavrsetka">Vrijeme zavrsetka:</label>
+            <input
+              type="time"
+              name="vrijeme_zavrsetka"
+              id="vrijeme_zavrsetka"
+              required
+            />
+          </div>
+          <hr />
+          <div class="container">
+            <label for="naslov">Naslov:</label>
+            <input
+              type="text"
+              name="naslov"
+              id="naslov"
+              maxlength="20"
+              size="20"
+              required
+            />
+          </div>
+          <hr />
+          <div class="container">
+            <label for="opis">Opis rada</label>
+            <textarea
+              name="opis"
+              id="opis"
+              cols="20"
+              rows="5"
+              maxlength="50"
+              required
+            ></textarea>
+          </div>
+          <hr />
+          <div class="button-container">
+            <button type="submit">U redu</button>
+            <button type="reset">Ponisti</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

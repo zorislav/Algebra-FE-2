@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontekstualni selektori</title>
+    <style>
+        body {
+            color: #333;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+        }
+        section p {
+            color: green;
+        }
+        footer section p {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        section > p {
+            text-decoration: line-through solid red;
+        }
+        h1 + p {
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zaglavlje</h1>
+        <p>Odlomak - zaglavlje</p>
+    </header>
+    <main>
+        <section>
+            <h1>Sekcija 1</h1>
+            <div>
+                <p>Odlomak 1 - sekcija 1</p>
+                <p>Odlomak 2 - sekcija 1</p>
+            </div>
+            <article>
+                <p>Odlomak 1 - article 1</p>
+                <p>Odlomak 2 - article 1</p>
+            </article>
+        </section>
+        <section>
+            <h1>Sekcija 2</h1>
+            <p>Odlomak 1 - sekcija 2</p>
+            <p>Odlomak 2 - sekcija 2</p>
+            <p>Odlomak 3 - sekcija 2</p>
+            <p>Odlomak 4 - sekcija 2</p>
+            <p>Odlomak 5 - sekcija 2</p>
+        </section>
+        <article>
+            <h1>Objava</h1>
+            <p>Odlomak 1 - article 2</p>
+            <p>Odlomak 2 - article 2</p>
+            <p>Odlomak 3 - article 2</p>
+            <p>Odlomak 4 - article 2</p>
+            <p>Odlomak 5 - article 2</p>
+        </article>
+    </main>
+    <footer>
+        <h1>Podnozje</h1>
+        <section>
+            <h1>Sekcija 3</h1>
+            <p>Odlomak 1 - sekcija 3</p>
+            <p>Odlomak 2 - sekcija 3</p>
+            <p>Odlomak 3 - sekcija 3</p>
+            <p>Odlomak 4 - sekcija 3</p>
+            <p>Odlomak 5 - sekcija 3</p>
+        </section>
+        <section>
+            <h1>Sekcija 4</h1>
+            <p>Odlomak 1 - sekcija 4</p>
+            <p>Odlomak 2 - sekcija 4</p>
+            <p>Odlomak 3 - sekcija 4</p>
+            <p>Odlomak 4 - sekcija 4</p>
+            <p>Odlomak 5 - sekcija 4</p>
+        </section>
+    </footer>
+</body>
+</html>

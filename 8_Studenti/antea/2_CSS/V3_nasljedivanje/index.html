@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasljedivanje CSS svojstava 2</title>
+    <style>
+        :root {
+            color: orange;
+        }
+        html {
+
+            color: #333;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+        p {
+            color: #060;
+        }
+        strong {
+            text-decoration: underline wavy red;
+        }
+        span {
+            font-weight: normal;
+        }
+        div {
+            width: 100px; height: 100px;
+        }
+        .myclass.myclass2 {
+            padding: 50px;
+        }
+        .myid {
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Occaecat deserunt ea laborum excepteur commodo qui.</h1>
+    <h2>Eu magna dolore excepteur esse sint.</h2>
+    <h3>Mollit minim incididunt consequat velit.</h3>
+    <h4>Excepteur amet aute Lorem sunt reprehenderit aliquip veniam.</h4>
+    <p>Irure minim veniam laboris culpa cillum cillum minim ipsum est qui eu in non aliquip. Exercitation est duis deserunt occaecat voluptate non ex id ad proident exercitation culpa occaecat. Reprehenderit non amet do et laboris nulla. Esse aliquip Lorem et aliquip et qui occaecat consequat ad laborum.</p>
+    <p>Irure officia laboris fugiat incididunt consequat do eiusmod culpa laboris. Et sunt nulla fugiat ullamco minim pariatur consectetur. Nisi velit mollit dolore cillum dolore minim ea proident sint. Fugiat est aliquip exercitation dolore qui magna. Anim aliquip commodo aliquip qui sit occaecat occaecat voluptate nostrud incididunt tempor dolore.</p>
+    <p>Ea do proident commodo elit voluptate deserunt in aute <strong>excepteur deserunt consequateiusmod irure. <span>Ullamco</span>  ipsum occaecat consequat</strong>   deserunt deserunt laboris commodo anim <em>occaecat ipsum</em> . Quis pariatur ut laboris anim in sunt magna veniam sint. Cupidatat irure et excepteur dolor exercitation enim dolore qui magna excepteur id proident officia.</p>
+    <div id="myid" class="myclass myclass2" style="background-color: blue;">
+        moj div
+    </div>
+</body>
+</html>

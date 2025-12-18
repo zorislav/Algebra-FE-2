@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="" method="">
+      <div>
+        <label for="ime" method="">Ime i prezime:</label>
+        <input
+          type="text"
+          name="ima"
+          id="ime"
+          size="30"
+          maxlength="30"
+          placeholder="Ime i prezime"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">E-mail Adresa:</label>
+        <input
+          type="email"
+          id="email"
+          size="30"
+          maxlength="30"
+          placeholder="E-mail"
+          name="email"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="tel">Telefon:</label>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="099/1234-123"
+          pattern="{0-9}{3}/{0-9}{4}-{0-9}{3}"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="password">Vaša lozinka</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          size="10"
+          maxlength="8"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="kolicina">Količina</label>
+        <input
+          type="number"
+          name="kolicina"
+          id="kolicina"
+          min="1"
+          max="10"
+          step="2"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="boja">Boja:</label>
+        <input type="color" name="boja" id="boja" />
+      </div>
+      <br />
+      <div>
+        <label for="info">Želite primati informacije:</label>
+        <input type="checkbox" name="info" id="info" value="true" checked />
+      </div>
+      <br />
+      <div>
+        Ocjena Tvrtke:
+        <label for="o1">1</label>
+        <input type="radio" name="ocjena" id="o1" value="1" />
+        <label for="o2">2</label>
+        <input type="radio" name="ocjena" id="o2" value="2" />
+        <label for="o3">3</label>
+        <input type="radio" name="ocjena" id="o3" value="3" />
+        <label for="o4">4</label>
+        <input type="radio" name="ocjena" id="o4" value="4" />
+        <label for="o5">5</label>
+        <input type="radio" name="ocjena" id="o5" value="5" />
+      </div>
+      <br />
+      <div>
+        <label for="dokument">Odaberite dokument:</label>
+        <input type="file" name="dokument" id="dokument" />
+      </div>
+      <br />
+      <div>
+        <label for="datum">Odaberite datum:</label>
+        <input type="date" name="datum" id="datum" />
+      </div>
+      <br />
+      <div>
+        <label for="komentar">Komentar:</label>
+        <textarea rows="10" cols="45" id="komentar" name="komentar"></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="grad">Odaberite seminar:</label>
+        <select name="grad" id="grad">
+          <option value="London">London</option>
+          <option value="Paris" selected>Paris</option>
+          <option value="Rim">Rim</option>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="grad2">Odaberite ili upišite grad:</label>
+        <input type="text" name="grad2" id="grad2" list="gradovi" />
+        <datalist id="gradovi">
+          <option value="London">London</option>
+          <option value="Paris">Paris</option>
+          <option value="Rim">Rim</option>
+        </datalist>
+      </div>
+      <br />
+      <input type="submit" value="Pošalji" name="submit_btn" />
+      <input type="reset" value="Poništi" name="reset_btn" />
+    </form>
+  </body>
+</html>

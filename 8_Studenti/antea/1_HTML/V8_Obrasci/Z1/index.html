@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="ime">Ime i prezime:</label>
+        <input type="text" name="ime" id="ime" />
+      </div>
+      <br />
+      <div>
+        <label for="tel">Telefon:</label>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          pattern="[0-9]{3}/[0-9]{4}-[0-9]{3}"
+          placeholder="099/2075-560"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="datum">Odaberite datum:</label>
+        <input type="datetime-local" name="datum" id="datum" />
+      </div>
+      <br />
+      <div>
+        <label for="info">Zelite primati informacije</label>
+        <input type="checkbox" name="info" id="info" value="true" checked />
+      </div>
+      <br />
+      <div>
+        Ocjena tvrtke:
+        <label for="o1">1</label>
+        <input type="radio" name="ocjena" id="o1" value="1" />
+        <label for="o2">2</label>
+        <input type="radio" name="ocjena" id="o2" value="2" />
+        <label for="o3">3</label>
+        <input type="radio" name="ocjena" id="o3" value="3" />
+        <label for="o4">4</label>
+        <input type="radio" name="ocjena" id="o4" value="4" />
+        <label for="o5">5</label>
+        <input type="radio" name="ocjena" id="o5" value="5" />
+      </div>
+      <br />
+      <div>
+        <label for="dokument">Odaberite dokument:</label>
+        <input type="file" name="dokument" id="dokument" />
+      </div>
+      <br />
+      <input type="submit" value="Posalji" name="submitbtn" />
+      <input type="reset" value="Ponisti" name="resetbtn" />
+    </form>
+  </body>
+</html>

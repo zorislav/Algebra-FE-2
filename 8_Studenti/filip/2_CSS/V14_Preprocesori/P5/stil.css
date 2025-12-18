@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+div {
+  background-color: rgb(150, 150, 0);
+  margin: 1 em auto;
+  padding: 1em;
+  width: 25%;
+}
+div:first-child {
+  animation: fade 2s ease-in-out infinite;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=stil.css.map */

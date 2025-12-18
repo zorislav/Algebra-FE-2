@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektori  HTML elementa</title> 
+    <style>
+        body { 
+            color: #333; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+            font-size: 20px;
+        } 
+        [title] {
+            text-decoration: underline solid red;
+        } 
+        [title="prvi odlomak"] { 
+            font-weight: bold;
+        } 
+
+        [title*="odlomak"] { 
+            color: darkgreen; 
+
+        } 
+        [title ~="odlomak"] { 
+            text-transform: uppercase;
+        } 
+
+        [title^="odlomak"] {        
+            font-style: italic; 
+        } 
+        [title|="odlomak"] { 
+            color: blue;
+        }
+        
+        [title$="odlomak"] { 
+            color: darkorange;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <h1 title="Glavni naslov stranice">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1> 
+    <h2>Lorem ipsum dolor</h2> 
+    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3> 
+    <p title="prvi odlomak">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit a officiis rerum hic odit nostrum ipsa ducimus eos repellat dicta! Dolore illum sapiente sint libero, dolores accusantium itaque est tempore.</p>
+    <p title="odlomak-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi suscipit mollitia ipsam in, illo eius rerum voluptas sint recusandae. Recusandae officia possimus repellendus suscipit ipsam totam, mollitia doloremque qui ad.</p>
+    <p title="odlomak 3">Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong> Dolorem ipsum molestiae similique,</strong> recusandae beatae enim. Dolores qui molestias autem. Necessitatibus expedita voluptatem sint repellat praesentium. Magnam consequuntur officiis nobis aperiam?</p>
+    <p title="odlomakbla">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <strong>Consequuntur asperiores fugiat molestiae labore,</strong> dolor delectus, distinctio illo totam nobis dolores architecto, laboriosam tenetur voluptas. Eaque maiores quam maxime consectetur blanditiis?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ex,<span title="nesto"> deleniti sunt, aperiam,</span> expedita voluptatem distinctio iure autem et quas a labore cupiditate laborum suscipit eius omnis necessitatibus consequatur eligendi!</p>
+</body>
+</html>

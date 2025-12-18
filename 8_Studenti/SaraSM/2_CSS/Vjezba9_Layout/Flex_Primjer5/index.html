@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+      }
+
+      .wrapper {
+        border: 1px dashed #666;
+        padding: 1em;
+      }
+      .wrapper div {
+        border: 1px solid #666;
+        width: 150px;
+        margin: 1em;
+        text-align: center;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        /*         justify-content: space-evenly / Space-around / Space-between / flex-end; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container wrapper">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+    </div>
+  </body>
+</html>

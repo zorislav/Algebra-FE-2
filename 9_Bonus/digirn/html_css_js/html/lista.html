@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIGIRN</title>
+  <link rel="shortcut icon" href="../assets/digirn-trans.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/osnovno.css">
+  <link rel="stylesheet" href="../css/lista.css">
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <img src="../../assets/digirn.png" width="150" alt="digirn logo">
+      <h2>DIGIRN</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Glavna</a></li>
+        <li><a href="unos.html">Novi nalog</a></li>
+        <li><a id="ucitaj" href="#">Učitaj naloge iz baze</a></li>
+        <li><a id="spremi" href="#">Spremi naloge u bazu</a></li>
+      </ul>
+      <div id="hamburger-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Glavna</a></li>
+          <li><a href="unos.html">Novi nalog</a></li>
+          <li><a id="ucitaj-small" href="#">Učitaj naloge iz baze</a></li>
+          <li><a id="spremi-small" href="#">Spremi naloge u bazu</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <h1>Lista Radnih Naloga</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>R.br.</th>
+            <th>Broj naloga</th>
+            <th class="table-col-hide">Datum naloga</th>
+            <th class="table-col-hide">Datum početka</th>
+            <th class="table-col-hide">Datum završetka</th>
+            <th>Naručitelj</th>
+            <th>Izvršitelj</th>
+            <th class="table-col-hide">Naslov</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="nema-naloga">Nema naloga. Upišite novi nalog ili učitajte naloge.</p>
+    </section>
+  </main>
+  <script type="module" src="../js/lista.js"></script>
+</body>
+
+</html>

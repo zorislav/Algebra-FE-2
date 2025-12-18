@@ -1,0 +1,18 @@
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 16px; 
+    color: #333; 
+    background-color: #ddddde;
+} 
+
+header { 
+    background-color: green;
+} 
+
+main { 
+    background-color: skyblue;
+} 
+
+footer { 
+    background-color: rgb(153, 51, 51);
+}

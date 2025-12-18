@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stil.css" />
+    <style>
+      /* +++++++++++++++ PRIMJER 1 +++++++++++++++ */
+      /*
+      h1 {
+        color: indigo;
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: navy;
+        margin-bottom: 32px;
+      }
+      h3 {
+        color: sienna;
+        margin-bottom: 24px;
+      }
+      p {
+        color: purple;
+        margin-bottom: 16px;
+      }
+      */
+
+      /* +++++++++++++++ PRIMJER 6 +++++++++++++++ */
+      /*
+      h1 {
+        color: indigo;
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: navy;
+        margin-bottom: 32px;
+      }
+      h3 {
+        color: sienna;
+        margin-bottom: 24px;
+      }
+      body {
+        color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+      }
+      header {
+        color: salmon;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+      p:first-child {
+        text-transform: uppercase;
+        text-decoration: underline wavy red;
+        text-underline-offset: 5px;
+      }
+      p:last-child {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        background-color: blueviolet;
+        padding: 8px 16px;
+        display: inline-block;
+        color: aliceblue;
+        border-radius: 1000px;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+        border: 1px solid rgb(122 0 237);
+      }
+      p:nth-child(2n + 1) {
+        text-decoration: line-through red dotted;
+      }
+      p:first-of-type {
+        font-weight: 900;
+      }
+      footer {
+        color: orangered;
+      }
+      div p {
+        background-color: indigo;
+      }
+      *::selection {
+        background-color: yellow;
+      }
+      h1 + p {
+        color: teal;
+      }
+      h1 ~ p {
+        color: violet;
+      }
+      */
+
+      /* +++++++++++++++ PRIMJER 7 +++++++++++++++ 
+      body {
+        color: #292929;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 18px;
+        line-height: -1;
+      }
+      section p {
+        color: gold;
+        background-color: indianred;
+        margin-bottom: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 1000px;
+      }
+      footer section p {
+        font-family: monospace;
+      }
+      section > p {
+        text-decoration: 14px line-through orangered;
+        speak-as: spell-out;
+        text-align: justify;
+        text-justify: inter-character;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <h1 style="color: salmon">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptates.
+    </h1>
+    <h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptates.
+    </h2>
+    <h3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptates.
+    </h3>
+    <p style="color: tomato">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla tenetur
+      nostrum veritatis error unde, architecto, nisi similique at debitis
+      quisquam deserunt quidem! Deleniti aliquam, quod blanditiis est quo quos
+      recusandae, officiis molestiae accusamus similique provident dicta fuga
+      tenetur. Tenetur, fugit?
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla tenetur
+      nostrum veritatis error unde, architecto, nisi similique at debitis
+      quisquam deserunt quidem! Deleniti aliquam, quod blanditiis est quo quos
+      recusandae, officiis molestiae accusamus similique provident dicta fuga
+      tenetur. Tenetur, fugit?
+    </p>
+    <header>
+      <h2>Primjer 6</h2>
+      <p>Odlomak 1 - zaglavlje</p>
+    </header>
+    <main>
+      <section>
+        <h1>Sekcija 1</h1>
+        <div>
+          <p>Odlomak1 - sekcija 1</p>
+        </div>
+        <article>
+          <p>Odlomak 1 - artikl 1</p>
+          <p>Odlomak 2 - artikl 1</p>
+        </article>
+        <p>Odlomak 1 - sekcija 1</p>
+        <p>Odlomak 2 - sekcija 1</p>
+        <p>Odlomak 3 - sekcija 1</p>
+        <p>Odlomak 4 - sekcija 1</p>
+        <p>Odlomak 5 - sekcija 1</p>
+      </section>
+      <section>
+        <h2>Naslov sekcije - sekcija 2</h2>
+        <p>Odlomak 1 - sekcija 2</p>
+        <p>Odlomak 2 - sekcija 2</p>
+        <p>Odlomak 3 - sekcija 2</p>
+        <p>Odlomak 4 - sekcija 2</p>
+        <p>Odlomak 5 - sekcija 2</p>
+      </section>
+      <section>
+        <div>
+          <div>
+            <p>Odlomak 1 - div</p>
+            <p>Odlomak 2 - div</p>
+            <p>Odlomak 3 - div</p>
+          </div>
+        </div>
+      </section>
+      <article>
+        <h1>Objava</h1>
+        <p>Odlomak 1 - article 2</p>
+        <p>Odlomak 2 - article 2</p>
+        <p>Odlomak 3 - article 2</p>
+        <p>Odlomak 4 - article 2</p>
+        <p>Odlomak 5 - article 2</p>
+      </article>
+      <div>
+        <ul>
+          <li>
+            <a href="">
+              <p>ODLOMAK U NESTANIM DIVOVIMA</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <h1>Podnozje</h1>
+      <section>
+        <h1>Sekcija 3</h1>
+        <p>Odlomak 1 - sekcija 3</p>
+        <p>Odlomak 2 - sekcija 3</p>
+        <p>Odlomak 3 - sekcija 3</p>
+        <p>Odlomak 4 - sekcija 3</p>
+        <p>Odlomak 5 - sekcija 3</p>
+      </section>
+      <section>
+        <h1>Sekcija 4</h1>
+        <p>Odlomak 1 - sekcija 4</p>
+        <p>Odlomak 2 - sekcija 4</p>
+        <p>Odlomak 3 - sekcija 4</p>
+        <p>Odlomak 4 - sekcija 4</p>
+      </section>
+      <p>Odlomak 1 - footer</p>
+      <p>Odlomak 2 - footer</p>
+      <p>Odlomak 3 - footer</p>
+    </footer>
+    <section class="display">
+      <h1>DISPLAY</h1>
+      <ul class="display-list">
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem, ipsum dolor.</li>
+      </ul>
+      <div class="display-div">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          reiciendis numquam repudiandae delectus nemo at, exercitationem
+          debitis repellat eveniet! Earum?
+        </p>
+      </div>
+    </section>
+    <section class="position">
+      <h1>POSITION</h1>
+      <h2>Example 1</h2>
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+      <h2>Example 2</h2>
+      <div class="box3">
+        box3
+        <div class="box4">box4</div>
+      </div>
+      <div class="frame">
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+      </div>
+      <div class="box7">Box7</div>
+      <div class="box8">Box8</div>
+    </section>
+    <section class="animations">
+      <h1>Animations</h1>
+      <div class="circle">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
+      <div class="circle">5</div>
+      <div class="circle">6</div>
+      <div class="circle">7</div>
+    </section>
+    <section class="preprocesori">
+      <div class="header">
+        <h1>Preprocesori (SCSS)</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">Lorem ipsum</a>
+      </div>
+      <div class="section">
+        <h1>Preprocesori (SCSS)</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">Lorem ipsum</a>
+      </div>
+      <article>
+        <h2>Lorem, ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">Article anchor element</a>
+      </article>
+      <div class="footer">
+        <h2>Lorem, ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">a element</a>
+      </div>
+    </section>
+    <section class="preprocesori">
+      <div class="header2">
+        <h1>Preprocesori (SCSS)</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">Lorem ipsum</a>
+      </div>
+      <div class="section2">
+        <h1>Preprocesori (SCSS)</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">Lorem ipsum</a>
+      </div>
+      <div class="article2">
+        <h2>Artikel</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">Article anchor element</a>
+      </div>
+      <div class="footer2">
+        <h2>Lorem, ipsum.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+          aliquam laudantium quam qui eius tenetur nesciunt molestiae pariatur
+          quis, doloribus delectus placeat velit quibusdam. Architecto?
+        </p>
+        <a href="#">a element</a>
+      </div>
+    </section>
+    <section class="scss-animations">
+      <h1>SCSS Animacije</h1>
+      <div class="fade1">Anim 1</div>
+      <div class="fade2">Anim 2</div>
+      <div class="fade3">Anim 3</div>
+      <div class="tranzicija">Trans 1</div>
+      <div class="tranzicija">Trans 2</div>
+      <div class="tranzicija">Trans 3</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIGIRN</title>
+  <link rel="shortcut icon" href="../assets/digirn-trans.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/osnovno.css">
+  <link rel="stylesheet" href="../css/prikaz.css">
+</head>
+
+<body>
+  <header>
+    <div id="header-container">
+      <img src="../../assets/digirn.png" width="150" alt="digirn logo">
+      <h2>DIGIRN</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Glavna</a></li>
+        <li><a href="lista.html">Nalozi</a></li>
+        <li><a id="aIzmjena" href="#">Izmjena naloga</a></li>
+        <li><a id="aBrisanje" href="#">Brisanje naloga</a></li>
+      </ul>
+      <div id="hamburger-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Glavna</a></li>
+          <li><a href="lista.html">Nalozi</a></li>
+          <li><a id="aIzmjena-small" href="#">Izmjena naloga</a></li>
+          <li><a id="aBrisanje-small" href="#">Brisanje naloga</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <h1>Prikaz Naloga</h1>
+      <hr>
+      <div class="container">
+        <p>Broj naloga:</p>
+        <p id="brojNaloga"></p>
+        <p>Narudžbenica:</p>
+        <p id="brojNarudzbe"></p>
+        <p>Datum otvaranja:</p>
+        <p id="datumNaloga"></p>
+      </div>
+      <hr>
+      <div class="container">
+        <p>Naručitelj:</p>
+        <p id="narucitelj"></p>
+        <p>Izvršitelj:</p>
+        <p id="izvrsitelj"></p>
+      </div>
+      <div class="container">
+        <p>Mjesto troška:</p>
+        <p id="mjestoTroska"></p>
+        <p>Nositelj troška:</p>
+        <p id="nositeljTroska"></p>
+      </div>
+      <hr>
+      <div class="container">
+        <p>Datum početka:</p>
+        <p id="datumPocetka"></p>
+        <p>Vrijeme početka:</p>
+        <p id="vrijemePocetka"></p>
+      </div>
+      <div class="container">
+        <p>Datum završetka:</p>
+        <p id="datumZavrsetka"></p>
+        <p>Vrijeme završetka:</p>
+        <p id="vrijemeZavrsetka"></p>
+      </div>
+      <hr>
+      <div class="container">
+        <p>Naslov:</p>
+        <p id="naslov"></p>
+      </div>
+      <hr>
+      <div class="container">
+        <p>Opis rada:</p>
+        <p id="opis"></p>
+      </div>
+      <hr>
+    </section>
+  </main>
+  <script type="module" src="../js/prikaz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcijanli</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      *:focus {
+        outline: none;
+      }
+      html {
+        background-color: #fff;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #2e2c28;
+        background-color: #f5f4f3;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        max-width: 75rem;
+        margin-inline: auto;
+        margin-bottom: 10rem;
+        padding-top: 4rem;
+        padding-inline: 2rem;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .img1 {
+        border-top-left-radius: 48px;
+        box-shadow: -2rem -2rem 0 #cdc9c3;
+      }
+      .img2 {
+        border-bottom-right-radius: 48px;
+        box-shadow: 2rem 2rem 0 #2e2c28;
+      }
+      ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: #2e2c28;
+      }
+      a:hover,
+      a:active,
+      a:focus {
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+      }
+      .contact-button:link,
+      .contact-button:visited {
+        background-color: #d9743a;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        text-decoration: none;
+      }
+      .contact-button:hover,
+      .contact-button:active,
+      .contact-button:focus {
+        background-color: #ae5d2e;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        font-family: "Roboto Serif", serif;
+      }
+      .about-section,
+      .contact-section {
+        max-width: 75rem;
+        margin-bottom: 10rem;
+        margin-inline: auto;
+      }
+      .contact-section {
+        padding-inline: 2rem;
+      }
+      .content-container {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+      }
+      .content-container > * {
+        flex: 1;
+      }
+      .about-us-container {
+        margin-bottom: 6rem;
+        padding-left: 4rem;
+        padding-right: 2rem;
+      }
+      .our-services-container {
+        padding-left: 2rem;
+        padding-right: 4rem;
+      }
+      .contact-container {
+        gap: 0;
+        background-color: #fff;
+      }
+      .contact-container .content-text {
+        padding: 4rem;
+      }
+      .content-text p {
+        line-height: 1.8;
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        font-family: "Roboto Serif", serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        background-color: #cdc9c3;
+        padding: 4rem;
+        width: 100%;
+      }
+      label {
+        margin-bottom: 0.5rem;
+      }
+      input,
+      textarea {
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #82807b;
+        background-color: #cdc9c3;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        color: #2e2c28;
+        caret-color: #2e2c28;
+      }
+      textarea {
+        width: 100%;
+        max-height: 2.3125rem;
+        margin-bottom: 4rem;
+        resize: none;
+      }
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border: 1px solid #2e2c28;
+      }
+      button {
+        color: #fff;
+        background-color: #2e2c28;
+        border: none;
+        padding: 1rem 2rem;
+        align-self: flex-start;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      button:hover,
+      button:focus {
+        background-color: #171614;
+      }
+      footer {
+        max-width: 70rem;
+        padding-bottom: 4rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      @media (max-width: 65em) {
+        html {
+          font-size: 14px;
+        }
+        nav {
+          display: none;
+        }
+      }
+      @media (max-width: 51em) {
+        h1 {
+          text-align: center;
+        }
+        header {
+          margin-bottom: 4rem;
+        }
+        .about-us-container {
+          flex-direction: column-reverse;
+          padding-inline: 2rem;
+        }
+        .our-services-container {
+          flex-direction: column;
+          padding-inline: 2rem;
+        }
+        .img1-container {
+          padding-left: 2rem;
+        }
+        .img2-container {
+          padding-right: 2rem;
+        }
+        .img2 {
+          border-bottom-right-radius: 48px;
+          box-shadow: 1rem 1rem 0 #2e2c28;
+        }
+      }
+      @media (max-width: 40em) {
+        .img1 {
+          border-top-left-radius: 48px;
+          box-shadow: -1rem -1rem 0 #cdc9c3;
+        }
+        .img2 {
+          border-bottom-right-radius: 48px;
+          box-shadow: 1rem 1rem 0 #2e2c28;
+        }
+        .img1-container {
+          padding-left: 1rem;
+        }
+        .img2-container {
+          padding-right: 1rem;
+        }
+        .about-section {
+          margin-bottom: 5rem;
+        }
+        .contact-section {
+          margin-bottom: 4rem;
+        }
+        .about-us-container {
+          gap: 3rem;
+          margin-bottom: 4rem;
+        }
+        .our-services-container {
+          gap: 2rem;
+        }
+        html {
+          font-size: 12px;
+        }
+        header {
+          padding-top: 2rem;
+        }
+        .contact-container {
+          flex-direction: column-reverse;
+          overflow: hidden;
+          background: none;
+          gap: 2rem;
+        }
+        .contact-container .content-text {
+          padding: 0;
+        }
+        form {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Turistička agencija Avanturist</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-us-container">O nama</a></li>
+          <li><a href="#our-services-container">Naše djelatnosti</a></li>
+          <li>
+            <a href="#contact-container" class="contact-button">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="about-section">
+        <div
+          class="content-container about-us-container"
+          id="about-us-container"
+        >
+          <div class="img1-container">
+            <img
+              src="../../../2_HTML/Parcijalni/team.jpg"
+              alt="Team"
+              class="img1"
+            />
+          </div>
+          <div class="content-text">
+            <h2>O nama</h2>
+            <p>
+              Avanturist je turistička agencija specijalizirana za nezaboravna
+              putovanja širom svijeta. Naša strast su priroda, kultura, aktivan
+              odmor i istraživanje skrivenih destinacija. Svakom klijentu
+              pristupamo individualno kako bismo ispunili njegova očekivanja i
+              stvorili jedinstvena iskustva.
+            </p>
+          </div>
+        </div>
+        <div
+          class="content-container our-services-container"
+          id="our-services-container"
+        >
+          <div class="content-text">
+            <h2>Naše djelatnosti</h2>
+            <p>
+              Organiziramo grupna i individualna putovanja, avanturističke
+              izlete, team building programe i tematske ture u Hrvatskoj i
+              inozemstvu. Nudimo planiranje smještaja, prijevoza i aktivnosti,
+              uz potpunu podršku klijentima prije i tijekom putovanja. Vaše
+              zadovoljstvo naš je prioritet.
+            </p>
+          </div>
+          <div class="img2-container">
+            <img
+              src="../../../2_HTML/Parcijalni/adventure.jpg"
+              alt="Adventure"
+              class="img2"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="content-container contact-container" id="contact-container">
+          <form>
+            <label for="ime-i-prezime">Ime i prezime:</label>
+            <input
+              type="text"
+              name="ime-i-prezime"
+              id="ime-i-prezime"
+              required
+            />
+            <label for="mail">Email:</label>
+            <input type="email" name="mail" id="mail" required />
+            <label for="poruka">Poruka:</label>
+            <textarea name="poruka" id="poruka" required></textarea>
+            <button type="submit">Pošalji</button>
+          </form>
+          <div class="content-text">
+            <h2>Kontakt</h2>
+            <p>
+              Ispunite naš online kontakt obrazac kako biste nas brzo i
+              jednostavno kontaktirali. Bilo da trebate informacije, ponudu ili
+              pomoć pri planiranju putovanja, naš tim će vam se javiti u
+              najkraćem mogućem roku. Vaša avantura započinje jednim klikom!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Avanturist &copy;</p>
+    </footer>
+  </body>
+</html>

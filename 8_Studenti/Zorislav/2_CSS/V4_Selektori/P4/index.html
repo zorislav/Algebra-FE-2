@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selektori HTML Elementa</title>
+  <style>
+    body {
+      color: #333;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+    }
+
+    [title] {
+      text-decoration: underline solid red;
+    }
+
+    [title="prvi odlomak"] {
+      font-weight: bold;
+    }
+
+    [title*="odlomak"] {
+      color: darkgreen;
+    }
+
+    [title~="odlomak"] {
+      text-transform: uppercase;
+    }
+
+    [title^="odlomak"] {
+      font-style: italic;
+    }
+
+    [title|="odlomak"] {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    [title$="odlomak"] {
+      color: darkorange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 title="Glavni naslov stranice">Pariatur eu ipsum laborum ipsum ut velit ex deserunt id cillum incididunt duis.
+  </h1>
+  <h2>Aliqua deserunt Lorem ut excepteur eu do labore est.</h2>
+  <h3>Duis sunt exercitation dolor voluptate in pariatur mollit sint reprehenderit ad adipisicing minim.</h3>
+  <p title="prvi odlomak">Qui excepteur nulla proident deserunt mollit ut pariatur. Mollit velit eu consectetur cillum
+    laborum et cupidatat.
+    Et tempor nisi sit aliquip anim cupidatat ipsum veniam adipisicing tempor commodo ea.</p>
+  <p title="odlomak-2">Deserunt irure id dolore in. Laborum ex exercitation anim aute. Eiusmod ullamco dolor veniam
+    dolor sint et id.
+    Aliqua ex amet esse consectetur officia qui minim irure in deserunt labore dolore esse exercitation. Culpa fugiat
+    cillum consequat anim. Ullamco nostrud amet adipisicing eu aliquip reprehenderit voluptate exercitation
+    reprehenderit dolor incididunt eiusmod et incididunt.</p>
+  <p title="odlomak 3">Nulla et excepteur qui eu incididunt sit occaecat consectetur Lorem cupidatat tempor nulla. Minim
+    deserunt Lorem
+    nisi ipsum. Pariatur duis irure <strong>fugiat minim dolor</strong> ad labore esse nisi deserunt nostrud fugiat
+    proident veniam.
+    Irure fugiat ex consectetur amet est occaecat reprehenderit dolore id irure non. Deserunt labore tempor proident
+    irure reprehenderit tempor mollit irure culpa exercitation mollit incididunt cillum fugiat. Proident qui eu fugiat
+    do.</p>
+  <p title="odlomakbla">Nostrud deserunt nisi ullamco <strong>qui pariatur </strong>deserunt. Fugiat magna labore aute
+    consectetur
+    officia incididunt culpa.
+    Magna duis dolore et labore cupidatat esse ut minim in esse ullamco.</p>
+  <p>Cillum laboris magna tempor eiusmod <span title="nesto">tempor tempor</span> . Sit est anim excepteur excepteur
+    reprehenderit dolore
+    adipisicing consectetur qui anim officia sint minim nostrud. Sit ullamco excepteur consectetur exercitation ut qui
+    enim ad adipisicing officia incididunt velit fugiat in. Nostrud aliqua officia in ut. Amet nulla ut tempor proident
+    Lorem commodo duis mollit elit elit.</p>
+</body>
+
+</html>

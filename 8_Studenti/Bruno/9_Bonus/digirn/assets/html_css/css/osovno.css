@@ -1,0 +1,143 @@
+:root {
+  --primary: #8b3c7f;
+  --onPrimary: #ffffff;
+  --inversePrimary: #f4b2e3;
+  --onSurface: #201a1e;
+  --outline: #80747b;
+  --surfaceVariant: #eedee7;
+  --outlineVaiant: #d2c2cb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-image: url("../../poz.jpg");
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary);
+  opacity: 0.8;
+  color: var(--onPrimary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+}
+
+header h2 {
+  color: var(--onPrimary);
+}
+
+header nav {
+  margin-right: 1rem;
+}
+
+header ul {
+  display: flex;
+  padding: none;
+  list-style-type: none;
+}
+
+header ul li {
+  margin-left: 1rem;
+}
+header a {
+  color: var(--onPrimary);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--inversePrimary);
+}
+
+section {
+  margin: 10rem auto 1rem;
+  text-align: center;
+  background-color: var(--surfaceVariant);
+  color: var(--onSurface);
+  width: 90%;
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+}
+
+section h1 {
+  margin-bottom: 1rem;
+}
+
+#hamburger-icon {
+  display: none;
+  margin-right: 1rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 5px;
+  background-color: var(--onPrimary);
+  margin: 6px 0;
+}
+
+aside {
+  display: none;
+  background-color: var(--primary);
+  opacity: 0.8;
+  padding: 1rem;
+  position: absolute;
+  top: 112.5px;
+  right: 0;
+}
+
+aside ul {
+  padding: none;
+  list-style-type: none;
+}
+
+aside li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+aside a {
+  color: var(--onPrimary);
+  text-decoration: none;
+}
+
+aside a:hover {
+  color: var(--inversePrimary);
+}
+
+@media (max-width: 899px) {
+  header nav ul {
+    display: none;
+  }
+
+  aside {
+    display: inline-block;
+  }
+
+  #hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 900px) {
+  aside {
+    display: none !important;
+  }
+}

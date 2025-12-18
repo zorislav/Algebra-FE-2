@@ -1,0 +1,26 @@
+* { 
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 20px;
+} 
+
+body { 
+    position: relative; 
+    line-height: 165px;
+} 
+
+h1 { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    position: relative;
+    text-align: center;
+} 
+
+
+#circle { 
+    width: 600px; 
+    height: 600px; 
+    background-color: antiquewhite;  
+    position: relative; 
+    left: 32.5%;
+    border: 2px solid black; 
+    border-radius: 100%;
+}

@@ -1,0 +1,18 @@
+body {
+  background-color: #eee;
+  color: #333;
+  font-family: Tahoma, sans-serif;
+}
+
+h1 {
+  color: #800;
+}
+
+a {
+  font-family: #333;
+}
+
+article {
+  border: 2px solid #800;
+  margin: 0.5em;
+}/*# sourceMappingURL=stil.css.map */

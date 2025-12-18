@@ -1,0 +1,187 @@
+$color1: salmon;
+$color2: #333;
+$color3: #800;
+$color4: #eee;
+
+$font1: Tahoma, sans-serif;
+$font2: Arial, sans-serif;
+
+.preprocesori {
+  background-color: $color1;
+}
+
+.preprocesori {
+  a {
+    font-family: $font1;
+  }
+  article {
+    border: 2px solid $color3;
+    background-color: $color3;
+
+    p {
+      color: $color4;
+    }
+  }
+  div,
+  article {
+    margin-bottom: 2rem;
+  }
+  .header,
+  .footer {
+    text-align: center;
+    background-color: #333;
+    color: $color4;
+    padding: 2rem;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.section {
+  h1 {
+    font-family: "Courier New", Courier, monospace;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.footer {
+  h1 {
+    color: #f66;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  a {
+    color: navy;
+    font-size: 2rem;
+  }
+}
+
+// Mixin
+
+$color5: #f0f0f0;
+$color6: #1f1f1f;
+$color7: rebeccapurple;
+
+@mixin flex-fontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin a-button {
+  a {
+    background-color: $color7;
+    color: $color5;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    transition: all 100ms ease;
+
+    &:visited {
+      background-color: #f93;
+    }
+    &:hover {
+      background-color: $color6;
+    }
+  }
+}
+
+@mixin align-element($display, $txt, $space) {
+  display: $display;
+  text-align: $txt;
+  margin: $space;
+}
+
+.preprocesori {
+  @include flex-fontainer();
+  padding: 1em;
+
+  article {
+    flex-basis: 48%;
+    background-color: $color6;
+    a {
+      @include align-element(grid, end, 2rem);
+    }
+  }
+}
+
+.footer {
+  @include a-button();
+}
+
+@mixin margin-mix($margin...) {
+  margin: $margin;
+}
+
+@mixin border-radius($r: 20px) {
+  border-radius: $r;
+}
+
+.header2,
+.footer2,
+.section2,
+.article2 {
+  border: 1px solid #000;
+  padding: 1rem;
+}
+
+.header2 {
+  @include margin-mix(20px);
+}
+
+.section2 {
+  @include margin-mix(2em auto);
+  max-width: 15rem;
+  @include border-radius();
+}
+
+.article2 {
+  @include margin-mix(0.5rem);
+  &:last-child {
+    @include margin-mix(0);
+    @include border-radius(0 30px);
+    border: 1px solid #000;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str...) {
+  animation: $str;
+}
+
+$colorRed: red;
+$colorGreen: #ffff00;
+
+.scss-animations {
+  div {
+    background-color: $colorGreen;
+    margin: 0.5rem auto;
+    padding: 1rem;
+    width: 25%;
+    border: 1px solid #000;
+    &:first-of-type {
+      @include animation(fade 2s ease-in-out infinite);
+    }
+  }
+}
+
+@include keyframes(fade) {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

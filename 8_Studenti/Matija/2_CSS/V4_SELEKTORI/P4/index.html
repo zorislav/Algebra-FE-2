@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selektori HTML Elementa</title>
+    <style>
+      body {
+        color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+      }
+      [title] {
+        text-decoration: underline solid red;
+      }
+      [title="prvi odlomak"] {
+        font-weight: bold;
+      }
+      [title*="odlomak"] {
+        color: darkgreen;
+      }
+      [title~="odlomak"] {
+        text-transform: uppercase;
+      }
+      [title^="odlomak"] {
+        font-style: italic;
+      }
+      [title|="odlomak"] {
+        font-family: "Courier New", Courier, monospace;
+      }
+      [title$="odlomak"] {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="Glavni naslov stranice">
+      Non ut proident eu non dolor amet et esse sit cillum.
+    </h1>
+    <h2>Occaecat et ut mollit nulla cupidatat non.</h2>
+    <h3>Amet excepteur veniam ad quis.</h3>
+    <p title="prvi odlomak">
+      Deserunt velit ad pariatur do ipsum deserunt commodo aute laboris
+      reprehenderit id Lorem. Cupidatat cupidatat irure ex nisi. Laborum commodo
+      sunt est cillum. Mollit pariatur velit deserunt commodo sunt eiusmod
+      cupidatat Lorem proident pariatur ad. Aliquip labore nisi et nostrud est
+      consectetur officia eiusmod in laboris.
+    </p>
+    <p title="odlomak-2">
+      Et in sint reprehenderit cillum et qui sunt ipsum fugiat deserunt ad
+      excepteur ea commodo. Minim ea non veniam proident. Velit est deserunt ea
+      mollit in pariatur. Minim eu consequat proident id pariatur. Elit magna
+      dolor minim consequat deserunt incididunt sint occaecat est Lorem dolore
+      pariatur aliquip ullamco. Aliquip laboris dolore quis mollit amet sint
+      fugiat irure commodo tempor deserunt nulla ipsum elit.
+    </p>
+    <p title="odlomak 3">
+      Non in culpa ex aute exercitation
+      <strong>eiusmod ullamco dolor mollit.</strong> Ullamco proident sit elit
+      quis irure est officia aute consequat esse. Aute non aute anim consectetur
+      fugiat reprehenderit anim enim voluptate do id occaecat.
+    </p>
+    <p title="odlomakbla">
+      Voluptate occaecat excepteur voluptate commodo eu ut pariatur culpa
+      veniam. <strong>Cillum eiusmod duis amet dolor eiusmod</strong> ullamco
+      deserunt cillum exercitation esse ipsum proident veniam. Tempor eiusmod
+      reprehenderit reprehenderit ut veniam velit exercitation. Amet magna ut id
+      officia qui consequat consectetur ut fugiat.
+    </p>
+    <p>
+      Incididunt in excepteur cillum irure. Laboris laboris incididunt laborum
+      amet sint ipsum dolor esse. Labore ad et mollit culpa Lorem ut consectetur
+      consequat incididunt <span title="nesto">commodo qui aliqua.</span> Eu
+      commodo irure id Lorem elit eiusmod dolore dolor officia officia pariatur.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #800;
+}
+section article {
+  background-color: #eee;
+  flex-basis: 48%;
+}
+
+footer a {
+  background-color: #333;
+  color: #eee;
+  padding: 10px;
+  margin: 1em;
+}
+footer a:visited {
+  background-color: #f93;
+}
+footer a:hover {
+  background-color: #800;
+}/*# sourceMappingURL=stil.css.map */

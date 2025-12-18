@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Selektori HTML dokumenata</title>
+    <style>
+      body {
+        color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+      }
+
+      [title] {
+        text-decoration: underline solid red;
+        /*kada postavimo title atribut u neki paragraf, naslov, ili nešto drugo,ž
+        u CSS-u ga pozivamo tako da ga napišemop u uglate zagrade */
+      }
+
+      [title="prvi odlomak"] {
+        font-weight: bold;
+      }
+
+      [title*="odlomak"] {
+        /* zvjezdica znači da je atribut postavljen i da se unutar atributa barem jednom pojavljuje odlomak */
+        color: darkgreen;
+      }
+
+      [title~="odlomak"] {
+        /* sinusoida znači da je */
+        text-transform: uppercase;
+      }
+
+      [title^="odlomak"] {
+        font-style: italic;
+      }
+
+      [title|="odlomak"] {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      [title$="odlomak"] {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="Glavni naslov stranice">
+      Qui eu nisi laboris aliqua mollit Lorem anim enim enim dolor eiusmod
+      eiusmod ea.
+    </h1>
+    <h2>
+      Qui velit labore deserunt ut exercitation labore nulla cupidatat aliqua
+      aliquip.
+    </h2>
+    <h3>
+      Consequat do sint voluptate labore id exercitation ad occaecat qui
+      voluptate pariatur ut aute ad.
+    </h3>
+    <p title="prvi odlomak">
+      Fugiat exercitation ex dolor do consectetur ea veniam duis tempor. Nisi
+      tempor commodo velit aliqua exercitation quis do officia velit nostrud.
+      Fugiat aliquip eiusmod eu eu eiusmod aliqua laboris. Ex ut consequat anim
+      sunt enim aute mollit ullamco. Exercitation sunt aliquip ea culpa est
+      aliqua eu sunt aliqua.
+    </p>
+    <p title="odlomak-2">
+      Ad aute sit ad anim ullamco. Quis quis irure non officia nisi proident qui
+      officia duis est culpa mollit sunt laboris. Do magna eiusmod incididunt
+      culpa aute.
+    </p>
+    <p title="odlomak 3">
+      Dolor est amet voluptate pariatur sit amet quis culpa sunt. Magna est do
+      minim non esse est magna. <strong>Cillum amet incididunt</strong> sint ad
+      deserunt labore incididunt non veniam in eiusmod sunt nostrud excepteur.
+      Nulla veniam ipsum velit cillum sint proident non ad amet. Elit
+      consectetur eiusmod ad nostrud minim tempor quis magna ullamco amet Lorem
+      sit do.
+    </p>
+    <p title="odlomakbla">
+      Laboris cillum ut adipisicing in tempor.
+      <strong>Ipsum labore amet</strong> officia minim exercitation et anim
+      nulla aliquip officia sint ipsum officia. Non occaecat do dolore sit et
+      ipsum adipisicing pariatur nulla deserunt. Eiusmod voluptate tempor anim
+      non aute qui Lorem sit sint dolor. Amet tempor non laborum aliqua ex
+      officia.
+    </p>
+    <p>
+      Pariatur amet anim anim adipisicing duis pariatur amet eiusmod sit velit
+      anim ut occaecat veniam.
+      <span title="nesto">Deserunt reprehenderit</span> pariatur fugiat mollit
+      dolor ut cillum ea ad exercitation. Id culpa proident reprehenderit minim.
+    </p>
+  </body>
+</html>

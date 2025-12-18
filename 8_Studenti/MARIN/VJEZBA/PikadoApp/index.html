@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Prava Pikado Tabla SVG</title>
+<style>
+  body {
+    background: #222;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  svg {
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  }
+  path {
+    stroke: #222;
+    stroke-width: 1.5px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+  }
+  path:hover {
+    fill: orange !important;
+  }
+  text {
+    fill: #222;
+    font-weight: bold;
+    font-size: 14px;
+    user-select: none;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<h1>Prava Pikado Tabla (SVG)</h1>
+<svg id="dartboard" width="600" height="600" viewBox="0 0 500 500" role="img" aria-label="Pikado tabla"></svg>
+
+<script>
+  const svg = document.getElementById('dartboard');
+  const cx = 250;
+  const cy = 250;
+
+  // Redoslijed brojeva na pravoj pikado tabli, kreće s 20 na vrhu pa ide oko kruga:
+  // https://en.wikipedia.org/wiki/Darts#Standard_board_layout
+  const numbersOrder = [20, 1, 18, 4, 13, 9, 14, 11, 8, 16,
+                        7, 19, 3, 17, 2, 15, 10, 6, 5, 12];
+
+  const sectorsCount = 20;
+  const anglePerSector = 360 / sectorsCount;
+
+  // Radijusi za različite dijelove
+  const outerRadius = 240;
+  const doubleInnerRadius = 210;
+  const doubleOuterRadius = 240;
+  const tripleInnerRadius = 130;
+  const tripleOuterRadius = 160;
+  const bullOuterRadius = 30;
+  const bullInnerRadius = 15;
+
+  // Boje
+  const colors = {
+    singleLight: '#eee',
+    singleDark: '#aaa',
+    doubleRed: '#c8102e',
+    doubleBlack: '#000000',
+    tripleRed: '#c8102e',
+    tripleBlack: '#000000',
+    bullOuter: '#006400',
+    bullInner: '#c8102e'
+  };
+
+  function degToRad(deg) {
+    return (deg * Math.PI) / 180;
+  }
+
+  // Kreira sektor prstena (luk između dva radijusa)
+  function createRingSector(cx, cy, innerR, outerR, startAngle, endAngle) {
+    const startRad = degToRad(startAngle);
+    const endRad = degToRad(endAngle);
+
+    const x1 = cx + outerR * Math.cos(startRad);
+    const y1 = cy + outerR * Math.sin(startRad);
+
+    const x2 = cx + outerR * Math.cos(endRad);
+    const y2 = cy + outerR * Math.sin(endRad);
+
+    const x3 = cx + innerR * Math.cos(endRad);
+    const y3 = cy + innerR * Math.sin(endRad);
+
+    const x4 = cx + innerR * Math.cos(startRad);
+    const y4 = cy + innerR * Math.sin(startRad);
+
+    const largeArcFlag = (endAngle - startAngle) > 180 ? 1 : 0;
+
+    return `
+      M ${x1} ${y1}
+      A ${outerR} ${outerR} 0 ${largeArcFlag} 1 ${x2} ${y2}
+      L ${x3} ${y3}
+      A ${innerR} ${innerR} 0 ${largeArcFlag} 0 ${x4} ${y4}
+      Z
+    `;
+  }
+
+  // Kreira sektor običnog polja između dva radijusa
+  function createSingleSector(cx, cy, innerR, outerR, startAngle, endAngle) {
+    // Koristimo createRingSector jer single polje je prsten između tripleOuterRadius i doubleInnerRadius
+    return createRingSector(cx, cy, innerR, outerR, startAngle, endAngle);
+  }
+
+  // Kreira sektor od centra do radijusa (za pojedine sektore poput bull)
+  function createCenterSector(cx, cy, r, startAngle, endAngle) {
+    const startRad = degToRad(startAngle);
+    const endRad = degToRad(endAngle);
+
+    const x1 = cx + r * Math.cos(startRad);
+    const y1 = cy + r * Math.sin(startRad);
+
+    const x2 = cx + r * Math.cos(endRad);
+    const y2 = cy + r * Math.sin(endRad);
+
+    const largeArcFlag = (endAngle - startAngle) > 180 ? 1 : 0;
+
+    return `
+      M ${cx} ${cy}
+      L ${x1} ${y1}
+      A ${r} ${r} 0 ${largeArcFlag} 1 ${x2} ${y2}
+      Z
+    `;
+  }
+
+  // Crtanje sektora za svaki broj
+  for (let i = 0; i < sectorsCount; i++) {
+    const number = numbersOrder[i];
+    const startAngle = i * anglePerSector - 90;
+    const endAngle = (i + 1) * anglePerSector - 90;
+
+    // 1. Dupla zona (vanjski prsten)
+    const doublePathD = createRingSector(cx, cy, doubleInnerRadius, doubleOuterRadius, startAngle, endAngle);
+    const doubleSector = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    doubleSector.setAttribute("d", doublePathD);
+    doubleSector.setAttribute("fill", i % 2 === 0 ? colors.doubleRed : colors.doubleBlack);
+    doubleSector.setAttribute("stroke", "#222");
+    doubleSector.setAttribute("stroke-width", "1");
+    doubleSector.setAttribute("cursor", "pointer");
+    doubleSector.setAttribute("tabindex", 0);
+    doubleSector.setAttribute("aria-label", `Dupla ${number}`);
+    doubleSector.addEventListener("click", () => alert(`Pogodio si dupla polje: ${number}`));
+    doubleSector.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        alert(`Pogodio si dupla polje: ${number}`);
+      }
+    });
+    svg.appendChild(doubleSector);
+
+    // 2. Tripla zona (srednji prsten)
+    const triplePathD = createRingSector(cx, cy, tripleInnerRadius, tripleOuterRadius, startAngle, endAngle);
+    const tripleSector = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    tripleSector.setAttribute("d", triplePathD);
+    tripleSector.setAttribute("fill", i % 2 === 0 ? colors.tripleRed : colors.tripleBlack);
+    tripleSector.setAttribute("stroke", "#222");
+    tripleSector.setAttribute("stroke-width", "1");
+    tripleSector.setAttribute("cursor", "pointer");
+    tripleSector.setAttribute("tabindex", 0);
+    tripleSector.setAttribute("aria-label", `Tripla ${number}`);
+    tripleSector.addEventListener("click", () => alert(`Pogodio si tripla polje: ${number}`));
+    tripleSector.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        alert(`Pogodio si tripla polje: ${number}`);
+      }
+    });
+    svg.appendChild(tripleSector);
+
+    // 3. Single zona vanjska (između dupla i tripla)
+    const singleOuterPathD = createRingSector(cx, cy, tripleOuterRadius, doubleInnerRadius, startAngle, endAngle);
+    const singleOuterSector = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    singleOuterSector.setAttribute("d", singleOuterPathD);
+    singleOuterSector.setAttribute("fill", i % 2 === 0 ? colors.singleLight : colors.singleDark);
+    singleOuterSector.setAttribute("stroke", "#222");
+    singleOuterSector.setAttribute("stroke-width", "1");
+    singleOuterSector.setAttribute("cursor", "pointer");
+    singleOuterSector.setAttribute("tabindex", 0);
+    singleOuterSector.setAttribute("aria-label", `Single vanjska ${number}`);
+    singleOuterSector.addEventListener("click", () => alert(`Pogodio si single vanjska polje: ${number}`));
+    singleOuterSector.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        alert(`Pogodio si single vanjska polje: ${number}`);
+      }
+    });
+    svg.appendChild(singleOuterSector);
+
+    // 4. Single zona unutarnja (između tripla i centra)
+    const singleInnerPathD = createRingSector(cx, cy, bullOuterRadius, tripleInnerRadius, startAngle, endAngle);
+    const singleInnerSector = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    singleInnerSector.setAttribute("d", singleInnerPathD);
+    singleInnerSector.setAttribute("fill", i % 2 === 0 ? colors.singleDark : colors.singleLight);
+    singleInnerSector.setAttribute("stroke", "#222");
+    singleInnerSector.setAttribute("stroke-width", "1");
+    singleInnerSector.setAttribute("cursor", "pointer");
+    singleInnerSector.setAttribute("tabindex", 0);
+    singleInnerSector.setAttribute("aria-label", `Single unutarnja ${number}`);
+    singleInnerSector.addEventListener("click", () => alert(`Pogodio si single unutarnja polje: ${number}`));
+    singleInnerSector.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        alert(`Pogodio si single unutarnja polje: ${number}`);
+      }
+    });
+    svg.appendChild(singleInnerSector);
+
+    // 5. Brojevi sektora postavljeni malo izvan vanjskog prstena (oko 260 radijusa)
+    const textAngle = (startAngle + endAngle) / 2;
+    const textRadius = doubleOuterRadius + 20;
+    const textX = cx + textRadius * Math.cos(degToRad(textAngle));
+    const textY = cy + textRadius * Math.sin(degToRad(textAngle));
+
+    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", textX);
+    text.setAttribute("y", textY);
+    text.setAttribute("text-anchor", "middle");
+    text.setAttribute("dominant-baseline", "middle");
+    text.textContent = number;
+    svg.appendChild(text);
+  }
+
+  // Bullseye vanjski krug (25 bodova)
+  const bullOuterCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  bullOuterCircle.setAttribute("cx", cx);
+  bullOuterCircle.setAttribute("cy", cy);
+  bullOuterCircle.setAttribute("r", bullOuterRadius);
+  bullOuterCircle.setAttribute("fill", colors.bullOuter);
+  bullOuterCircle.setAttribute("stroke", "#222");
+  bullOuterCircle.setAttribute("stroke-width", "1");
+  bullOuterCircle.setAttribute("cursor", "pointer");
+  bullOuterCircle.setAttribute("tabindex", 0);
+  bullOuterCircle.setAttribute("aria-label", "Outer Bull - 25 bodova");
+  bullOuterCircle.addEventListener("click", () => alert("Pogodio si Outer Bull (25 bodova)!"));
+  bullOuterCircle.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      alert("Pogodio si Outer Bull (25 bodova)!");
+    }
+  });
+  svg.appendChild(bullOuterCircle);
+
+  // Bullseye unutarnji krug (50 bodova)
+  const bullInnerCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  bullInnerCircle.setAttribute("cx", cx);
+  bullInnerCircle.setAttribute("cy", cy);
+  bullInnerCircle.setAttribute("r", bullInnerRadius);
+  bullInnerCircle.setAttribute("fill", colors.bullInner);
+  bullInnerCircle.setAttribute("stroke", "#222");
+  bullInnerCircle.setAttribute("stroke-width", "1");
+  bullInnerCircle.setAttribute("cursor", "pointer");
+  bullInnerCircle.setAttribute("tabindex", 0);
+  bullInnerCircle.setAttribute("aria-label", "Inner Bull - 50 bodova");
+  bullInnerCircle.addEventListener("click", () => alert("Pogodio si Inner Bull (50 bodova)!"));
+  bullInnerCircle.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      alert("Pogodio si Inner Bull (50 bodova)!");
+    }
+  });
+  svg.appendChild(bullInnerCircle);
+
+</script>
+
+</body>
+</html>

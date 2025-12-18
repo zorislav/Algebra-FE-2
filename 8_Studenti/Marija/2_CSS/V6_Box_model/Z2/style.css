@@ -1,0 +1,26 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+body > div {
+  background-color: #eee;
+  border: 20px solid #999;
+  height: 800px;
+  margin: 2em auto;
+  width: 800px;
+}
+
+div > div:first-child {
+  background: #f66;
+  height:  400px;
+  width: 400px;
+}
+
+div > div:last-child {
+  background: #69f;
+  height: 400px;
+  margin-left: 400px;
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.wrapper {
+  padding: 1em;
+}
+.wrapper div {
+  background: #eee;
+  border: 1px solid #666;
+  padding: 1em;
+  text-align: center;
+}
+.flexcontainer {
+  display: flex;
+  justify-items: space-between;
+  flex-wrap: wrap;
+}
+.flexitem {
+  height: 100px;
+  width: 48%;
+  margin: 10px;
+}
+.flexitem:nth-child(3n) {
+  width: 100%;
+}

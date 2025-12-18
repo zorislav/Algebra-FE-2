@@ -1,0 +1,41 @@
+div { 
+
+    background-color: yellow; 
+    width: 150px; 
+    height: 150px; 
+    position: relative; 
+    animation-name: animacija1; 
+    animation-duration: 5s; 
+    animation-delay: 3s; 
+    animation-timing-function: linear; 
+    animation-direction: forwards; 
+    animation-fill-mode: backwards;
+
+} 
+
+@keyframes animacija1 { 
+0% { 
+    left: 0; 
+    top: 0; 
+
+} 
+
+25% { 
+    left: 500px; 
+    top: 0;
+} 
+
+50% { 
+    left: 500px; 
+    top: 500px;
+}
+75% { 
+    left: 0px; 
+    top: 500px;
+}
+100% { 
+    left: 0px; 
+    top: 0px; 
+    background-color: green;
+}
+}

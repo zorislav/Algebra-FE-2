@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <form action="" method="">
+            <div>
+              <label for="name">Username</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                size=""
+                maxlength=""
+                required
+                placeholder="Username"
+              />
+            </div>
+
+            <div>
+              <label for="email">email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email address"
+              />
+            </div>
+
+            <div>
+              <label for="tel">Tel Number</label>
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="+385"
+                pattern=""
+              />
+            </div>
+
+            <div>
+              <label for="password">Passwrod</label>
+              <input type="password" name="password" id="password" required />
+            </div>
+
+            <div>
+              <label for="number">Number</label>
+              <input
+                type="number"
+                name="number"
+                id="number"
+                min=""
+                max=""
+                step=""
+              />
+            </div>
+
+            <div>
+              <label for="color">Color</label>
+              <input type="color" name="color" id="color" />
+            </div>
+
+            <div>
+              <label for="check">Checkobx</label>
+              <input
+                type="checkbox"
+                name="check"
+                id="check"
+                value="true"
+                checked
+              />
+            </div>
+
+            <div>
+              <h2>Rating</h2>
+              <div>
+                <label for="ratin1">1</label>
+                <input type="radio" name="ratin1" id="ratin1" value="1" />
+              </div>
+              <div>
+                <label for="ratin2">2</label>
+                <input type="radio" name="ratin2" id="ratin2" value="2" />
+              </div>
+              <div>
+                <label for="ratin3">3</label>
+                <input type="radio" name="ratin3" id="ratin3" value="3" />
+              </div>
+            </div>
+
+            <div>
+              <label for="file">Upload file</label>
+              <input type="file" name="file" id="file" />
+            </div>
+
+            <div>
+              <label for="date">Date</label>
+              <input type="date" name="date" id="date" />
+            </div>
+
+            <div>
+              <label for="comment">Let us comment</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="10"
+                cols="45"
+              ></textarea>
+            </div>
+
+            <div>
+              <label for="select">select</label>
+              <select name="select" id="select">
+                <option value="option" selected>option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="city">city</label>
+              <input type="text" name="city" id="city" list="cityList" />
+              <datalist id="cityList">
+                <option value="option">option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+                <option value="option">option</option>
+              </datalist>
+            </div>
+
+            <div>
+              <input type="submit" value="submit" />
+              <input type="reset" value="reset" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

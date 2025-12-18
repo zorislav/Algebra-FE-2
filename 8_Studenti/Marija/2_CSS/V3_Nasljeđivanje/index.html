@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasljeđivanje CSS svojstava 2</title>
+  <style>
+
+    :root {
+      color: orange;
+    }
+
+    html {
+            color: #333;
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    p {
+      color: #060;
+    }
+
+    strong {
+      text-decoration: underline wavy red;
+    }
+
+    span {
+      font-weight: normal;
+    }
+
+    div {
+      width: 300px;
+      height: 300px;
+    }
+
+    .myclass.myclass2 {
+      padding: 50px;
+    }
+
+    #myid {
+      margin: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Eu fugiat aute voluptate ullamco.</h1>
+  <h2>Enim officia nulla nostrud sit.</h2>
+  <h3>Ipsum occaecat tempor nostrud consectetur ea ad ipsum fugiat incididunt aliqua esse.</h3>
+  <h4>Ullamco irure ea nulla quis pariatur tempor do anim.</h4>
+  <p>Excepteur amet velit ad sint velit qui dolor irure id pariatur deserunt minim fugiat. Duis laboris consectetur enim reprehenderit Lorem qui deserunt ullamco esse aliqua Lorem. Eu reprehenderit ad quis ut fugiat dolor duis reprehenderit est anim ut eiusmod. Dolore aute consectetur in ad adipisicing veniam nulla officia aliquip duis culpa adipisicing.</p>
+  <p>Aliquip magna ut fugiat voluptate nisi fugiat duis culpa magna culpa. Aliquip reprehenderit nostrud nostrud ipsum laborum. Nostrud irure consequat non est adipisicing.</p>
+  <p>Esse reprehenderit excepteur ea exercitation occaecat ipsum. <strong>Aliquip <span>consectetur</span> nisi nisi nulla Lorem.</strong> Minim nostrud magna incididunt ipsum officia irure magna minim nisi id duis. Esse <em>commodo nulla</em> ullamco pariatur proident id minim non ipsum do laboris. Tempor sunt amet et consectetur consectetur sunt duis et excepteur dolore nostrud aute labore. Adipisicing duis adipisicing ea pariatur deserunt sint consequat quis velit.</p>
+  <div id="myid" class="myclass myclass2" style="background-color: blue;">
+    MOJ DIV
+  </div>
+</body>
+</html>

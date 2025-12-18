@@ -1,0 +1,93 @@
+@import "./base/reset";
+@import "./base/colors";
+@import "./abstracts/mixins";
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  background: url(back.JPG) no-repeat center center/cover fixed;
+}
+
+.oblaci {
+  @include flex-container;
+  padding-top: 2vh;
+  div {
+    height: 20vw;
+    width: 33vw;
+    position: relative;
+    z-index: 99;
+    background: url(cloud.png) no-repeat center center/contain;
+  }
+  .oblak1 {
+    @include animation("left-right 3.9s 1.1s ease-in-out alternate infinite");
+  }
+
+  .oblak2 {
+    @include animation("left-right 3.9s 2.7s ease-in-out alternate infinite");
+  }
+
+  .oblak3 {
+    @include animation("left-right 3.9s 3.9s ease-in-out alternate infinite");
+  }
+}
+
+main {
+  .sunce {
+    @include animation("skakanje 3.6s linear forwards");
+    width: 14vw;
+    height: 14vw;
+    background-color: $sunce;
+    box-shadow: $sunce-sjena 0 0 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: 60vh;
+    left: 43vw;
+  }
+}
+
+footer {
+  color: $font;
+  font-size: 3vw;
+  font-style: italic;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+}
+
+@include keyframes(skakanje) {
+  0% {
+    top: 50vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
+
+@include keyframes(left-right) {
+  0% {
+    top: 0vw;
+  }
+  50% {
+    top: 2vw;
+  }
+  100% {
+    top: -2vw;
+  }
+}
+
+@media (max-width: 767px) {
+   .oblaci { 
+    div {
+      flex-basis: 49vw;
+    }
+   }
+  }
+
+  @media (max-width: 467px) {
+    .oblaci {
+      .oblak2, .oblak3 {
+        display: none;
+      }
+    }
+  }

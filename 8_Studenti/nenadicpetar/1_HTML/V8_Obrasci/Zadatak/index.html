@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="" method="">
+      <div>
+        <label for="ime">Ime i prezime *</label>
+        <br />
+        <input
+          type="text"
+          name="ime"
+          id="ime"
+          size="30"
+          placeholder="Vaše ime i prezime"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="mail">E-mail adresa: *</label>
+        <br />
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          size="30"
+          placeholder="Upišite valjanu e-mail adresu"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="num">Kontakt broj telefona</label>
+        <br />
+        <input
+          type="tel"
+          name="num"
+          id="num"
+          placeholder="099/1234-123"
+          pattern="[0-9]{3}/[0-9]{4}-[0-9]{3}"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="birth">Datum rođenja</label>
+        <br />
+        <input type="date" name="birth" id="birth" />
+      </div>
+      <br />
+      <div>
+        Koje jezike govorite?
+        <br />
+        <label for="language">Engleski</label>
+        <input type="checkbox" name="language" id="language" value="true" />
+        <label for="language">Talijanski</label>
+        <input type="checkbox" name="language" id="language" value="true" />
+        <label for="language">Njemački</label>
+        <input type="checkbox" name="language" id="language" value="true" />
+        <label for="language">Francuski</label>
+        <input type="checkbox" name="language" id="language" value="true" />
+        <label for="language">Španjolski</label>
+        <input type="checkbox" name="language" id="language" value="true" />
+      </div>
+      <br />
+      <div>
+        <label for="radio"
+          >Da li ste do sada koristili usluge naše tvrtke?</label
+        >
+        <br />
+        <label for="radio">Da</label>
+        <input type="radio" name="radio" id="radio" />
+        <label for="radio2">Ne</label>
+        <input type="radio" name="radio2" id="radio2" />
+      </div>
+      <br />
+      <div>
+        <label for="cv">Priložite životopis</label>
+        <br />
+        <input type="file" name="cv" id="cv" />
+      </div>
+      <br />
+      <div>
+        <button type="reset">Poništi</button>
+        <button type="submit">Prijavi se</button>
+      </div>
+    </form>
+  </body>
+</html>

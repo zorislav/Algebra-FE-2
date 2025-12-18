@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      *:focus {
+        outline: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        transition: all 800ms ease;
+      }
+      img:hover {
+        scale: 1.1;
+      }
+      body {
+        font-family: "Lexend", sans-serif;
+        color: #212529;
+        background-color: #f8f9fa;
+      }
+      .section-hero {
+        background-image: url(../../../../2_HTML/Bonus/Zadatak1/banner.jpeg);
+        background-size: cover;
+        background-position: top;
+        min-height: 100vh;
+        margin-bottom: 8rem;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-size: 1.2rem;
+        padding: 2rem 0;
+        max-width: 90rem;
+        margin: 0 auto;
+      }
+      ul a:link,
+      ul a:visited {
+        text-decoration: none;
+        color: #212529;
+        padding: 1rem 2rem;
+        transition: all 600ms ease;
+      }
+      ul a:hover,
+      ul a:active {
+        letter-spacing: 2px;
+        transition: all 300ms ease;
+      }
+      ul a:focus-visible {
+        box-shadow: 0 0 0 8px #6c6856;
+        border-radius: 8px;
+        transition: all 300ms ease;
+      }
+      .logo {
+        font-weight: 900;
+        font-size: 2.5rem;
+        margin-right: auto;
+        letter-spacing: -2.5px;
+      }
+      .heading-container {
+        min-height: 75vh;
+        text-align: center;
+        align-content: center;
+      }
+      h1 {
+        font-size: 5rem;
+        font-weight: 900;
+        letter-spacing: -2.5px;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        max-width: 70rem;
+        margin-inline: auto;
+      }
+      .subheading {
+        font-size: 1.2rem;
+        margin-bottom: 4rem;
+        opacity: 60%;
+      }
+      .link-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+      .cta-button {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        flex-basis: 100%;
+        border-radius: 1000px;
+        box-shadow: 0 8px 0 #212529;
+        font-size: 1.2rem;
+        transition: all 600ms ease;
+      }
+      .cta-left {
+        color: #f8f9fa;
+        background-color: #6c6856;
+        font-weight: 500;
+      }
+      .cta-left:hover,
+      .cta-left:active,
+      .cta-left:focus {
+        background-color: #4c493c;
+        transition: all 300ms ease;
+      }
+      .cta-right {
+        color: #6c6856;
+        outline: 2px solid #6c6856;
+        font-weight: 700;
+      }
+      .cta-right:hover,
+      .cta-right:active,
+      .cta-right:focus {
+        background-color: #6c6856;
+        color: #f8f9fa;
+        font-weight: 500;
+        transition: all 300ms ease;
+      }
+      h2 {
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        margin-bottom: 4rem;
+      }
+      .image-grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 90rem;
+        margin: 0 auto;
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+      .image-container {
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .load-more:link,
+      .load-more:visited {
+        max-width: 230px;
+        margin-inline: auto;
+        color: #212529;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        gap: 1rem;
+        margin-bottom: 8rem;
+        transition: all 600ms ease;
+        padding: 1rem 2rem;
+      }
+      .load-more:hover,
+      .load-more:active {
+        letter-spacing: 2px;
+        transition: all 300ms ease;
+      }
+      .load-more:focus-visible {
+        box-shadow: 0 0 0 8px rgba(108, 104, 86, 0.7);
+        border-radius: 8px;
+        transition: all 300ms ease;
+      }
+      .load-icon {
+        height: 24px;
+        aspect-ratio: 1;
+      }
+      .section-contact {
+        background-color: #6c6856;
+        padding-block: 8rem;
+      }
+      .section-contact h2 {
+        color: #f8f9fa;
+      }
+      label,
+      input {
+        display: block;
+        font-size: 1.2rem;
+      }
+      label {
+        margin-bottom: 1rem;
+      }
+      input {
+        margin-bottom: 2rem;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding: 1rem;
+        background-color: #e9ecef;
+        border: 1px solid #adb5bd;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        transition: all 600ms ease;
+      }
+      input:focus-visible {
+        border: 1px solid #6c6856;
+        transition: all 300ms ease;
+      }
+      form {
+        display: flex;
+        max-width: 90rem;
+        margin: 0 auto;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .form-elements {
+        flex: 1;
+        padding: 8rem;
+      }
+      .form-pairs {
+        display: flex;
+        gap: 2rem;
+      }
+      .last-pair {
+        margin-bottom: 4rem;
+      }
+      .form-img {
+        background-image: url("../../../../2_HTML/Bonus/Zadatak1/img4.jpeg");
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+      }
+      .submit {
+        width: 100%;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 8px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="section-hero">
+      <header>
+        <nav>
+          <ul>
+            <li class="logo">LOGO</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#section-portfolio">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#section-contact">Contact us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="heading-container">
+        <h1>SIMPLE AND ONE PAGE WEBSITE</h1>
+        <p class="subheading">Made with HTML and CSS</p>
+        <div class="link-container">
+          <a href="#" class="cta-button cta-left">GET STARTED</a>
+          <a href="#" class="cta-button cta-right">SUBSCRIBE TO US</a>
+        </div>
+      </div>
+    </section>
+    <section id="section-portfolio">
+      <h2>Portfolio</h2>
+      <div class="image-grid-container">
+        <div class="image-container">
+          <img
+            src="../../../../2_HTML/Bonus/Zadatak1/img1.jpeg"
+            alt="Colorful salt"
+            height="306"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../../../../2_HTML/Bonus/Zadatak1/img2.jpeg"
+            alt="Mountains"
+            height="306"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../../../../2_HTML/Bonus/Zadatak1/img3.jpeg"
+            alt="Lake"
+            height="306"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../../../../2_HTML/Bonus/Zadatak1/img4.jpeg"
+            alt="River"
+            height="306"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../../../../2_HTML/Bonus/Zadatak1/img5.jpeg"
+            alt="Mountains 2"
+            height="306"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../../../../2_HTML/Bonus/Zadatak1/img6.jpeg"
+            alt="Mountains 3"
+            height="306"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <a href="#" class="load-more">
+        <span>Load more</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="load-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          />
+        </svg>
+      </a>
+    </section>
+    <section class="section-contact" id="section-contact">
+      <h2>Contact us</h2>
+      <form>
+        <div class="form-elements">
+          <div class="form-pairs">
+            <div>
+              <label for="firstName">First Name:</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div>
+              <label for="lastName">Last Name:</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+          <div class="form-pairs last-pair">
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" />
+            </div>
+          </div>
+          <button type="submit" class="cta-button cta-left submit">
+            Submit
+          </button>
+        </div>
+        <div class="form-img">&nbsp;</div>
+      </form>
+    </section>
+  </body>
+</html>

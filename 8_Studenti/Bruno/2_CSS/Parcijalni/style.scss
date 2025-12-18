@@ -1,0 +1,118 @@
+@import "abstracts/mixins";
+@import "base/colors";
+@import "base/reset";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(img/back.JPG) center center/cover no-repeat;
+  height: 100vh;
+}
+
+.oblaci {
+  @include prilagodjvanje;
+  height: 40vh;
+
+  img {
+    position: relative;
+    width: 30%;
+    z-index: 1;
+  }
+
+  img:first-of-type {
+    animation: animacijaOblaci 3.9s 1.1s ease infinite;
+  }
+
+  img:nth-of-type(2) {
+    animation: animacijaOblaci 3.9s 2.7s ease infinite;
+  }
+
+  img:nth-of-type(3) {
+    animation: animacijaOblaci 3.9s 3.9s ease infinite;
+  }
+}
+
+@keyframes animacijaOblaci {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  13% {
+    left: 20px;
+  }
+  25% {
+    left: -20px;
+  }
+  37% {
+    left: 20px;
+  }
+  50% {
+    top: 150px;
+    left: 0px;
+  }
+  63% {
+    left: 20px;
+  }
+  75% {
+    left: -20px;
+  }
+  88% {
+    left: 20px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+main {
+  .sunce {
+    position: relative;
+    left: 43vw;
+    z-index: 0;
+    margin-top: 55px;
+    background-color: $color1;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    box-shadow: $color1 0 0 50px;
+    animation: animacijaSunca 3.6s linear forwards;
+  }
+}
+
+@keyframes animacijaSunca {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 400px;
+  }
+}
+
+footer {
+  color: $font1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 3vw;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 479px) {
+  .oblaci img:nth-of-type(2),
+  img:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .oblaci img:nth-of-type(2) {
+    display: none;
+  }
+}

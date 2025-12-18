@@ -1,0 +1,80 @@
+:root {
+    --primary: #8b3c7f;
+    --onPrimary: #fff;
+    --inversePrimary: #f4b2e3;
+    --onSurface: #201a1e;
+    --outline: #80747b;
+    --surfaceVariant: #eedee7;
+    --outlineVariant: #d2c2cd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-image: url(../../assets/);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary);
+    opacity: 0.8;
+    color: var(--onPrimary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-container {
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    color: var(--onPrimary);
+}
+
+header nav {
+    margin-right: 1rem;
+}
+
+header ul {
+    display: flex;
+    padding: none;
+    list-style-type: none;
+}
+
+header ul li {
+    margin-left: 1rem;
+}
+
+header a {
+    color: var(--onPrimary);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--inversePrimary);
+}
+
+section {
+    margin: 10rem auto 1rem;
+    text-align: center;
+    background-color: var(--surfaceVariant);
+    color: var(--onSurface);
+    width: 90%;
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+}
+
+section h1 {
+    margin-bottom: 1rem;
+}

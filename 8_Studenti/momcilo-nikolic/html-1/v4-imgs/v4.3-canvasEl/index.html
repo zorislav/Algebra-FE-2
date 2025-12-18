@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <canvas id="myCanvas" width="600" height="200"></canvas>
+        </div>
+      </section>
+    </main>
+    <script>
+      const canvasEl = document.querySelector("#myCanvas");
+      const ctv = canvasEl.getContext("2d");
+      ctv.fillStyle = "#f00";
+      ctv.fillRect(10, 10, 100, 100);
+    </script>
+  </body>
+</html>

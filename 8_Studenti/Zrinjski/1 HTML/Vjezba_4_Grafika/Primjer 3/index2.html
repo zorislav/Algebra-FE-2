@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <h2>Linija</h2>
+    <canvas id="myCanvas1" width="600" height="200" style="border: 1px solid blue"></canvas>
+
+    <script>
+        var canvasEl = document.getElementById("myCanvas1");
+        var ctx = canvasEl.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(30,180);
+        ctx.lineTo(460,30);
+        ctx.lineWidth = 8;
+        ctx.strokeStyle="#F00";
+        ctx.stroke();
+    </script>
+
+    
+</body>
+</html>

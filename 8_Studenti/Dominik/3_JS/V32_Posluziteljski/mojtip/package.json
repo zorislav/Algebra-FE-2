@@ -1,0 +1,15 @@
+{
+  "name": "mojtipdev1",
+  "version": "1.0.0",
+  "description": "Damo npm nodul - daje tip podatka",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "dominik6720",
+  "license": "ISC",
+  "devDependencies": {
+    "lodash": "^4.17.21"
+  }
+}

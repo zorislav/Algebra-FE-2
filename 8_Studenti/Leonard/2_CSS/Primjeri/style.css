@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #eee;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+/* DISPLAY --------------------------------------------------------------------- */
+
+.display-list {
+  list-style: none;
+  display: flex;
+  border: 1px solid salmon;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.display-list li {
+  background-color: beige;
+}
+
+.display-div {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-div p {
+  border: 1px solid salmon;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+/* POSITION -------------------------------------------------------------------- */
+
+div.box1,
+div.box2,
+div.box3,
+div.box4,
+div.box5,
+div.box6,
+div.box7,
+div.box8 {
+  height: 200px;
+  aspect-ratio: 1;
+  text-align: center;
+  align-content: center;
+  border: 2px solid black;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: -3px;
+}
+
+.box1,
+.box3,
+.box5,
+.box7 {
+  background-color: cadetblue navy;
+  background: linear-gradient(cadetblue, teal);
+}
+
+.box2,
+.box4,
+.box6,
+.box8 {
+  background: linear-gradient(orange, orangered);
+}
+
+.box2 {
+  position: relative;
+  left: 200px;
+  top: -200px;
+}
+
+.box3 {
+  position: relative;
+}
+
+.box4 {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.frame {
+  height: 600px;
+  aspect-ratio: 1;
+  border: 2px solid black;
+  margin: 100px auto;
+  position: relative;
+}
+
+.box6 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.box7 {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  opacity: 10%;
+}
+
+.box8 {
+  position: sticky;
+  bottom: 100px;
+  left: 100px;
+}
+
+/* ANIMATIONS ------------------------------------------------------------------ */
+
+.circle {
+  height: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: black;
+  text-align: center;
+  align-content: center;
+  border: 5px solid teal;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  position: relative;
+}
+
+@keyframes animation1 {
+  0% {
+    left: 0;
+    background: black;
+  }
+  100% {
+    left: 1000px;
+    background: white;
+  }
+}
+
+.circle:first-of-type {
+  animation: animation1 5s linear;
+}

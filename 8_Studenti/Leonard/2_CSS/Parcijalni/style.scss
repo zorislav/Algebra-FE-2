@@ -1,0 +1,48 @@
+@import "abstracts/mixins";
+@import "base/colors";
+@import "base/reset";
+
+body {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url(back.JPG);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    gap: 4rem;
+    padding: 0 4rem;
+  }
+
+  .sun {
+    width: 14vw;
+    aspect-ratio: 1;
+    background-color: $sun-color;
+    border-radius: 50%;
+    box-shadow: 0 0 48px $sun-shadow;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    translate: -50%;
+    z-index: -1;
+  }
+
+  .message {
+    margin-top: auto;
+    margin-bottom: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: $font-color;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

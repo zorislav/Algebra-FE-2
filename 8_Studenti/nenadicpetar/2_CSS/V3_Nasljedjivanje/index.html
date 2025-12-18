@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Nasljeđivanje CSS svojstava 2</title>
+    <style>
+      :root {
+        color: orange;
+      }
+      html {
+        color: #333;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      p {
+        color: #060;
+      }
+
+      em {
+        color: aqua;
+      }
+
+      strong {
+        text-decoration: underline wavy red;
+      }
+
+      span {
+        font-weight: normal;
+      }
+
+      div {
+        width: 300px;
+        height: 300px;
+      }
+
+      .myClass.myClass2 {
+        padding: 50px;
+      }
+
+      #myId {
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>In consequat cupidatat nostrud esse tempor sint pariatur ullamco.</h1>
+    <h2>
+      Labore consequat fugiat elit voluptate exercitation adipisicing aliquip.
+    </h2>
+    <h3>Magna incididunt laborum tempor non sint sint cupidatat quis.</h3>
+    <h4>Lorem proident reprehenderit ut elit mollit elit laborum.</h4>
+    <p>
+      Velit minim occaecat eiusmod ullamco voluptate id non duis occaecat dolore
+      deserunt non nostrud. Ex aute Lorem cupidatat ipsum ex qui ea culpa culpa
+      mollit est culpa voluptate. Aliqua voluptate occaecat magna laboris anim
+      anim dolor elit fugiat. Reprehenderit sunt labore ullamco fugiat culpa
+      cupidatat id. Id mollit id pariatur ullamco nisi ullamco voluptate
+      reprehenderit occaecat.
+    </p>
+    <p>
+      Id duis quis amet et culpa cillum anim culpa Lorem anim. Cillum nisi
+      labore cillum amet reprehenderit pariatur pariatur dolore occaecat Lorem
+      et ullamco irure. Ut non nulla dolor anim labore non officia occaecat ut
+      exercitation quis. Do aliquip esse cillum magna velit duis esse pariatur.
+      Ad fugiat tempor aliqua do qui velit nostrud sunt labore minim occaecat
+      tempor ullamco. Enim eu incididunt commodo Lorem incididunt mollit fugiat
+      reprehenderit. Cupidatat mollit enim anim magna ea eu ex velit est
+      consectetur est Lorem.
+    </p>
+    <p>
+      <strong
+        >Nostrud incididunt nostrud <span>aliquip</span> reprehenderit ad enim
+        do est ea sit elit.</strong
+      >
+      Ipsum nulla excepteur velit deserunt est nulla
+      <em>fugiat laboris.</em> Quis sint excepteur labore eiusmod sit labore.
+      Nisi et pariatur in eiusmod officia. Do dolor laboris quis eiusmod mollit.
+      Aute nostrud laborum velit voluptate enim nisi incididunt est minim
+      laboris nulla minim. Excepteur excepteur mollit ullamco labore.
+    </p>
+    <div id="myId" class="myClass myClass2" style="background-color: blue">
+      Moj DIV
+    </div>
+  </body>
+</html>

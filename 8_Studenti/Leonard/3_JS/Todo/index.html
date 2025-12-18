@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Todo app</h1>
+      <div class="actions">
+        <div class="actions-left">
+          <button class="btn btn--actions btn--filter">
+            <ion-icon name="filter-outline"></ion-icon>
+            <span>Filter</span>
+          </button>
+          <div class="filter-group hidden-filters">
+            <button class="btn btn--actions btn--all">
+              <span>All</span>
+            </button>
+            <button class="btn btn--actions btn--unfinished">
+              <span>Unfinished</span>
+            </button>
+            <button class="btn btn--actions btn--finished">
+              <span>Finished</span>
+            </button>
+          </div>
+          <button class="btn btn--actions btn--trash">
+            <ion-icon name="trash-outline"></ion-icon>
+            <span>Clear all</span>
+          </button>
+        </div>
+        <div class="actions-right">
+          <input type="text" class="input-add" />
+          <button class="btn btn--actions btn--add">
+            <ion-icon name="add-outline"></ion-icon>
+            <span>Add</span>
+          </button>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Completed</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="no-tasks-text">No tasks</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination hidden-pagination">
+        <!-- <button class="btn btn--pagination">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+        <button class="btn btn--pagination">1</button>
+        <button class="btn btn--pagination">2</button>
+        <button class="btn btn--pagination">3</button>
+        <button class="btn btn--pagination">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button> -->
+      </div>
+    </main>
+    <div class="toast hidden-toast">
+      <ion-icon name="warning-outline"></ion-icon>
+      <span class="toast-message">Please enter a task</span>
+    </div>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
