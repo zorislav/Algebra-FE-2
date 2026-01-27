@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas2</title>
+  </head>
+  <body>
+    <h1>Canvas</h1>
+    <h2>Linija</h2>
+
+    <canvas id="myCanvas" width="600" height="200"></canvas>
+    <script>
+      var canvasE1 = document.getElementById("myCanvas");
+      var ctx = canvasE1.getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo(30, 180);
+      ctx.lineTo(460, 30);
+      ctx.lineWidth = 8;
+      ctx.strokeStyle = "#f00";
+      ctx.stroke();
+    </script>
+    <h2>Kvadrat</h2>
+    <canvas id="myCanvas2" width="600" height="200"></canvas>
+    <script>
+      var canvasE1 = document.getElementById("myCanvas2");
+      var ctx = canvasE1.getContext("2d");
+      ctx.beginPath();
+      ctx.rect(20, 20, 150, 100);
+      ctx.fillStyle = "ff6";
+      ctx.fill();
+      ctx.lineWidth = 5;
+    </script>
+    <h2>Krug</h2>
+    <canvas id="myCanvas3" width="600" height="200"></canvas>
+    <script>
+      var canvasE1 = document.getElementById("myCanvas3");
+      var ctx = canvasE1.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+      ctx.fillStyle = "ff6";
+      ctx.fill();
+      ctx.lineWidth = 5;
+    </script>
+    <h2>Polukrug</h2>
+    <canvas id="myCanvas4" width="600" height="200"></canvas>
+    <script>
+      var canvasE1 = document.getElementById("myCanvas4");
+      var ctx = canvasE1.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(100, 75, 50, 0, Math.PI);
+      ctx.fillStyle = "ff6";
+      ctx.fill();
+      ctx.lineWidth = 5;
+      
+  </body>
+</html>
