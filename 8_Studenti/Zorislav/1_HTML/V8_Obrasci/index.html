@@ -8,18 +8,90 @@
 </head>
 
 <body>
-  <form action="www.tvtrtka.com" method="GET" autocomplete="on">
+  <form action="www.tvtrtka.com" method="post" autocomplete="on" enctype="application/x-www-form-urlencoded">
     <div>
       <label for="ime">Ime</label>
-      <input type="text" id="ime" name="ime" maxlength="10" size="15" placeholder="Ime" autocomplete="name" required>
+      <input type="text" id="ime" name="ime" maxlength="10" size="15" placeholder="Ime" autocomplete="given-name"
+        required>
       <br>
       <label for="prezime">Prezime</label>
-      <input type="text" id="prezime" name="prezime" maxlength="20" size="20" placeholder="Prezime">
+      <input type="text" id="prezime" name="prezime" maxlength="20" size="20" placeholder="Prezime"
+        autocomplete="family-name">
+      <br>
+      <label for="adresa">Adresa</label>
+      <input type="text" id="adresa" name="adresa" autocomplete="address-line1">
+      <br>
+      <label for="email">E-mail adresa</label>
+      <input type="email" id="email" name="email" autocomplete="email">
+      <br>
+      <label for="opis">Opis</label>
+      <input type="text" id="opis" name="opis"> >
+      <br>
+      <label for="tel">Telefon</label>
+      <input type="tel" id="tel" name="tel" placeholder="099/1111-111">
+      <br>
+      <label for="pwd">Zaporka</label>
+      <input type="password" id="pwd" name="pwd">
     </div>
     <hr>
     <div>
-      <label for="email">E-mail adresa</label>
-      <input type="email" id="email">
+      <label for="boja">Izaberi boju</label>
+      <input type="color" id="boja" name="boja">
+    </div>
+    <hr>
+    <div>
+      <label for="chack">Želim primati obavjesti</label>
+      <input type="checkbox" id="check" name="chack" checked>
+    </div>
+    <hr>
+    <div>
+      Ocijenite usluge naše tvrtke
+      <br>
+      <label for="o1">1</label>
+      <input type="radio" id="o1" name="ocjena" value="1">
+      <label for="o2">2</label>
+      <input type="radio" id="o2" name="ocjena" value="2">
+      <label for="o3">3</label>
+      <input type="radio" id="o3" name="ocjena" value="3">
+      <label for="o4">4</label>
+      <input type="radio" id="o4" name="ocjena" value="4">
+      <label for="o5">5</label>
+      <input type="radio" id="o5" name="ocjena" value="5">
+    </div>
+    <hr>
+    <div>
+      <label for="dokument">Odaberite dokument</label>
+      <input type="file" name="dokument" id="dokument">
+    </div>
+    <hr>
+    <div>
+      <label for="datum">Odaberite datum</label>
+      <input type="date" id="datum" name="datum">
+    </div>
+    <hr>
+    <div>
+      <label for="komentar">Upišite komentar</label>
+      <textarea style="resize: horizontal;" name="komentar" id="komentar" cols="30" rows="10"
+        maxlength="100"></textarea>
+    </div>
+    <hr>
+    <div>
+      <label for="grad">Odaberite grad</label>
+      <select name="grad" id="grad">
+        <option value="london">London</option>
+        <option value="pariz" selected>Pariz</option>
+        <option value="rim">Rim</option>
+      </select>
+    </div>
+    <hr>
+    <div>
+      <label for="grad2">Odaberite ili upišite grad</label>
+      <input type="text" id="grad2" name="grad2" list="gradovi">
+      <datalist id="gradovi">
+        <option value="London">
+        <option value="Pariz">
+        <option value="Rim">
+      </datalist>
     </div>
     <hr>
     <div>
