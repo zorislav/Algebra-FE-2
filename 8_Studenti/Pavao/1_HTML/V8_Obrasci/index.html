@@ -8,26 +8,98 @@
 </head>
 
 <body>
-    <form action="www.tvrtka.com" method="GET">
+    <form action="www.tvrtka.com" method="GET" autocomplete="on">
         <div>
             <label for="ime">Ime:</label>
-            <input type="text" id="ime" name="ime" maxlength="20" size="20" autocomplete="given-name" />
+            <input type="text" id="ime" name="ime" maxlength="20" size="20" autocomplete="name" />
             <br>
             <label for="prezime">Prezime:</label>
-            <input type="text" id="prezime" name="prezime" maxlength="20" size="20" />
+            <input type="text" id="prezime" name="prezime" maxlength="20" size="20" autocomplete="family-name" />
         </div>
+        <label for="adresa">Adresa:</label>
+        <input type="text" id="adresa" name="adresa" autocomplete="address-level1" />
         <div>
             <label for="email">E-mail adresa:</label>
-            <input type="email" id="email" name="email" />
+            <input type="email" id="email" name="email" autocomplete="email" />
+            <br><label for="opis">Opis:</label>
+            <input type="text" id="opis" name="opis" autocomplete="off" />
+            <br>
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="099 123 1234" />
+            <br>
+            <label for="pwd">Zaporka</label>
+            <input type="password" id="pwd" name="pwd" />
         </div>
         <hr>
         <div>
-            <input name="reset_btn" type="reset" value="Poništi">
-            <input name="submit_btn" type="submit" value="Pošalji podatke">
-            <button type="reset">Poništi</button>
-            <button type="submit">Pošalji</button>
+            <label>Izaberi boju</label>
+            <input type="color" id="boja" name="boja" value="#ff0000" />
         </div>
+        <hr>
+        <div>
+            <label for="check">Zelim primati obavijesti</label>
+            <input type="checkbox" id="check" name="check" checked />
+        </div>
+        <hr>
+        <div>
+            Ocjenite usluge naše tvrtke
+            <br>
+            <label for="o1">1</label>
+            <input type="radio" id="1" name="ocjena" value="1">
+            <label for="o2">2</label>
+            <input type="radio" id="2" name="ocjena" value="2">
+            <label for="o3">3</label>
+            <input type="radio" id="3" name="ocjena" value="3">
+            <label for="o4">4</label>
+            <input type="radio" id="4" name="ocjena" value="4">
+            <label for="o5">5</label>
+            <input type="radio" id="5" name="ocjena" value="5">
+            <hr>
+        </div>
+        <hr>
+        <div>
+            <label>Odaberite dokument</label>
+            <input type="file" id="dokument" name="dokument" />
+            <hr>
+            <div>
+                <label for=" datum">Odaberite datum:</label>
+                <input type="date" id="datum" name="datum" />
+            </div>
+            <hr>
+            <div>
+                <label for="komentar">Upišite komentar</label>
+                <textarea style="resize:none" name="komentar" id="komentar" cols="30" rows="10"></textarea>
+            </div>
+            <hr>
+            <div>
+                <label for="grad">Grad:</label><select>
+                    <option value="london">London</option>
+                    <option value="pariz">Pariz</option>
+                    <option value="rim">Rim</option>
+                </select>
+            </div>
+            <hr>
+            <div>
+                <label for="grad">Odaberite ili upišite grad</label>
+                <input list="gradovi" id="grad" name="grad">
+
+                <datalist id="gradovi">
+                    <option value="London">
+                    <option value="Pariz">
+                    <option value="Rim">
+                    <option value="Rijeka">
+                </datalist>
+            </div>
+
+            <hr>
+            <div>
+                <!--   <input name="reset_btn" type="reset" value="Poništi">
+            <input name="submit_btn" type="submit" value="Pošalji podatke"> -->
+                <button type="reset">Poništi</button>
+                <button type="submit">Pošalji</button>
+            </div>
     </form>
+
 
 </body>
 
