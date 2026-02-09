@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas2</title>
+
+    <script>
+      function getCanvasContext(elementId) {
+        return document.getElementById(elementId).getContext("2d");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Canvas</h1>
+    <h2>Linija</h2>
+    <canvas id="myCanvas1" width="600" height="200"></canvas>
+    <script>
+      const firstCanvasCtx = getCanvasContext("myCanvas1");
+
+      firstCanvasCtx.beginPath();
+      firstCanvasCtx.moveTo(30, 180);
+      firstCanvasCtx.lineTo(460, 30);
+
+      firstCanvasCtx.lineWidth = 8;
+      firstCanvasCtx.strokeStyle = "#F00";
+      firstCanvasCtx.stroke();
+    </script>
+    <h2>Kvadrat</h2>
+    <canvas id="myCanvas2" width="600" height="200"></canvas>
+    <script>
+      const secondCanvasCtx = getCanvasContext("myCanvas2");
+
+      secondCanvasCtx.beginPath();
+      secondCanvasCtx.rect(230, 20, 150, 150);
+
+      secondCanvasCtx.fillStyle = "#F00";
+      secondCanvasCtx.fill();
+
+      secondCanvasCtx.strokeStyle = "#333";
+      secondCanvasCtx.lineWidth = 5;
+      secondCanvasCtx.stroke();
+    </script>
+    <h2>Krug</h2>
+    <canvas id="myCanvas3" width="600" height="200"></canvas>
+    <script>
+      const thirdCanvas = document.getElementById("myCanvas3");
+      const thirdCanvasCtx = thirdCanvas.getContext("2d");
+
+      const circCenterX = thirdCanvas.width / 2;
+      const circCenterY = thirdCanvas.height / 2;
+      const circRadius = 80;
+
+      thirdCanvasCtx.beginPath();
+      thirdCanvasCtx.arc(circCenterX, circCenterY, circRadius, 0, 2 * Math.PI);
+
+      thirdCanvasCtx.fillStyle = "#F00";
+      thirdCanvasCtx.fill();
+
+      thirdCanvasCtx.strokeStyle = "#333";
+      thirdCanvasCtx.lineWidth = 5;
+      thirdCanvasCtx.stroke();
+    </script>
+    <h2>Polukrug</h2>
+    <canvas id="myCanvas4" width="600" height="200"></canvas>
+    <script>
+      const fourthCanvas = document.getElementById("myCanvas4");
+      const fourthCanvasCtx = fourthCanvas.getContext("2d");
+
+      const semiCircCenterX = fourthCanvas.width / 2;
+      const semiCircCenterY = fourthCanvas.height / 2;
+      const semiCircRadius = 80;
+
+      fourthCanvasCtx.beginPath();
+      fourthCanvasCtx.arc(
+        semiCircCenterX,
+        semiCircCenterY,
+        semiCircRadius,
+        0,
+        1 * Math.PI,
+      );
+
+      fourthCanvasCtx.fillStyle = "#F00";
+      fourthCanvasCtx.fill();
+
+      fourthCanvasCtx.strokeStyle = "#333";
+      fourthCanvasCtx.lineWidth = 5;
+      fourthCanvasCtx.stroke();
+    </script>
+    <h2>Proizvoljni oblik</h2>
+    <canvas id="myCanvas5" width="600" height="200"></canvas>
+    <script>
+      const fifthCanvasCtx = getCanvasContext("myCanvas5");
+
+      fifthCanvasCtx.beginPath();
+      fifthCanvasCtx.moveTo(170, 80);
+
+      fifthCanvasCtx.bezierCurveTo(130, 100, 130, 150, 230, 150);
+      fifthCanvasCtx.bezierCurveTo(150, 180, 320, 180, 340, 150);
+      fifthCanvasCtx.bezierCurveTo(420, 150, 420, 120, 390, 100);
+      fifthCanvasCtx.bezierCurveTo(430, 40, 370, 30, 340, 50);
+      fifthCanvasCtx.bezierCurveTo(320, 5, 250, 20, 250, 50);
+      fifthCanvasCtx.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+      fifthCanvasCtx.strokeStyle = "blue";
+      fifthCanvasCtx.lineWidth = 5;
+
+      fifthCanvasCtx.stroke();
+    </script>
+    <h2>Tekst</h2>
+    <canvas id="myCanvas6" width="600" height="200"></canvas>
+    <script>
+      const sixthCanvasCtx = getCanvasContext("myCanvas6");
+
+      sixthCanvasCtx.beginPath();
+
+      sixthCanvasCtx.font = "italic bold 60px 'Curier new'";
+      sixthCanvasCtx.fillStyle = "#F60";
+      sixthCanvasCtx.fillText("Pozdrav svima!", 50, 100);
+    </script>
+    <h2>Linearni gradijent</h2>
+    <canvas id="myCanvas7" width="600" height="200"></canvas>
+    <script>
+      const seventhCanvasCtx = getCanvasContext("myCanvas7");
+
+      seventhCanvasCtx.beginPath();
+
+      const linearGradient = seventhCanvasCtx.createLinearGradient(
+        0,
+        0,
+        400,
+        0,
+      );
+      linearGradient.addColorStop(0, "#F00");
+      linearGradient.addColorStop(0.5, "#0F0");
+      linearGradient.addColorStop(1, "#FF0");
+
+      seventhCanvasCtx.fillStyle = linearGradient;
+      seventhCanvasCtx.fillRect(0, 0, 400, 200);
+    </script>
+    <h2>Radijalni gradijent</h2>
+    <canvas id="myCanvas8" width="400" height="200"></canvas>
+    <script>
+      const eightCanvasCtx = getCanvasContext("myCanvas8");
+
+      const radialGradient = eightCanvasCtx.createRadialGradient(
+        200,
+        100,
+        50,
+        200,
+        100,
+        150,
+      );
+      radialGradient.addColorStop(0, "#F00");
+      radialGradient.addColorStop(0.5, "#0F0");
+      radialGradient.addColorStop(1, "#FF0");
+
+      eightCanvasCtx.fillStyle = radialGradient;
+      eightCanvasCtx.fillRect(0, 0, 400, 200);
+    </script>
+  </body>
+</html>

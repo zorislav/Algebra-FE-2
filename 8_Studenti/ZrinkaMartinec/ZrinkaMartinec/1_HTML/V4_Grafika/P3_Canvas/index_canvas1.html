@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas1</title>
+</head>
+<body>
+  <h1>Canvas1</h1>
+  <h2>Linija</h2>
+  <canvas id= "MyCanvas1"width=""600", height=""200"></canvas>
+  <script> 
+    var canvasEl = document.getElementById("MyCanvas1");
+    var ctx = canvasEl.getContext("2d");
+    ctx.beginPath()
+    ctx.moveTo (30, 80)
+    ctx.lineTo (460, 30)
+    ctx.linewidth = 8;
+    ctx.strokeStyle = "#f00"
+    ctx.stroke ()
+
+  </script>
+
+<h2>Kvadrat</h2>
+<canvas id= "MyCanvas2"width=""600" , height=""200"></canvas>
+  <script> 
+    var canvasEl = document.getElementById("MyCanvas2");
+    var ctx = canvasEl.getContext("2d");
+    ctx.beginPath()
+    ctx.rect (20, 20, 150, 150)
+    ctx.fillStyle = "#ff6"
+    ctx.fill()
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "#333"
+    </script>
+
+  <h2>Krug</h2>
+   <canvas id="myCanvas3" width="600" height="200"></canvas>
+   <script>
+    var canvasEl = document.getElementById("myCanvas3"); 
+    var ctx = canvasEl.getContext("2d");
+    var centerX = canvasEl.width / 2;
+    var centerY = canvasEl.height / 2;
+    var radius = 80;
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI); 
+    ctx.fillStyle = "#F00";
+    ctx.fill();
+    ctx.strokeStyle = "#333";
+    ctx.lineWidth = 5;
+    ctx.stroke();
+    </script>  
+    
+  <h2>Polukrug</h2>
+   <canvas id= "MyCanvas4" width= "600", height="200"></canvas>
+   <script>
+    var canvasEl= document.getElementById("MyCanvas4");
+    var ctx = canvasEl.getContext("2d");
+    var centerX = canvasEl.width / 2 ;
+    var centery = canvasEl.height / 2 ;
+    var radius= 80;
+    ctx.beginPath()
+    ctx.arc(centerX, centerY, radius, 0, 1 *Math.PI);
+    ctx.fillStyle = "#F60";
+    ctx.fill();
+    ctx.strokeStyle = "#333"
+    ctx.lineWidth = 5;
+    ctx.stroke ();
+    </script>
+
+    <h2>Proizvoljni oblik</h2>   
+    <canvas id= "MyCanvas5" width="600", height="200"></canvas>
+    <script>
+    var canvasEl = document.getElementById("MyCanvas5");
+    var ctx = canvasEl.getContext("2d");
+    ctx.beginPath()
+    ctx.moveTo(170, 80)
+    ctx.bezierCurveTo(130, 100, 130, 150, 230, 150);
+    ctx.bezierCurveTo(250, 180, 320, 180, 340, 150);
+    ctx.bezierCurveTo(420, 150, 420, 120, 390, 100);
+    ctx.bezierCurveTo(430, 40, 370, 30, 340, 50);
+    ctx.bezierCurveTo(320, 5, 250, 20, 250, 50);
+    ctx.bezierCurveTo(200, 5, 150, 20, 170, 80);      
+    
+    ctx.fillStyle= "yellow";
+    ctx.fill();
+    ctx.strokeStyle= "blue";
+    ctx.lineWidth= 5;
+    ctx.stroke();
+    </script>
+
+    <h2>Tekst</h2>
+    <canvas id= "MyCanvas6" width ="600", height= "200"></canvas>
+    <script>
+    var canvasEl = document.getElementById("MyCanvas6");
+    var ctx = canvasEl.getContext("2d");
+    ctx.beginPath()
+    ctx.font="italic bold 60px 'Courier new'";
+    ctx.fillStyle= "purple";
+    ctx.fillText("Pozdrav svima!", 50, 100);
+    ctx.fill();
+    
+    </script>
+
+    <h2>Linearni gradijent</h2>
+    
+    <canvas id= "MyCanvas7" width="600" height="200"></canvas>
+    <script>
+    var canvasEl = document.getElementById("MyCanvas7");
+    var ctx = canvasEl.getContext("2d");
+    var grad = ctx.createLinearGradient(0, 0, 400, 0);
+    grad.addColorStop(0, "#f00")
+    grad.addColorStop(0.5, "#F60");
+    grad.addColorStop(1, "#FF0");
+
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 400, 200);
+    </script>
+    
+    <h2>Radijalni gradijent</h2>
+    <canvas id="myCanvas7" width="400" height="200"></canvas>
+    <script>
+    var canvasEl=document.getElementById("myCanvas7");
+    var ctx=canvasEl.getContext("2d");
+
+    var grad=ctx.createRadialGradient(200,100,50,200,100,150);
+    grad.addColorStop(0, "#4B0082");
+    grad.addColorStop(0.5,"#800080");
+    grad.addColorStop(1, "#0000FF");
+
+    ctx.fillStyle=grad;
+    ctx.fillRect(0,0,400,200);
+</script>
+</body>
+</html>

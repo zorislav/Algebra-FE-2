@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="www.tvrtka.com" method="get" autocomplete="on">
+      <div>
+        <label for="Ime">Ime</label>
+        <input
+          type="text"
+          id="Ime"
+          name="Ime"
+          maxlength="10"
+          size="15"
+          placeholder="Ime"
+          autocomplete="cc-given-name"
+          required
+        />
+        <br />
+        <label for="Prezime">Prezime</label>
+        <input
+          type="text"
+          id="Prezime"
+          name="Prezime"
+          maxlength="20"
+          size="20"
+          placeholder="Prezime"
+        />
+      </div>
+      <hr />
+      <div>
+        <label for="email">E-mail adresa</label>
+        <input type="email" id="email" />
+      </div>
+      <hr />
+      <div>
+        <!--  <input name="reset_btn" type="reset" value="Poništiti obrazac" />-->
+        <!--  <input name="submit_btn" type="submit" value="Pošalji podatke" />-->
+        <button type="reset">Poništi</button>
+        <button type="submit">Pošalji</button>
+      </div>
+    </form>
+  </body>
+</html>

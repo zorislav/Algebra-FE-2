@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedijski sadržaji u HTML-u</title>
+  </head>
+  <body>
+    <h1>Multimedijski sadrzaji u HTML-u</h1>
+
+    <h2>Podržani audio formati u HTML-u</h2>
+    <ul>
+      <li>MP3</li>
+      <li>Ogg<g/li>
+      <li>WAV</li>
+    </ul>
+    <audio controls>
+      <source src="../in3s.mp3" type="audio/mpeg" />
+      <p>Web preglednik ne podržava audio element</p>
+    </audio>
+
+    <h2>Podržani video formati u HTML-u:</h2>
+    <ul>
+      <li>MP4</li>
+      <li>WebM</li>
+      <li>Ogg</li>
+    </ul>
+    <video width="600" controls>
+      <source src="../mountains.mp4" type="video/mp4" />
+      <source src="../mountains.webm" type="video/webm" />
+      <p>Web preglednik ne podržava video element</p>
+    </video>
+  </body>
+</html>

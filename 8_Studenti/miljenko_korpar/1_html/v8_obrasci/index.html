@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="www.tvrtka.com" method="GET"> <!-- autocomplete="off" za isključivanje autocomplet funkcionalnosti na input fieldu-->
+        <div>
+            <label for="ime">Ime</label>
+            <input type="text" id="ime" name="ime_param" maxlength="20" size="20" placeholder="Ime" required></input> <!-- kad nema required atributa, unos vrijednosti nije obavezan-->
+        </div>
+        <div>
+            <label for="prezime">Prezime</label>
+            <input type="text" id="prezime" name="prezime_param" maxlength="20" size="20" placeholder="Prezime" required></input>
+        </div>
+        <hr>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email_param" maxlength="20" size="20" placeholder="test@gmail.com" ></input>
+        </div>
+        <hr>
+        <div>
+            <!--input type="reset" name="reset-btn" value="Poništi obrazac">
+            <input type="submit" name="submit-btn" value="Pošalji podatke"--> <!-- Na ovaj način se i submit-button šalje kao GET parametar -->
+            <button type="reset">Poništi</button>
+            <button type="submit">Pošalji</button>
+        </div>
+        <hr>
+    </form>
+  </body>
+</html>

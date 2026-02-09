@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+    <script></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const canvasCtx = canvas.getContext("2d");
+
+      const drawSquare = (topLeftX, topLeftY, width, height) => {
+        canvasCtx.beginPath();
+        canvasCtx.rect(topLeftX, topLeftY, width, height);
+      };
+
+      const drawCircle = (centerX, centerY, radius) => {
+        canvasCtx.beginPath();
+        canvasCtx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+      };
+
+      const fillCurrentShape = (fillStyle) => {
+        canvasCtx.fillStyle = fillStyle;
+        canvasCtx.fill();
+      };
+
+      const setBorderOnCurrentShape = (strokeStyle, lineWidth) => {
+        canvasCtx.strokeStyle = strokeStyle;
+        canvasCtx.lineWidth = lineWidth;
+        canvasCtx.stroke();
+      };
+
+      drawSquare(0, 0, canvas.width, canvas.height);
+      fillCurrentShape("#FF0");
+      setBorderOnCurrentShape("#F00", 5);
+
+      drawCircle(canvas.width / 2, canvas.height / 2, canvas.width / 4);
+      fillCurrentShape("#00F");
+      setBorderOnCurrentShape("#000", 5);
+
+      const innerCircleWidth = canvas.width / 4;
+      const innerCircleHeight = canvas.height / 4;
+      drawSquare(
+        (canvas.width - innerCircleWidth) / 2,
+        (canvas.height - innerCircleHeight) / 2,
+        innerCircleWidth,
+        innerCircleHeight,
+      );
+      fillCurrentShape("#FFF");
+    </script>
+  </body>
+</html>
