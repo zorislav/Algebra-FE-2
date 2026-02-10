@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGIRN</title>
+</head>
+
+<body>
+    <header>
+        <img src="digirn.png" alt="DIGIRN logo" height="150">
+        <h2>DIGIRN</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Početna stranica</a></li>
+                <li><a href="lista.html">Lista naloga</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Izmjena naloga</h1>
+            <section>
+                <form>
+                    <hr>
+                    <label for="brojNaloga">Broj naloga:</label>
+                    <input type="text" id="brojNaloga" name="brojNaloga" value="5mziv10231" maxlength="10" size="10"
+                        required>
+                    <label for="narudzbenica">Narudžbenica:</label>
+                    <input type="text" id="narudzbenica" name="narudzbenica" value="144abco3m" maxlength="10" size="10"
+                        required>
+                    <label for="datumOtvaranja">Datum otvaranja:</label>
+                    <input type="date" id="datumOtvaranja" name="datumOtvaranja" value="2024-11-25" required>
+                    <hr>
+                    <label for="narucitelj">Naručitelj:</label>
+                    <input type="text" id="narucitelj" name="narucitelj" value="Moj stan" maxlength="15" size="15">
+                    <label for="izvrsitelj">Izvršitelj:</label>
+                    <input type="text" id="izvrsitelj" name="izvrsitelj" value="Elektro servis" maxlength="15" size="15"
+                        required>
+                    <hr>
+                    <label for="mjestoTroska">Mjesto troška:</label>
+                    <input type="text" id="mjestoTroska" name="mjestoTroska" maxlength="15" size="15"
+                        value="Odjel nabave">
+                    <label for="nositeljTroska">Nositelj troška:</label>
+                    <input type="text" id="nositeljTroska" name="nositeljTroska" maxlength="15" size="15"
+                        value="odjel prodaje">
+                    <hr>
+                    <label for="datumPocetka">Datum početka:</label>
+                    <input type="date" id="datumPocetka" name="datumPocetka" value="2025-01-15">
+                    <label for="vrijemePocetka">Vrijeme početka:</label>
+                    <input type="time" id="vrijemePocetka" name="vrijemePocetka" value="09:00">
+                    <br>
+                    <label for="datumZavrsetka">Datum završetka:</label>
+                    <input type="date" id="datumZavrsetka" name="datumZavrsetka" value="2025-01-16">
+                    <label for="vrijemeZavrsetka">Vrijeme završetka:</label>
+                    <input type="time" id="vrijemeZavrsetka" name="vrijemeZavrsetka" value="17:00">
+                    <hr>
+                    <label for="naslov">Naslov:</label>
+                    <input type="text" id="naslov" name="naslov" value="Popravak utičnice">
+                    <label for="opisRada">Opis rada:</label>
+                    <textarea id="opisRada" name="opisRada" maxlength="50" cols="20"
+                        rows="5">Zamjena utičnice i provjera instalacije.</textarea>
+                    <button type="submit">Uredu</button>
+                    <button type="reset">Poništi</button>
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>

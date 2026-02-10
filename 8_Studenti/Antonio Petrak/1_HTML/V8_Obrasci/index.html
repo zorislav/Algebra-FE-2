@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="www.tvrtka.com" method="get">
+      <div>
+        <label for="ime">Ime</label>
+        <input
+          type="text"
+          id="ime"
+          name="ime"
+          maxlength="10"
+          size="15"
+          placeholder="Ime"
+          autocomplete="name"
+        />
+        <br />
+        <label for="prezime">Prezime</label>
+        <input
+          type="text"
+          id="prezime"
+          name="prezime"
+          maxlength="20"
+          size="20"
+          placeholder="Prezime"
+        />
+        <br />
+        <label for="adresa">Adresa</label>
+        <input
+          type="text"
+          id="adresa"
+          name="adresa"
+          autocomplete="address-line1"
+        />
+        <br />
+        <label for="email">E-mail adresa</label>
+        <input type="email" id="email" autocomplete="email" />
+        <br />
+        <label for="opis">Opis</label>
+        <input type="text" name="opis" id="opis" />
+        <br />
+        <label for="tel">Telefon</label>
+        <input type="tel" name="tel" id="tel" placeholder="099/1111-111" />
+      </div>
+      <label for="pwd">Zaporka</label>
+      <input type="password" name="pwd" id="pwd" />
+      <hr />
+      <div>
+        <label for="boja">Izaberi boju</label>
+        <input type="color" name="boja" id="boja" />
+      </div>
+      <hr />
+      <div>
+        <label for="check">Želim primati obavijest</label>
+        <input type="checkbox" name="check" id="check" checked />
+      </div>
+      <hr />
+      <div>
+        Ocijenite usluge naše tvrtke
+        <br />
+        <label for="o1">1</label>
+        <input type="radio" name="ocjena" id="o1" value="1" />
+        <label for="o2">2</label>
+        <input type="radio" name="ocjena" id="o2" value="2" />
+        <label for="o3">3</label>
+        <input type="radio" name="ocjena" id="o3" value="3" />
+        <label for="o4">4</label>
+        <input type="radio" name="ocjena" id="o4" value="4" />
+        <label for="o5">5</label>
+        <input type="radio" name="ocjena" id="o5" value="5" />
+      </div>
+      <hr />
+      <div>
+        <label for="datum">Odaberite datum</label>
+        <input type="date" name="datum" id="datum" />
+      </div>
+      <hr />
+      <div>
+        <label for="komentar">Upišite komentar</label>
+        <textarea
+          style="resize: none"
+          name="komentar"
+          id="komentar"
+          cols="30"
+          rows="10"
+          maxlength="100"
+        ></textarea>
+      </div>
+      <hr />
+      <div>
+        <label for="grad"></label>
+        <select name="grad" id="grad">
+          <option value="london">London</option>
+          <option value="pariz" selected>Pariz</option>
+          <option value="rim">Rim</option>
+        </select>
+      </div>
+      <hr />
+      <div>
+        <label for="grad2">Odaberite ili upišite grad</label>
+        <input type="text" name="grad2" id="grad2" list="gradovi" />
+        <datalist id="gradovi">
+          <option value="London"></option>
+          <option value="Pariz"></option>
+          <option value="Rim"></option>
+        </datalist>
+      </div>
+      <hr />
+      <div>
+        <input name="reset_btn" type="reset" value="Poništi" />
+        <input name="submit_btn" type="submit" value="Pošalji" />
+        <br />
+      </div>
+    </form>
+  </body>
+</html>
