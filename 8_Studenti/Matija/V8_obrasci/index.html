@@ -16,7 +16,7 @@
           maxlength="10"
           size="15"
           placeholder="Ime"
-          autocomplete="cc-given-name"
+          autocomplete="given-name"
           required
         />
         <br />
@@ -28,15 +28,77 @@
           maxlength="20"
           size="20"
           placeholder="Prezime"
-        />
+          autocomplete="family-name"
+          label for="adresa">Adresa</label>
+          <input type="text" id="adresa" name="adresa" autocomplete="address-line1">
+
+        
       </div>
       <hr />
       <div>
         <label for="email">E-mail adresa</label>
         <input type="email" id="email" />
       </div>
+      <label for="pwd">Zaporka</label>
+      <input type="password" id="pwd" name="pwd">
       <hr />
       <div>
+        <label for="boja">Odaberi boju</label>
+        <input type="color" name="boja" id="boja">
+      </div>
+      <hr>
+       <div>
+        <label for="check">Želim primati obavijesti</label>
+        <input type="checkbox" id="check" name="check" checked>
+       </div>
+       <hr>
+       <div>
+         Ocijenite usluge naše tvrtke
+         <br>
+         <label for="o1">1</label>
+         <input type="radio" id="o1" name="ocjena" value="1">
+         <label for="o2">2</label>
+         <input type="radio" id="o2" name="ocjena" value="2">
+         <label for="o3">3</label>
+         <input type="radio" name="ocjena" id="o3" value="3">
+         <label for="o4">4</label>
+         <input type="radio" name="ocjena" id="o4" value="4">
+         <label for="o5">5</label>
+         <input type="radio" name="ocjena" id="o5" value="5">
+       </div>
+       <hr>
+       <div>
+        <label for="dokument">Odaberite dokument</label>
+        <input type="file" name="dokument" id="dokument">
+       </div>
+       <div>
+        <label for="datum">Odaberite datum</label>
+        <input type="date" id="datum" name="datum">
+       </div>
+       <hr>
+       <div>
+        <label for="komentar">upišite komentar</label>
+        <textarea  name="komentar" id="komentar" cols="30" rows="10" maxlength="100"></textarea>
+       </div>
+       <hr>
+       <div>
+        <label for="grad">Odaberite grad</label>
+        <select name="grad" id="grad">
+          <option value="London">London</option>
+          <option value="Pariz" selected>Pariz</option>
+          <option value="Rim">Rim</option>
+        </select>
+       </div>
+       <hr>
+       <div>
+        <label for="grad 2">odaberite ili upišite grad</label>
+        <input type="text" id="grad 2" name="grad 2" list="gradovi" >
+        <datalist id="gradovi">
+        <option value="London">
+          <option value="Pariz">
+            <option value="Rim">
+        </datalist>
+       </div>  
         <!--  <input name="reset_btn" type="reset" value="Poništiti obrazac" />-->
         <!--  <input name="submit_btn" type="submit" value="Pošalji podatke" />-->
         <button type="reset">Poništi</button>

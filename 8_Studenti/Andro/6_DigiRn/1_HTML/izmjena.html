@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGIRN</title>
+  </head>
+  <body>
+    <header>
+      <img src="digirn.png" alt="digirn logo" width="200px" height="150px" />
+      <h2>DIGIRN</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Glavna stranica</a></li>
+          <li><a href="lista.html">Nalozi</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Izmjena naloga</h1>
+      </section>
+      <section>
+        <form action="">
+          <hr />
+          <label for="broj_naloga">Broj naloga:</label>
+          <input
+            type="text"
+            id="broj_naloga"
+            value="5mziv4o1444"
+            name="broj_naloga"
+            maxlength="10"
+            size="10"
+            required
+          />
+          <label for="narudzbenica">Narudžbenica:</label>
+          <input
+            type="text"
+            id="narudzbenica"
+            name="narudzbenica"
+            value="1444abc1iv"
+            maxlength="10"
+            size="10"
+            required
+          />
+          <label for="datum_naloga">Datum otvaranja:</label>
+          <input
+            type="date"
+            id="datum_naloga"
+            name="datum_naloga"
+            value="2024-10-14"
+            required
+          />
+          <hr />
+          <label for="narucitelj">Naručitelj:</label>
+          <input
+            type="text"
+            id="narucitelj"
+            name="narucitelj"
+            value="Moj stan"
+            maxlength="15"
+            size="15"
+          />
+          <label for="izvrsitelj">Izvršitelj:</label>
+          <input
+            type="text"
+            id="izvrsitelj"
+            name="izvrsitelj"
+            value="Elektro servis"
+            maxlength="15"
+            size="15"
+            required
+          />
+          <hr />
+          <label for="mjesto_troska">Mjesto troška:</label>
+          <input
+            type="text"
+            name="mjesto_troska"
+            value="Odjel nabave"
+            id="mjesto_troska"
+            maxlength="15"
+            size="15"
+          />
+          <label for="nositelj_troska">Nositelj troška:</label>
+          <input
+            type="text"
+            name="nositelj_troska"
+            id="nositelj_troska"
+            value="Odjel prodaje"
+            maxlength="15"
+            size="15"
+          />
+          <hr />
+          <label for="datum_pocetka">Datum početka:</label>
+          <input
+            type="date"
+            name="datum_pocetka"
+            id="datum_pocetka"
+            value="2024-10-15"
+          />
+          <label for="vrijeme_pocetka">Vrijeme početka:</label>
+          <input
+            type="time"
+            name="vrijeme_pocetka"
+            id="vrijeme_pocetka"
+            value="09:00"
+          />
+          <br />
+          <label for="datum_zavrsetka">Datum završetka:</label>
+          <input
+            type="date"
+            name="datum_zavrsetka"
+            id="datum_zavrsetka"
+            value="2024-10-16"
+          />
+          <label for="vrijeme_zavrsetka">Vrijeme završetka:</label>
+          <input
+            type="time"
+            name="vrijeme_zavrsetka"
+            id="vrijeme_zavrsetka"
+            value="17:00"
+          />
+          <hr />
+          <label for="naslov">Naslov:</label>
+          <input
+            type="text"
+            name="naslov"
+            id="naslov"
+            value="Čišćenje filtera"
+          />
+          <hr />
+          <label for="opis">Opis rada:</label>
+          <textarea name="opis" id="opis" maxlength="50" cols="20" rows="5">
+            Rastavljanje uređaja, čišćenje, sastavljanje uređaja
+          </textarea>
+          <hr />
+          <button type="submit">U redu</button>
+          <button type="reset">Poništi</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

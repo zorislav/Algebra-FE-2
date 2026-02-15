@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrasci</title>
+</head>
+
+<body>
+    <h1>Prijava za posao</h1>
+    <i>Molimo ispunite sljedeći obrazac kako biste se prijavili za posao:</i><br><br>
+    <form>
+
+        <label for="name">Ime i prezime:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="tel">Broj telefona:</label>
+        <input type="tel" id="tel" name="tel" placeholder="+385 99 123 4567"><br><br>
+
+        <label for="datum">Datum rođenja:</label>
+        <input type="date" id="datum" name="datum"><br><br>
+
+        <label for="jezici">Koje jezike govorite:</label><br>
+        <label><input type="checkbox" name="jezici" value="hrvatski"> Hrvatski</label><br>
+        <label><input type="checkbox" name="jezici" value="engleski"> Engleski</label><br>
+        <label><input type="checkbox" name="jezici" value="njemački"> Njemački</label><br>
+        <label><input type="checkbox" name="jezici" value="francuski"> Francuski</label><br>
+        <label><input type="checkbox" name="jezici" value="španjolski"> Španjolski</label>
+        <br><br>
+
+        <label for="reached">Kako ste nas pronašli?</label><br>
+        <label><input type="radio" name="reached" value="preko prijatelja"> Preko prijatelja</label><br>
+        <label><input type="radio" name="reached" value="preko interneta"> Preko interneta</label><br>
+        <label><input type="radio" name="reached" value="preko oglasa HZZo"> Preko oglasa HZZo</label><br>
+        <label><input type="radio" name="reached" value="preko društvenih mreža"> Preko društvenih mreža</label><br>
+        <br>
+
+        <label for="zivotopis">Prilozite životopis:</label><br>
+        <input type="file" id="zivotopis" name="zivotopis"><br><br>
+
+        <label for="molba">Priložite molbu:</label><br>
+        <input type="file" id="molba" name="molba"><br><br>
+
+        <input type="reset" value="Poništi">
+        <input type="submit" value="Pošalji">
+    </form>
+
+</body>
+
+</html>
