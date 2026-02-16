@@ -3,13 +3,182 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parcijalni</title>
+    <meta name="autor" content="Antonio" />
+    <meta name="description" content="Parcijalni HTML" />
+    <title>Turistička agencija "Avanturist"</title>
+    <style>
+
+      body {
+        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+      }
+      
+      header {
+        
+        text-align: center;
+        background-color: #f2f2f2;
+        color: #333;
+        padding: 20px;
+        
+      }
+      main {
+        
+        background-color: #f2f2f2;
+        padding: 20px;
+        color: #333;
+        
+      }
+
+      footer {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 20px;
+        color: #a5a5a5;
+        
+      }
+
+    
+      
+      a:link {
+  
+        color: #a5a5a5;
+background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+          
+  color: #a5a5a5;
+background-color: transparent;
+  text-decoration: none;
+}
+  a:hover {
+  color: #000000;
+  background-color: transparent;
+  text-decoration: overline;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+#kontakt {
+  font-size: 30px;
+}
+summary {
+  text-align: center;
+}
+    </style>
   </head>
   <body>
     <header>
-      <h1>Turistička agencija "Avanturist"</h1>
+      <h3 >
+        <font >Turistička agencija "Avanturist"</font>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font>
+          <a href="#onama">O nama</a>&nbsp;&nbsp;
+          <a href="#djelatnosti">Naše djelatnosti</a>&nbsp;&nbsp;
+          <a href="#kontakt">Kontakt</a>&nbsp;&nbsp;
+        </font>
+      </h3>
     </header>
-    <main></main>
-    <footer></footer>
+    <hr />
+    <main>
+
+      <h1 >Turistička agencija "Avanturist"</h1>
+      <br>
+      <section>
+        <h2 id="onama" >O nama</h2>
+        
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="team.jpg" alt="O nama" width="760" height="430" />
+      </section>
+      <br><br>
+      <section >
+        <h2 id="djelatnosti" >Naše djelatnosti</h2>
+        <p >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="adventure.jpg" alt="Travel" width="760" height="430" />
+      </section>
+      <br><br>
+      <details>
+        <summary id="kontakt">Kontakt</summary>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <br><br><br><br>
+        <form action="www.antoniopetrak.com" method="get name="obrazac" action=" " method="post" style="text-align: left;"
+          <p>
+            <label for="ime_prezime">Ime i prezime</label><br />
+            <input
+              id="ime_prezime"
+              type="text"
+              name="imeprezime"
+              required
+              placeholder="Ime i Prezime"
+            />
+          </p>
+          <p>
+            <label for="email">E-mail</label><br />
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="E-mail"
+            />
+          </p>
+          <p>
+            <label for="poruka">Poruka</label><br />
+            <textarea
+              id="poruka"
+              name="poruka"
+              cols="50"
+              rows="4"
+              placeholder="Upišite poruku ovdje"
+            ></textarea>
+          </p>
+          <p>
+            <input type="submit" name="submit_button" value="Pošalji poruku" />
+          </p>
+        </form>
+      </details>
+      
+    </main>
+    <hr />
+    <footer >
+      <p><em>Avanturist &copy; 2019.</em></p>
+      <a href=" mailto:info@avanturist.com">
+        <img src="mail.png" alt="e-mail"/>
+      </a>
+    </footer>
   </body>
 </html>
