@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konekstualni elementi</title>
+    <style>
+      body {
+        color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      section p {
+        color: green;
+      }
+      footer section p {
+        font-family: "Courier New", Courier, monospace;
+      }
+      section > p {
+        text-decoration: line-through solid red;
+      }
+      h1 + p {
+        font-weight: bold;
+      }
+      p::selection {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Zaglavlje</h1>
+      <p>Zaglavlje odlomak1</p>
+    </header>
+    <main>
+      <section>
+        <h1>Sekcija1</h1>
+        <div>
+          <p>Sekcija1 odlomak1</p>
+          <p>Sekcija1 odlomak2</p>
+        </div>
+        <aricle>
+          <p>Sekcija1 odlomak3</p>
+          <p>Sekcija1 odlomak4</p>
+          <p>Sekcija1 odlomak5</p></aricle
+        >
+      </section>
+      <article>
+        <h1>Naslov sekcije 2</h1>
+        <p>Sekcija2 odlomak1</p>
+        <p>Sekcija2 odlomak2</p>
+        <p>Sekcija2 odlomak3</p>
+        <p>Sekcija2 odlomak4</p>
+        <p>Sekcija2 odlomak5</p>
+      </article>
+    </main>
+    <footer>
+      <h1>Podnožje</h1>
+      <section>
+        <h1>Podnožje sekcija1</h1>
+        <p>Podnožje odlomak1</p>
+        <p>Podnožje odlomak2</p>
+        <p>Podnožje odlomak3</p>
+        <p>Podnožje odlomak4</p>
+      </section>
+      <p>Podnožje odlomak1</p>
+      <p>Podnožje odlomak1</p>
+      <p>Podnožje odlomak1</p>
+      <p>Podnožje odlomak2</p>
+      <p>Podnožje odlomak3</p>
+    </footer>
+  </body>
+</html>
