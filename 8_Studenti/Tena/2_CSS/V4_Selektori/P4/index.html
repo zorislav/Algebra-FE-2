@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selektori atributa</title>
+    <style>
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Verdana;
+      }
+
+      [title] {
+        text-decoration: underline solid red;
+      }
+      [title="Prvi odlomak"] {
+        font-weight: bold;
+      }
+
+      [title*="odlomak"] {
+        color: darkgreen;
+      }
+      [title~="odlomak"] {
+        text-transform: uppercase;
+      }
+      [title^="odlomak"] {
+        font-style: italic;
+      }
+
+      [title|="odlomak"] {
+        font-family: "Courier New", Courier, monospace;
+      }
+      [title$="odlomak"] {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="Naslov stranice">
+      Ullamco anim enim aliquip laboris veniam in fugiat nulla et ut.
+    </h1>
+    <h2>
+      Adipisicing pariatur ullamco excepteur laboris commodo dolore ea velit
+      laborum dolor nulla pariatur et.
+    </h2>
+    <h3>
+      Est proident esse magna proident quis excepteur sunt amet veniam sint
+      pariatur adipisicing duis commodo.
+    </h3>
+    <h4>Deserunt amet magna non est non.</h4>
+    <p title="Prvi odlomak">
+      Ut sit laboris esse ipsum pariatur proident id occaecat consectetur id.
+      Cupidatat deserunt eiusmod tempor laboris minim consectetur ad eu ipsum
+      aliquip pariatur. Deserunt voluptate fugiat est fugiat sint tempor labore
+      id. Nisi esse elit labore quis adipisicing ea consectetur est minim qui
+      consequat. Labore eiusmod adipisicing eu laboris dolor tempor eiusmod est
+      est ut ut cupidatat ipsum ad. Aliqua exercitation eiusmod minim nisi ex ex
+      et et veniam Lorem veniam proident consectetur duis. Minim consequat
+      adipisicing tempor exercitation exercitation exercitation sit esse tempor
+      in commodo. Tempor enim ipsum pariatur nostrud est nisi. Reprehenderit
+      veniam aliqua excepteur laborum ea duis quis qui minim esse ea ad
+      reprehenderit excepteur. Officia non consectetur mollit adipisicing aliqua
+      qui magna amet et pariatur. Exercitation reprehenderit id id laborum minim
+      incididunt occaecat pariatur minim dolor esse. Lorem anim excepteur dolore
+      aute culpa culpa id amet. Tempor quis Lorem commodo est qui. Et cupidatat
+      laborum culpa reprehenderit laborum excepteur tempor laboris ad commodo
+      laboris ad occaecat sint. Sit veniam esse Lorem eiusmod do consectetur
+      velit exercitation proident est pariatur adipisicing. Culpa et incididunt
+      tempor sit consectetur cupidatat. Qui incididunt occaecat eu cupidatat
+      sunt quis elit. Excepteur reprehenderit exercitation dolore cillum
+      occaecat. Et nulla ipsum incididunt tempor et tempor est esse aliqua.
+      Reprehenderit consectetur proident sint ea sunt. Excepteur commodo anim
+      excepteur nostrud in adipisicing. Commodo pariatur consequat deserunt duis
+      laborum exercitation. Labore laborum deserunt in ex est velit tempor.
+    </p>
+
+    <p title="odlomak 2">
+      Ut sit laboris esse ipsum pariatur proident id occaecat consectetur id.
+      Cupidatat deserunt eiusmod tempor laboris minim consectetur ad eu ipsum
+      aliquip pariatur. Deserunt voluptate fugiat est fugiat sint tempor labore
+      id. Nisi esse elit labore quis adipisicing ea consectetur est minim qui
+      consequat. Labore eiusmod adipisicing eu laboris dolor tempor eiusmod est
+      est ut ut cupidatat ipsum ad. Aliqua exercitation eiusmod minim nisi ex ex
+      et et veniam Lorem veniam proident consectetur duis. Minim consequat
+      adipisicing tempor exercitation exercitation exercitation sit esse tempor
+      in commodo. Tempor enim ipsum pariatur nostrud est nisi. Reprehenderit
+      veniam aliqua excepteur laborum ea duis quis qui minim esse ea ad
+      reprehenderit excepteur. Officia non consectetur mollit adipisicing aliqua
+      qui magna amet et pariatur. Exercitation reprehenderit id id laborum minim
+      incididunt occaecat pariatur minim dolor esse. Lorem anim excepteur dolore
+      aute culpa culpa id amet. Tempor quis Lorem commodo est qui. Et cupidatat
+      laborum culpa reprehenderit laborum excepteur tempor laboris ad commodo
+      laboris ad occaecat sint. Sit veniam esse Lorem eiusmod do consectetur
+      velit exercitation proident est pariatur adipisicing. Culpa et incididunt
+      tempor sit consectetur cupidatat. Qui incididunt occaecat eu cupidatat
+      sunt quis elit. Excepteur reprehenderit exercitation dolore cillum
+      occaecat. Et nulla ipsum incididunt tempor et tempor est esse aliqua.
+      Reprehenderit consectetur proident sint ea sunt. Excepteur commodo anim
+      excepteur nostrud in adipisicing. Commodo pariatur consequat deserunt duis
+      laborum exercitation. Labore laborum deserunt in ex est velit tempor.
+    </p>
+    <p>
+      Ut sit laboris esse ipsum pariatur proident id occaecat consectetur id.
+      Cupidatat deserunt eiusmod tempor laboris minim consectetur ad eu ipsum
+      aliquip pariatur. Deserunt voluptate fugiat est fugiat sint tempor labore
+      id. Nisi esse elit labore quis adipisicing ea consectetur est minim qui
+      consequat. Labore eiusmod adipisicing eu laboris dolor tempor eiusmod est
+      est ut ut cupidatat ipsum ad. Aliqua exercitation eiusmod minim nisi ex ex
+      et et veniam Lorem veniam proident consectetur duis. Minim consequat
+      adipisicing tempor exercitation exercitation exercitation sit esse tempor
+      in commodo. Tempor enim ipsum pariatur nostrud est nisi. Reprehenderit
+      veniam aliqua excepteur laborum ea duis quis qui minim esse ea ad
+      reprehenderit excepteur. Officia non consectetur mollit adipisicing aliqua
+      qui magna amet et pariatur. Exercitation reprehenderit id id laborum minim
+      incididunt occaecat pariatur minim dolor esse. Lorem anim excepteur dolore
+      aute culpa culpa id amet. Tempor quis Lorem commodo est qui. Et cupidatat
+      laborum culpa reprehenderit laborum excepteur tempor laboris ad commodo
+      laboris ad occaecat sint. Sit veniam esse Lorem eiusmod do consectetur
+      velit exercitation proident est pariatur adipisicing. Culpa et incididunt
+      tempor sit consectetur cupidatat. Qui incididunt occaecat eu cupidatat
+      sunt quis elit. Excepteur reprehenderit exercitation dolore cillum
+      occaecat. Et nulla ipsum incididunt tempor et tempor est esse aliqua.
+      Reprehenderit consectetur proident sint ea sunt. Excepteur commodo anim
+      excepteur nostrud in adipisicing. Commodo pariatur consequat deserunt duis
+      laborum exercitation. Labore laborum deserunt in ex est velit tempor.
+    </p>
+    <p title="odlomak moj">
+      Ut sit laboris esse ipsum pariatur proident id occaecat consectetur id.
+      Cupidatat deserunt eiusmod tempor laboris minim consectetur ad eu ipsum
+      aliquip pariatur. Deserunt voluptate fugiat est fugiat sint tempor labore
+      id. Nisi esse elit labore quis adipisicing ea consectetur est minim qui
+      consequat. Labore eiusmod adipisicing eu laboris dolor tempor eiusmod est
+      est ut ut cupidatat ipsum ad. Aliqua exercitation eiusmod minim nisi ex ex
+      et et veniam Lorem veniam proident consectetur duis. Minim consequat
+      adipisicing tempor exercitation exercitation exercitation sit esse tempor
+      in commodo. Tempor enim ipsum pariatur nostrud est nisi. Reprehenderit
+      veniam aliqua excepteur laborum ea duis quis qui minim esse ea ad
+      reprehenderit excepteur. Officia non consectetur mollit adipisicing aliqua
+      qui magna amet et pariatur. Exercitation reprehenderit id id laborum minim
+      incididunt occaecat pariatur minim dolor esse. Lorem anim excepteur dolore
+      aute culpa culpa id amet. Tempor quis Lorem commodo est qui. Et cupidatat
+      laborum culpa reprehenderit laborum excepteur tempor laboris ad commodo
+      laboris ad occaecat sint. Sit veniam esse Lorem eiusmod do consectetur
+      velit exercitation proident est pariatur adipisicing. Culpa et incididunt
+      tempor sit consectetur cupidatat. Qui incididunt occaecat eu cupidatat
+      sunt quis elit. Excepteur reprehenderit exercitation dolore cillum
+      occaecat. Et nulla ipsum incididunt tempor et tempor est esse aliqua.
+      Reprehenderit consectetur proident sint ea sunt. Excepteur commodo anim
+      excepteur nostrud in adipisicing. Commodo pariatur consequat deserunt duis
+      laborum exercitation. Labore laborum deserunt in ex est velit tempor.
+    </p>
+    <p title="predzadnji.odlomak">
+      Ut sit laboris esse ipsum pariatur proident id occaecat consectetur id.
+      Cupidatat deserunt eiusmod tempor laboris minim consectetur ad eu ipsum
+      aliquip pariatur. Deserunt voluptate fugiat est fugiat sint tempor labore
+      id. Nisi esse elit labore quis adipisicing ea consectetur est minim qui
+      consequat. Labore eiusmod adipisicing eu laboris dolor tempor eiusmod est
+      est ut ut cupidatat ipsum ad. Aliqua exercitation eiusmod minim nisi ex ex
+      et et veniam Lorem veniam proident consectetur duis. Minim consequat
+      adipisicing tempor exercitation exercitation exercitation sit esse tempor
+      in commodo. Tempor enim ipsum pariatur nostrud est nisi. Reprehenderit
+      veniam aliqua excepteur laborum ea duis quis qui minim esse ea ad
+      reprehenderit excepteur. Officia non consectetur mollit adipisicing aliqua
+      qui magna amet et pariatur. Exercitation reprehenderit id id laborum minim
+      incididunt occaecat pariatur minim dolor esse. Lorem anim excepteur dolore
+      aute culpa culpa id amet. Tempor quis Lorem commodo est qui. Et cupidatat
+      laborum culpa reprehenderit laborum excepteur tempor laboris ad commodo
+      laboris ad occaecat sint. Sit veniam esse Lorem eiusmod do consectetur
+      velit exercitation proident est pariatur adipisicing. Culpa et incididunt
+      tempor sit consectetur cupidatat. Qui incididunt occaecat eu cupidatat
+      sunt quis elit. Excepteur reprehenderit exercitation dolore cillum
+      occaecat. Et nulla ipsum incididunt tempor et tempor est esse aliqua.
+      Reprehenderit consectetur proident sint ea sunt. Excepteur commodo anim
+      excepteur nostrud in adipisicing. Commodo pariatur consequat deserunt duis
+      laborum exercitation. Labore laborum deserunt in ex est velit tempor.
+    </p>
+    <p title="odlomak">
+      Ut sit laboris esse ipsum pariatur proident id occaecat consectetur id.
+      Cupidatat deserunt eiusmod tempor laboris minim consectetur ad eu ipsum
+      aliquip pariatur. Deserunt voluptate fugiat est fugiat sint tempor labore
+      id. Nisi esse elit labore quis adipisicing ea consectetur est minim qui
+      consequat. Labore eiusmod adipisicing eu laboris dolor tempor eiusmod est
+      est ut ut cupidatat ipsum ad. Aliqua exercitation eiusmod minim nisi ex ex
+      et et veniam Lorem veniam proident consectetur duis. Minim consequat
+      adipisicing tempor exercitation exercitation exercitation sit esse tempor
+      in commodo. Tempor enim ipsum pariatur nostrud est nisi. Reprehenderit
+      veniam aliqua excepteur laborum ea duis quis qui minim esse ea ad
+      reprehenderit excepteur. Officia non consectetur mollit adipisicing aliqua
+      qui magna amet et pariatur. Exercitation reprehenderit id id laborum minim
+      incididunt occaecat pariatur minim dolor esse. Lorem anim excepteur dolore
+      aute culpa culpa id amet. Tempor quis Lorem commodo est qui. Et cupidatat
+      laborum culpa reprehenderit laborum excepteur tempor laboris ad commodo
+      laboris ad occaecat sint. Sit veniam esse Lorem eiusmod do consectetur
+      velit exercitation proident est pariatur adipisicing. Culpa et incididunt
+      tempor sit consectetur cupidatat. Qui incididunt occaecat eu cupidatat
+      sunt quis elit. Excepteur reprehenderit exercitation dolore cillum
+      occaecat. Et nulla ipsum incididunt tempor et tempor est esse aliqua.
+      Reprehenderit consectetur proident sint ea sunt. Excepteur commodo anim
+      excepteur nostrud in adipisicing. Commodo pariatur consequat deserunt duis
+      laborum exercitation. Labore laborum deserunt in ex est velit tempor.
+    </p>
+  </body>
+</html>
