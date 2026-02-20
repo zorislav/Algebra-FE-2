@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo klase</title>
+    <style>
+      :root {
+        --my-footer-color: #f37;
+        /* selektor koji selektira najveci elemen, lako ako treba na vise mjesta odjednom promjeniti klasu */
+      }
+
+      html {
+      }
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      header {
+        color: red;
+      }
+
+      footer {
+        color: var(--my-footer-color);
+      }
+
+      p:first-child {
+        text-decoration: underline wavy red;
+      }
+
+      p:last-child {
+        font-size: 14px;
+      }
+      p:nth-child(2) {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      p:first-of-type {
+        font-weight: bold;
+      }
+      p:last-of-type {
+        text-transform: uppercase;
+      }
+
+      p:nth-of-type(2) {
+        color: turquoise;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Zaglavlje</h1>
+      <p>Zaglavlje Odlomak 1</p>
+    </header>
+    <main>
+      <section>
+        <p>Sekcija 1 Odlomak 1</p>
+        <p>Sekcija 1 Odlomak 2</p>
+        <p>Sekcija 1 Odlomak 3</p>
+        <p>Sekcija 1 Odlomak 4</p>
+        <p>Sekcija 1 Odlomak 5</p>
+      </section>
+      <section>
+        <h1>Naslov Sekcije 2</h1>
+        <p>Sekcija 2 Odlomak 1</p>
+        <p>Sekcija 2 Odlomak 2</p>
+        <p>Sekcija 2 Odlomak 3</p>
+        <p>Sekcija 2 Odlomak 4</p>
+        <p>Sekcija 2 Odlomak 5</p>
+      </section>
+    </main>
+    <footer>
+      <p>Podnozje Odlomak 1</p>
+      <p>Podnozje Odlomak 2</p>
+      <p>Podnozje Odlomak 3</p>
+    </footer>
+  </body>
+</html>
