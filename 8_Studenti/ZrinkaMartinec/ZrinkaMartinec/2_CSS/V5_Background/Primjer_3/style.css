@@ -1,0 +1,19 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+  font-size: 16px;
+  color:#333;
+  background-color: #ddd;
+}
+p:first-of-type{
+  background-color: #ffc;
+  background-image: url(light-bulb.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+p:nth-of-type(5){
+  background: url(butterfly.png) center / contain no-repeat,
+  url(orange.png) right top/100px no-repeat,
+  url(coffee-cup.png) center center/contain no-repeat,
+  url(pattern.png)
+}
