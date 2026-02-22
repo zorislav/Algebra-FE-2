@@ -1,0 +1,25 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  /*background-color: #ddd;
+  background-image: url(butterfly.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25%;
+  background-attachment: fixed;*/
+
+  background: #ddd url(butterfly.png) center center / 15% no-repeat fixed;
+}
+div {
+  width: 2000px;
+  height: 400px;
+}
+#div1 {
+  background: blueviolet url(butterfly.png) center center / 35%;
+}
+#div2 {
+  width: 1800px;
+  height: 100px;
+  background-image: linear-gradient(blue, pink, blueviolet);
+}
