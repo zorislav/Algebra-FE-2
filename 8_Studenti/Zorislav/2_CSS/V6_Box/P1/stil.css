@@ -1,0 +1,58 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  background-color: #f93;
+  /* box-sizing: border-box; */
+}
+
+.width1 {
+  width: 50%;
+}
+
+.width2 {
+  width: 500px;
+}
+
+.width3 {
+  width: 25em;
+}
+
+.height1 {
+  height: 50%;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.height2 {
+  height: 150px;
+}
+
+.height3 {
+  height: 5em;
+}
+
+.border {
+  border: 2px solid green;
+}
+
+.border-width {
+  border: 10px dashed crimson;
+}
+
+.border-style {
+  border: 10px dotted lightseagreen;
+}
+
+.border-color {
+  border: 10px double rgb(19, 103, 96);
+}
