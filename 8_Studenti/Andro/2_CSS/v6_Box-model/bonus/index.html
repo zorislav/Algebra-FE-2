@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box - bonus</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      img {
+        width: 300px;
+        border: 2px solid #999;
+        padding: 20px;
+      }
+      #div1 {
+        /* margin: 10px auto; */
+        text-align: center;
+      }
+      .mojdiv {
+        width: 500px;
+        height: 300px;
+      }
+      #div2 {
+        background-color: green;
+        margin: 10px;
+      }
+      #div3 {
+        background-color: red;
+        margin: 20px;
+      }
+      #div4 {
+        width: 500px;
+        height: 300px;
+        background-color: green;
+        /* padding-top: 1px; */
+        overflow: auto;
+      }
+      #div5 {
+        width: 300px;
+        height: 100px;
+        background-color: blue;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <img src="photo.jpg" alt="photo" />
+    </div>
+    <hr />
+    <div class="mojdiv" id="div2">div 2</div>
+    <hr />
+    <div class="mojdiv" id="div3">div 3</div>
+    <hr />
+    <div id="div4">
+      <div id="div5">Unutarnji div</div>
+    </div>
+  </body>
+</html>

@@ -56,3 +56,38 @@ div {
 .border-color {
   border: 10px double rgb(19, 103, 96);
 }
+
+.border2 {
+  border-top: 6px solid #333;
+  border-right: 10px double #f32;
+  border-bottom: 4px dashed #33f;
+  border-left: 8px dotted #3f3;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.padding2 {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 5px;
+  text-align: justify;
+}
+
+.margin {
+  margin: 50px;
+}
+
+.margin2 {
+  /* margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  margin-left: 200px; */
+  margin: 20px 30px 50px 200px;
+}
+
+.margin-auto {
+  margin: 20px auto;
+}
