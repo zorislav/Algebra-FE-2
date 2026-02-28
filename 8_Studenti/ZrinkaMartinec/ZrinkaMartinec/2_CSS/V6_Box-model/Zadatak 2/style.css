@@ -1,0 +1,27 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+#div1 {
+  background-color: #eee;
+  border: 20px solid #999;
+  width: 800px;
+  height: 800px;
+  margin: 2em auto;
+}
+div:first-child {
+  background-color: #f66;
+  margin: 0 400 400 0;
+  width: 400px;
+  height: 400px;
+}
+
+div:last-child {
+  background-color: #69f;
+  width: 400px;
+  height: 400px;
+  margin-right: 0;
+  margin-left: auto;
+}
