@@ -1,0 +1,32 @@
+body {
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+p {
+  color: blue;
+}
+.paragraph {
+  color: green;
+}
+
+#paragraph {
+  color: red;
+}
+
+#paragraph {
+  /* color: grey; */
+}
+
+[title] {
+  color: brown;
+}
+
+p:first-of-type {
+  color: blueviolet;
+}
+
+p::first-letter {
+  color: yellow;
+}
