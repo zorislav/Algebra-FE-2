@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+h1 {
+  text-align: center;
+}
+.wrapper {
+  text-align: center;
+}

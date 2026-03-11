@@ -1,0 +1,15 @@
+body {
+  background-color: #eee;
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.borders, header,
+footer {
+  border: 2px solid #333;
+}
+
+article {
+  padding: 1em;
+  margin: 1em;
+}/*# sourceMappingURL=stil.css.map */
