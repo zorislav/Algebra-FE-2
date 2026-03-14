@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS</title>
+  <style>
+    /* CSS reset */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --scheme: dark;
+      /*dark grey*/
+      --color-dark: #333;
+      /*off white*/
+      --color-light: #F5F5F5;
+    }
+
+    body {
+      height: 100vh;
+      background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+      padding: 2rem;
+    }
+
+    h1 {
+      margin: 0.5rem;
+      text-align: center;
+      font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+    }
+
+    .blur {
+      margin: 1rem auto;
+      padding: 10px;
+      border-radius: 12px;
+      /* Vendor prefixes Safari. 10px blur radius */
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    .scale {
+      padding: 10px;
+      border-radius: 12px;
+      color: if(style(--scheme: dark): var(--color-light); else: var(--color-dark));
+      background-color: if(style(--scheme: dark): var(--color-dark); else: var(--color-light));
+      font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Advanced CSS</h1>
+  <p class="scale">Ex et occaecat ullamco esse dolore deserunt reprehenderit cillum consequat occaecat non. Cupidatat
+    labore velit laboris do ullamco nulla do voluptate. Adipisicing voluptate officia esse cupidatat ea et nostrud
+    Lorem deserunt voluptate elit occaecat reprehenderit. </p>
+  <div class="blur">
+    <p>
+      Pariatur duis est Lorem do elit commodo tempor consectetur irure labore.
+    </p>
+  </div>
+  <p>
+    Quis enim qui cupidatat laboris anim occaecat eiusmod quis occaecat elit do. Ex voluptate sint
+    eiusmod qui esse sint quis voluptate culpa laborum commodo aliqua. Exercitation ea ullamco Lorem aliqua dolore.
+  </p>
+</body>
+
+</html>
