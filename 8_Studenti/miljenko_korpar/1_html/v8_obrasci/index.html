@@ -6,28 +6,147 @@
     <title>Obrasci</title>
   </head>
   <body>
-    <form action="www.tvrtka.com" method="GET"> <!-- autocomplete="off" za isključivanje autocomplet funkcionalnosti na input fieldu-->
-        <div>
-            <label for="ime">Ime</label>
-            <input type="text" id="ime" name="ime_param" maxlength="20" size="20" placeholder="Ime" required></input> <!-- kad nema required atributa, unos vrijednosti nije obavezan-->
-        </div>
-        <div>
-            <label for="prezime">Prezime</label>
-            <input type="text" id="prezime" name="prezime_param" maxlength="20" size="20" placeholder="Prezime" required></input>
-        </div>
-        <hr>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email_param" maxlength="20" size="20" placeholder="test@gmail.com" ></input>
-        </div>
-        <hr>
-        <div>
-            <!--input type="reset" name="reset-btn" value="Poništi obrazac">
-            <input type="submit" name="submit-btn" value="Pošalji podatke"--> <!-- Na ovaj način se i submit-button šalje kao GET parametar -->
-            <button type="reset">Poništi</button>
-            <button type="submit">Pošalji</button>
-        </div>
-        <hr>
+    <form
+      action="www.tvrtka.com"
+      method="GET"
+      autocomplete="on"
+      enctype="multipart/form-data"
+    >
+      <!-- autocomplete="off" za isključivanje autocomplet funkcionalnosti na input fieldu-->
+      <div>
+        <label for="ime">Ime</label>
+        <input
+          type="text"
+          id="ime"
+          name="ime"
+          maxlength="20"
+          size="20"
+          placeholder="Ime"
+          required
+          autocomplete="given-name"
+        />
+        <!-- kad nema required atributa, unos vrijednosti nije obavezan-->
+      </div>
+      <br />
+      <div>
+        <label for="prezime">Prezime</label>
+        <input
+          type="text"
+          id="prezime"
+          name="prezime"
+          maxlength="20"
+          size="20"
+          placeholder="Prezime"
+          required
+          autocomplete="family-name"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="adresa">Adresa</label>
+        <input
+          type="text"
+          id="adresa"
+          name="adresa"
+          autocomplete="address-line1"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" />
+      </div>
+      <br />
+      <div>
+        <label for="opis">Opis</label>
+        <input type="text" id="opis" name="opis" />
+      </div>
+      <br />
+      <div>
+        <label for="tel">Telefon</label>
+        <input type="tel" id="tel" name="tel" placeholder="099/1111-111" />
+      </div>
+      <br />
+      <div>
+        <label for="pwd">Zaporka</label>
+        <input type="password" id="pwd" name="pwd" placeholder="********" />
+      </div>
+
+      <hr />
+      <div>
+        <label for="boja">Odaberi boju</label>
+        <input type="color" id="boja" name="boja" />
+      </div>
+      <hr />
+      <div>
+        <label for="check">Želim primati obavijesti</label>
+        <input type="checkbox" id="check" name="check" checked />
+      </div>
+      <hr />
+      <div>
+        <label for="usluge-ocjena">Ocijenite usluge naše tvrtke</label>
+        <br />
+        <input type="radio" id="o1" name="ocjena" value="1" />
+        <label for="o1">1</label>
+        <input type="radio" id="o2" name="ocjena" value="2" />
+        <label for="o2">2</label>
+        <input type="radio" id="o3" name="ocjena" value="3" />
+        <label for="o3">3</label>
+        <input type="radio" id="o4" name="ocjena" value="4" />
+        <label for="o4">4</label>
+        <input type="radio" id="o5" name="ocjena" value="5" />
+        <label for="o5">5</label>
+      </div>
+      <hr />
+      <div>
+        <label for="datoteka">Odaberite datoteku</label>
+        <br />
+        <input type="file" id="datoteka" name="datoteka" />
+      </div>
+      <hr />
+      <div>
+        <label for="datum">Odaberite datum</label>
+        <input type="date" id="datum" name="datum" />
+      </div>
+      <hr />
+      <div>
+        <label for="komentar">Upišite komentar</label>
+        <textarea
+          name="komentar"
+          id="komentar"
+          cols="30"
+          rows="10"
+          style="resize: none"
+        ></textarea>
+        <!-- style="resize: none" -> ne dupušta promjenu velične elemente ni veritikalno, ni horizontalno  -->
+      </div>
+      <hr />
+      <div>
+        <label for="grad">Odaberite grad</label>
+        <select name="grad" id="grad">
+          <option value="london">London</option>
+          <option value="pariz" selected>Pariz</option>
+          <option value="rim">Rim</option>
+        </select>
+      </div>
+      <hr />
+      <div>
+        <label for="grad2">Odaberite ili upišite grad</label>
+        <input type="text" id="grad2" name="grad2" list="gradovi" />
+        <datalist id="gradovi">
+          <option value="London" />
+          <option value="Pariz" />
+          <option value="Rim" />
+        </datalist>
+      </div>
+      <hr />
+      <div>
+        <!--input type="reset" name="reset-btn" value="Poništi obrazac">
+            <input type="submit" name="submit-btn" value="Pošalji podatke"-->
+        <!-- Na ovaj način se i submit-button šalje kao GET parametar -->
+        <button type="reset">Poništi</button>
+        <button type="submit">Pošalji</button>
+      </div>
     </form>
   </body>
 </html>

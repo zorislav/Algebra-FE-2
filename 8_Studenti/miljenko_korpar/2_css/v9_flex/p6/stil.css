@@ -1,0 +1,38 @@
+/* '*' je selektor svih elemenata - obicno sluzi za anuliranje standardne browser stilizacije */
+
+/* Zašto koristimo '*' kao selektor ? Zato jer radimo s pravilima koja se ne nasljeđuju. */
+/* Npr. font-family u body elementu će naslijediti sva djeca body elementa, ali margin pravilo se neće naslijediti. 
+Ako stavimo margin: 0 u body elementu, a unutar body elementa stavimo paragraf, taj paragraf će i dalje imati standardnu top i bottom marginu od 16px
+*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* descendant selektor */
+/* selektiramo sve div elemente koji se nalaze unutar elementa čija je vrijednost class atributa jednaka 'wrapper' */
+.wrapper div {
+  border: 1px solid #666;
+  width: 150px;
+  background-color: #eee;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+  display: inline;
+}
+
+.wrapper {
+  border: 1px dashed #666;
+  padding: 1em;
+  height: 600px;
+}
+
+.flex-container {
+  display: flex;
+  /*align-items: stretch;*/ /* stretch je default */ /* u ovom primjeru ce se div elementi rastegnuti po visini da zauzmu visinu kontejnera */
+}

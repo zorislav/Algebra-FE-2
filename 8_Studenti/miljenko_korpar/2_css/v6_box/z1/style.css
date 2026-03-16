@@ -1,0 +1,40 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+div {
+  background-color: #eee;
+  text-align: justify;
+}
+
+div:first-of-type {
+  border: 5px solid #666;
+  margin: 2em auto;
+  padding: 2em;
+  width: 300px;
+}
+
+div:nth-of-type(2) {
+  border: 5px dashed #666;
+  margin: 2em 0 2em auto; /* desna margina 0, lijeva auto -̣> efektivno je to poravnanje s desnom marginom */
+  padding: 2em 4em;
+  width: 25%;
+}
+
+div:nth-of-type(3) {
+  border-right: 8px double #666;
+  margin: 2em auto 2em 0; /* lijeva margina 0, desna auto -̣> efektivno je to poravnanje s lijevom marginom */
+  padding: 5px 20px 30px 50px;
+  width: 300px;
+}
+
+div:nth-of-type(4) {
+  border-top: 4px dashed #666;
+  border-bottom: 6px dotted #666;
+  margin: auto; /* lijeva margina 0, desna 0 -̣> efektivno je centriranje */
+  padding: 10px;
+  width: 80%;
+}

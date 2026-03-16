@@ -1,0 +1,49 @@
+/* 1 */
+body {
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/* 2 */
+p {
+  color: blue;
+}
+
+/* vrijednost svojstva u selektoru klase nadjačava ono u selektoru elementa */
+/* 3 */
+.paragraf {
+  color: green;
+}
+
+/* vrijednost svojstva u selektoru atributa ima istu jačinu kao ono u selektoru elementa */
+/* u tom slučaju poredak u CSS-u ima ulogu, primjenjuje se ona vriednost koja je posljednja definiranaa */
+/* 4 */
+[title] {
+  color: brown;
+}
+
+/* vrijednsot svojsta u selektoru pseudo-klase nadjačava ono u selektoru elementa, klase ili atributa */
+/* 5 */
+p:first-of-type {
+  color: blueviolet;
+}
+
+/* specifična pseudo-klasa, vrijednost svojstva u selektoru id-a ju ne nadjačava, prvo slovo u paragrafu će i dalje biti žuto */
+/* 6 */
+p::first-letter {
+  color: yellow;
+}
+
+/* vrijednost svojstva u selektoru id-a nadjačava ono u ostalim selektorima korištenima u vanjskom CSS-u */
+/* jači je od iste vrijednost u unutarnjem CSS-u */
+/* 8 */
+#paragraf {
+  color: red;
+}
+
+/* !important ima "override" ulogu, nadjačava sve ostale vrijednosti definirane za isto svojstvo, rezulate je plavi text u browseru */
+/* 10 - najjače, može se overrideati samo ako se u inline CSS-u također koristi !important */
+p {
+  color: aquamarine !important;
+}

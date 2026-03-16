@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Bonus</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      img {
+        width: 300px;
+        border: 2px solid #999;
+        padding: 20px;
+        /* margin: 10px auto; */ /* ovo ne centrira sliku jer je img inline element */
+      }
+
+      #div1 {
+        text-align: center;
+      }
+
+      .mojdiv {
+        width: 500px;
+        height: 300px;
+      }
+
+      #div2 {
+        background-color: green;
+        margin: 10px;
+      }
+
+      #div3 {
+        background-color: red;
+        margin: 20px;
+      }
+
+      #div4 {
+        width: 500px;
+        height: 300px;
+        background-color: green;
+        /* padding-top: 1px; */ /* ovo rješava margin colapse "problem" između chilp i parent div elementa, ali i dalje imamo dodatan padding od 1px kojeg mozda ne zelimo */
+        overflow: auto; /* ovo je fix za margin collapse, browser prestaje "spajati" margine */
+      }
+
+      #div5 {
+        width: 300px;
+        height: 100px;
+        background-color: blue;
+
+        /* zanimljivo, gornji rub div4 i div5 elementa su poravnati, a očekivali bi da je div5 spušten za 20px */
+        /* To je ponovno margin colapse na djelu, ali ovaj put za elemente dijete i roditelj. Vrijedi kad vanjski element nema sadržaj (npr. tekst) prije unutarnjeg diva. */
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <img src="photo.jpg" alt="photo" />
+    </div>
+    <hr />
+    <div class="mojdiv" id="div2">Div 2</div>
+    <!-- <br /> -->
+    <!-- Zanimljivo, izgleda kao da nedostaje donja margina od 10px između div 2 i div3. -->
+    <!-- To se zove margin colapse - kad imamo dva SUSJEDNA BLOK element, ukupna vertikalna margina (top/bottom) između jednaka je max(vert_margin_eleme1, vert_margin_elem2) -->
+    <!-- Kad se između njih ubaci neki drugi blok (e.g. br), margin colapse između ta dva elementa više ne vrijedi  -->
+    <div class="mojdiv" id="div3">Div 3</div>
+    <div id="div4">
+      <div id="div5">Unutarnji div</div>
+    </div>
+  </body>
+</html>

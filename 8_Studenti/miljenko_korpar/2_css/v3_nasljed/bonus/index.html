@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaskadiranje</title>
+    <style>
+      /* 7 - nije 8 zbog redoslijeda, zato jer se vanjski CSS učitava (<link rel="stylesheet" href="stil.css" />) nakon <style> elementa */
+      #paragraf {
+        color: cadetblue;
+      }
+    </style>
+    <link rel="stylesheet" href="stil.css" />
+  </head>
+
+  <body>
+    <h1>Primjer kaskadiranja</h1>
+    <p
+      id="paragraf"
+      class="paragraf"
+      title="Moj paragraf"
+      /* 9 - nadjačava sve osim pravila koje ima '!important' */
+      style="color: plum;"
+    >
+      Kaskadiranje, nasljeđivanje, specifičnost
+    </p>
+  </body>
+</html>

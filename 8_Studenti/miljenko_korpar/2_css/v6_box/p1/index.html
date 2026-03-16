@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <link rel="stylesheet" href="stil.css" />
+  </head>
+
+  <body>
+    <h1>CSS Box Model</h1>
+    <div>Lorem ipsum</div>
+
+    <h2>width & height</h2>
+    <h3>width %</h3>
+    <div class="width1">Lorem ipsum - width1</div>
+
+    <h3>width px</h3>
+    <div class="width2">Lorem ipsum - width2</div>
+
+    <h3>width em</h3>
+    <div class="width3">Lorem ipsum - width3</div>
+
+    <h3>height %</h3>
+    <!-- height1: 50% nema utjecaja na visinu elemenata, kao da taj class atribut nije ni dodan na div element -->
+    <!-- razlog: da bi svojstvo s relativnom visinom imalo utjecaj na visinu elementa, parent element, u ovom slučaju body, bi morao imati definiran heigh property takav da mu vrijednost nije auto  -->
+    <div class="height1">Lorem ipsum - height1</div>
+
+    <h3>height % *</h3>
+    <div class="height2">
+      <div class="height1 blue">Lorem ipsum - height *</div>
+    </div>
+
+    <h3>height px</h3>
+    <div class="height2">Lorem ipsum - height px</div>
+
+    <h3>height em</h3>
+    <div class="height3">Lorem ipsum - height em</div>
+
+    <h2>Border</h2>
+    <div class="width2 height2 border">Lorem ipsum - border width2 height2</div>
+
+    <h3>border-width</h3>
+    <div class="width2 height2 border-width">
+      Lorem ipsum - border-width width2 height2
+    </div>
+
+    <h3>border-style</h3>
+    <div class="width2 height2 border-style">
+      Lorem ipsum - border-style width2 height2
+    </div>
+
+    <h3>border-color</h3>
+    <div class="width2 height2 border-color">
+      Lorem ipsum - border-color width2 height2
+    </div>
+
+    <h3>border - *</h3>
+    <div class="width2 height2 border2">Lorem ipsum - width2 height2</div>
+
+    <h2>Padding</h2>
+    <div class="border width2 height2 padding">
+      Lorem ipsum - border width2 haight2 padding
+    </div>
+
+    <h3>padding - *</h3>
+    <div class="border padding2 width2">
+      Aute ut exercitation irure voluptate id ex excepteur in nulla esse in
+      laborum dolor. Aute proident officia aliquip elit eu. Nisi quis dolore
+      duis ullamco enim voluptate cupidatat incididunt cillum cupidatat
+      excepteur voluptate. Adipisicing ex ex ipsum mollit. Aliqua anim qui non
+      ipsum. Aliquip ipsum est qui fugiat.
+    </div>
+
+    <h2>Margin</h2>
+    <div class="width2 height2 padding border margin">
+      Lorem ipsum - border width2 height2 padding
+    </div>
+
+    <h3>margin - *</h3>
+    <div class="width2 height2 border padding margin2">
+      Lorem ipsum - width2 height2 border padding margin2
+    </div>
+
+    <h3>margin - auto</h3>
+    <div class="width2 height2 border padding margin-auto">
+      Lorem ipsum - width2 height2 border padding margin-auto
+    </div>
+  </body>
+</html>
