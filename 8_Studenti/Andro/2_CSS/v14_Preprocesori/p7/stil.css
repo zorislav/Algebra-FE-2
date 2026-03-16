@@ -1,0 +1,14 @@
+body {
+  background-color: #eee;
+  color: #333;
+  width: 900px;
+}
+
+header,
+footer,
+article {
+  background-color: #eee;
+  color: #333;
+  margin: 1em;
+  padding: 2em;
+}/*# sourceMappingURL=stil.css.map */
