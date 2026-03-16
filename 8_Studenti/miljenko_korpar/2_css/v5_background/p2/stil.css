@@ -1,0 +1,30 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+
+  /* background-color: #ddd;
+  background-image: url(butterfly.png);
+  background-repeat: no-repeat;
+  background-position: center center; */
+  /* background-position: 50% 50%; */
+  /* background-position-x: 50%;
+  background-position-y: 50%; */
+  /* background-size: 25%; */ /* default je background-size: auto */
+  /* background-attachment: fixed; */ /* fixes znači da se position odnosi na viewport, scroll (default) znači se se position oznosi na html element za kojeg je taj background definiran */
+  background: #ddd url(butterfly.png) no-repeat center center / 25% fixed; /* Size uvijek dolazi nakon position vrijednosti i separira se pomoću znaka '/' */
+}
+
+div {
+  width: 500px;
+  height: 300px;
+}
+
+#div1 {
+  background: blue url(butterfly.png) center center/contain no-repeat;
+}
+
+#div2 {
+  /* background-image: linear-gradient(green, yellow, red); */
+  background: linear-gradient(green, yellow, red);
+}
