@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern CSS</title>
+  <style>
+    /* CSS Reset */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Custom property */
+    :root {
+      --scheme: dark;
+      --color-dark: #333;
+      --color-light: #F5F5F5;
+    }
+
+    body {
+      height: 100vh;
+      background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+    }
+
+    h1 {
+      margin: 0.5rem;
+      text-align: center;
+      font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+    }
+
+    .blur {
+      margin: 1rem;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+
+    }
+
+    .scale {
+      font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+      padding: 10px;
+      border-radius: 12px;
+      color: if(style(--scheme: dark): var(--color-light); else: var(--color-dark));
+      background-color: if(style(--scheme: dark): var(--color-dark); else: var(--color-light));
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Modern CSS</h1>
+  <p class="scale">Nostrud dolor tempor eiusmod adipisicing velit. Esse cupidatat aute sunt excepteur non nulla
+    cupidatat. Cupidatat
+    dolor reprehenderit amet amet aute eu officia quis.</p>
+  <div class="blur">
+    <p>
+      Laborum commodo voluptate voluptate dolore.
+    </p>
+  </div>
+  <p>
+    Eiusmod sint minim fugiat dolor proident elit excepteur sunt ullamco magna. Elit pariatur magna dolore qui eu sunt
+    sint dolor fugiat pariatur. Esse cupidatat commodo dolor ad ullamco elit eiusmod voluptate ullamco eu. Sit nostrud
+    amet elit eu dolor enim. Commodo ut enim velit ad occaecat enim consequat tempor ut excepteur incididunt amet
+    consequat.
+  </p>
+
+
+  <!-- Block Element Modifier
+
+  The `search-form` block has the `theme` modifier with the value `islands`
+  <form class="search-form search-form_theme_islands">
+      <input class="search-form__input">
+
+      The `button` element has the `size` modifier with the value `m`
+      <button class="search-form__button search-form__button--size--m">Search</button>
+  </form> -->
+
+</body>
+
+</html>
