@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern CSS</title>
+    <style>
+      /* CSS Reset */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Custom property*/
+      :root {
+        --scheme: dark;
+        --color-dark: #333;
+        --color-light: #f5f5f5;
+      }
+
+      body {
+        height: 100vh;
+        background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+      }
+
+      h1 {
+        margin: 0.5rem;
+        text-align: center;
+        font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+      }
+
+      .blur {
+        margin: 1rem;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .scale {
+        font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+        padding: 10px;
+        border-radius: 12px;
+        color: if(
+          style(--scheme: dark): var(--color-light) ;else: var(--color-dark)
+        );
+        background-color: if(
+          style(--scheme: dark): var(--color-dark) ;else: var(--color-light)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modern CSS</h1>
+    <p class="scale">
+      Magna quis ullamco aute magna. Cillum veniam sint aliqua nisi est ea.
+      Proident voluptate eu exercitation excepteur officia reprehenderit
+      pariatur est amet aute fugiat cupidatat magna sint. Consequat enim dolor
+      nostrud consectetur cillum laborum fugiat laboris dolor. Ad eiusmod
+      exercitation deserunt eiusmod dolor.
+    </p>
+    <div class="blur">
+      <p>
+        Duis culpa et quis culpa aliqua. In fugiat officia nulla sint aliqua
+        enim esse id enim duis dolore veniam. Quis magna ipsum id elit.
+      </p>
+    </div>
+    <div>
+      <p>
+        Quis sint sunt qui duis. Proident esse cupidatat et culpa amet sint qui
+        minim cillum. Aute cupidatat esse qui excepteur est aute ea aliqua
+        mollit.
+      </p>
+    </div>
+  </body>
+</html>
