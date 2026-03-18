@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+  font-size: 116px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}

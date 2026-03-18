@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern CSS</title>
+  </head>
+  <style>
+    /*CSS Reset*/
+    *,
+    *::before::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /*Custom property*/
+    :root {
+      --scheme: dark;
+      --color-dark: #333;
+      --color-light: #f5f5f5;
+    }
+    body {
+      height: 100vh;
+      background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+    }
+    h1 {
+      margin: 0.5rem;
+      text-align: center;
+      font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+    }
+    .blur {
+      margin: 1rem;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    .scale {
+      font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+      padding: 10px;
+      border-radius: 12px;
+      color: if(
+        style(--scheme: dark): var(--color-light) ;else: var(--color-dark)
+      );
+      background-color: if(
+        style(--scheme: dark): var(--color-dark) ;else: var(--color-light)
+      );
+    }
+  </style>
+  <body>
+    <h1>Modern CSS</h1>
+    <p class="scale">
+      Quis excepteur ipsum exercitation est sunt sint amet ex ad excepteur. Eu
+      mollit aliqua voluptate ex irure anim commodo. Esse proident ad quis nisi.
+      Exercitation sit mollit aute in excepteur est duis. Pariatur occaecat ea
+      deserunt mollit tempor aliqua laboris reprehenderit tempor aliqua. Duis
+      minim reprehenderit nulla mollit cillum laboris ut occaecat voluptate do
+      proident. Sunt proident consectetur cupidatat laborum enim eiusmod ullamco
+      incididunt dolore id ad pariatur.
+    </p>
+    <div class="blur">
+      <p>
+        In ullamco irure labore commodo est duis non qui dolor ullamco et irure
+        commodo tempor.
+      </p>
+    </div>
+    <p>
+      Do officia veniam ipsum cillum amet magna culpa officia ipsum pariatur
+      adipisicing amet excepteur. Nostrud in in magna tempor adipisicing culpa
+      cupidatat ullamco est tempor Lorem et sint cillum. Proident aliquip labore
+      deserunt aliquip occaecat. Sit aliquip ullamco cillum irure dolor sint
+      dolor sit amet deserunt enim. Duis do id est aliquip velit et sint
+      consectetur nostrud.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+@import "base/colors.scss";
+@import "base/typography.scss";
+@import "base/reset.scss";
+@import "abstract/mixins.scss";
+body {
+  color: $color2;
+  font-family: $sans-serif;
+}
+ul {
+  list-style-type: none;
+  li {
+    display: inline;
+  }
+}
+
+.meni {
+  @include spacing(1em 1em);
+  background-color: $color1;
+}
+
+@include linx($color4, $color3, $color2, $color1);
