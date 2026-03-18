@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS</title>
+    <style>
+        /*CSS Reset*/
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*Custom property*/
+        :root {
+            --schema: dark;
+            --color-dark: #333;
+            --color-light: #f5f5f5;
+        }
+
+        body {
+            height: 100vh;
+            background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+        }
+
+        h1 {
+            margin: 0.5rem;
+            text-align: center;
+            font-size: clamp(2rem, 4vw+1rem, 3.5rem);
+        }
+
+        .blur {
+            margin: 1rem;
+            padding: 10px;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px)
+        }
+
+        .scale {
+            font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+            padding: 10px;
+            border-radius: 12px;
+            color: if(style(--scheme:dark):var(--color-light); else: var(--color-dark));
+            background-color: if(style(--scheme:dark):var(--color-light); else: var(--color-dark));
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modern CSS</h1>
+    <p class="scale">Deserunt aliqua nostrud in occaecat exercitation laboris labore Lorem dolore enim aliqua. Lorem in
+        minim quis
+        enim ad elit sunt dolor. Mollit anim non minim nulla sint dolor esse veniam culpa nisi non labore esse in.
+        Mollit ex
+        ullamco irure elit ut laboris.</p>
+    <div class="blur">
+        <p>
+            Minim commodo duis qui magna do elit labore veniam mollit deserunt dolor Lorem ex.
+        </p>
+    </div>
+    <div>
+        <p>
+            Adipisicing in ut sit tempor minim labore culpa irure. Aliqua elit excepteur est qui. Culpa duis aliquip
+            cillum amet reprehenderit sunt tempor enim nulla fugiat.
+        </p>
+    </div>
+
+</body>
+
+</html>
