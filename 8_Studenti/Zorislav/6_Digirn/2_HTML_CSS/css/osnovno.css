@@ -75,6 +75,10 @@ section {
   border-radius: 4px;
 }
 
+section h1 {
+  margin-bottom: 1rem;
+}
+
 aside {
   display: none;
   background-color: var(--primary);
