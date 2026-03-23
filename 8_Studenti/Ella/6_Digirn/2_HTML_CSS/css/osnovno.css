@@ -1,0 +1,138 @@
+:root {
+  --primary: #8b3c7f;
+  --on-primary: #fff;
+  --inverse-primary: #f4b2e3;
+  --on-surface: #201a1e;
+  --outline: #80747b;
+  --tretiary-container: #ffdbcf;
+  --surface-variant: #eedee7;
+  --outline-variant: #d2c2cb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-image: url("../assets/poz.jpg");
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 112.5px;
+  background-color: var(--primary);
+  opacity: 0.8;
+  color: var(--on-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  color: var(--on-primary);
+}
+
+header nav {
+  margin-right: 1rem;
+}
+
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+
+header ul li {
+  margin-left: 1rem;
+}
+
+header a {
+  color: var(--on-primary);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--inverse-primary);
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  margin: 10rem auto 1rem;
+  padding: 1rem;
+  width: 90%;
+  text-align: center;
+  background-color: var(--surface-variant);
+  color: var(--on-surface);
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+}
+
+section h1 {
+  margin-bottom: 1rem;
+}
+
+aside {
+  display: none;
+  background-color: var(--primary);
+  opacity: 0.8;
+  padding: 1rem;
+  position: absolute;
+  top: 112.5px;
+  right: 0;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#hamburger-icon {
+  display: none;
+  margin-right: 1rem;
+}
+
+aside a {
+  color: var(--on-primary);
+  text-decoration: none;
+}
+
+aside a:hover {
+  color: var(--inverse-primary);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 5px;
+  background-color: var(--on-primary);
+  margin: 6px 0;
+}
+
+@media (max-width: 899px) {
+  #hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  aside {
+    display: inline-block;
+  }
+}
