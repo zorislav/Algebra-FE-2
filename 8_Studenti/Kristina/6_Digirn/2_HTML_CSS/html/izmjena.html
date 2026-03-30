@@ -9,138 +9,76 @@
     <title>DIGIRN</title>
   </head>
   <body>
-    <header>
-      <div id="header-container"></div>
-      <img
-        src="../assets/digirn.png"
-        alt="digrn logo"
-        width="150"
-        height="150"
-      />
-      <h2>DIGIRN</h2>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="../html/index.html">Glavna</a></li>
-
-          <li><a href="../html/lista.html">Nalozi</a></li>
-        </ul>
-        <div id="hamburger-icon">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+ <header>
+    <img src="../../assets/digirn.png" alt="digirn logo">
+    <h2>DIGIRN</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Glavna</a></li>
+        <li><a href="lista.html">Nalozi</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h1>Izmjena Naloga</h1>
+      <form action="" method="">
+        <hr>
+        <div class="container">
+          <label for="broj_naloga">Broj naloga:</label>
+          <input type="text" name="broj_naloga" id="broj_naloga" maxlength="10" size="10" value="5mziv4o1444" required>
+          <label for="narudzbenica">Narudžbenica:</label>
+          <input type="text" name="narudzbenica" id="narudzbenica" maxlength="10" size="10" value="1444abc1iv" required>
+          <label for="datum_naloga">Datum otvaranja:</label>
+          <input type="date" name="datum_naloga" id="datum_naloga" value="2024-10-14" required>
         </div>
-      </nav>
-    </header>
-    <main>
-      <aside>
-        <nav>
-          <ul>
-            <li><a href="lista.html">Nalozi</a></li>
-
-            <li><a href="index.html">Glavna</a></li>
-
-            <li><a href="Prikaz.html">Prikaz naloga</a></li>
-
-            <li><a href="Unos.html">Unos naloga</a></li>
-            <li><a href="izmjena.html">Izmjena naloga</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <section>
-        <h1>Izmjena naloga</h1>
-        <form action="">
-          <hr>
-          <div class="container">
-          <label for="Broj_naloga">Broj naloga:</label>
-          <input
-            type="text"
-            id="Broj_naloga"
-            name=""
-            maxlength="10"
-            size="10"
-          /></div>
-          <hr />
-          <div class="container">
-          <label for="Narudžbenica">Narudžbenica:</label>
-          <input
-            type="text"
-            id="Narudžbenica"
-            name=""
-            maxlength="10"
-            size="10"
-          /></div>
-          <div class="container">
-          <label for="Datum_naloga">Datum otvaranja</label>
-          <input type="date" id="Datum_naloga" name="Datum_naloga" required />
-          </div>
-          <hr />
-          <div class="container">
-          <label for="naručitelj">Naručitelj:</label>
-          <input
-            type="text"
-            id="naručitelj"
-            name="naručitelj"
-            maxlength="15 "
-            size="15"
-          /></div>
-          <hr />
-          <div class="container">
-          <label for="izvršitelj">Izvršitelj:</label>
-          <input
-            type="text"
-            id="izvršitelj"
-            name="izvršitelj"
-            maxlength="15"
-            size="15"
-          /></div>
-        
-          <hr />
-          <div class="container">
-          <label for="mjesto_troška">Mjesto troška:</label>
-          <input
-            type="text"
-            id="mjesto_troška"
-            name="mjesto_troška"
-            maxlength="15"
-            size="15"
-          /></div>
-          <hr />
-          <div class="container">
-          <label for="nositelj_troška">Nositelj troška:</label>
-          <input
-            type="text"
-            id="nositelj_troška"
-            name="nositelj_troška"
-            maxlength="15"
-            size="15"
-          /></div>
-          <hr />
-          <div class="container">
-          <label for="">Datum početka</label>
-          <input type="date" name="datum_početka" id="datum_početka" />
-          <label for="vrijeme_  početka">Vrijeme početka</label>
-          <input type="time" name="vrijeme_početka" id="vrijeme_početka" />
-          <br />
-          <div class="container">
-          <label for="">Datum završetka</label>
-          <input type="date" name="datum_završetka" id="datum_završetka" />
-          <label for="vrijeme_završetka">Vrijeme završetka</label>
-          <input type="time" name="vrijeme_završetka" id="vrijeme_završetka" />
-          <br />
-          <br />
-          <hr /><div>
-          <label for="naslov">Naslov</label>
-          <input type="text" name="naslov" id="naslov" /></div>
-          <hr />
-          <div class="container">
-          <label for="opis">Opis</label>
-          <textarea name="opis" id="opis" maxlength="50"></textarea></div>
-          <hr />
-          <button type="submit">Uredu</button>
+        <hr>
+        <div class="container">
+          <label for="narucitelj">Naručitelj:</label>
+          <input type="text" name="narucitelj" id="narucitelj" value="Moj stan" maxlength="15" size="15">
+          <label for="izvrsitelj">Izvršitelj:</label>
+          <input type="text" name="izvrsitelj" id="izvrsitelj" value="Elektro servis" maxlength="15" size="15" required>
+          <label for="mjesto_troska">Mjesto troška:</label>
+          <input type="text" name="mjesto_troska" id="mjesto_troska" value="Odjel nabave" maxlength="15" size="15">
+          <label for="nositelj_troska">Nositelj troška:</label>
+          <input type="text" name="nositelj_troska" id="nositelj_troska" value="Odjel prodaje" maxlength="15" size="15">
+        </div>
+        <hr>
+        <div class="container">
+          <label for="datum_pocetka">Datum početka:</label>
+          <input type="date" name="datum_pocetka" id="datum_pocetka" value="2024-10-15" required>
+          <label for="vrijeme_pocetka">Vrijeme početka:</label>
+          <input type="time" name="vrijeme_pocetka" id="vrijeme_pocetka" value="09:00" required>
+          <label for="datum_zavrsetka">Datum završetka:</label>
+          <input type="date" name="datum_zavrsetka" id="datum_zavrsetka" value="2024-10-16" required>
+          <label for="vrijeme_zavrsetka">Vrijeme završetka:</label>
+          <input type="time" name="vrijeme_zavrsetka" id="vrijeme_zavrsetka" value="17:00" required>
+        </div>
+        <hr>
+        <div class="container">
+          <label for="naslov">Naslov:</label>
+          <input type="text" name="naslov" id="naslov" value="Čišćenje filtera" maxlength="20" size="20" required>
+        </div>
+        <hr>
+        <div class="container">
+          <label for="opis">Opis rada:</label>
+          <textarea name="opis" id="opis" maxlength="50" cols="20" rows="5">
+  Rastavljanje uređaja, čišćenje, sastavljanje uređaja</textarea>
+        </div>
+        <hr>
+        <div class="button-container">
+          <button type="submit">U redu</button>
           <button type="reset">Poništi</button>
-        </form>
-      </section>
+        </div>
+        <hr>
+      </form>
+    </section>
+  </main>
     </main>
   </body>
 </html>

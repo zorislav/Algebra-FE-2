@@ -1,12 +1,13 @@
+/* root element */
 :root {
   --primary: #8b3c7f;
-  --on-primary: #fff;
-  --inverse-primary: #f4b2e3;
-  --on_surface: #201a1e;
-  --outline: #80747b;
-  --tertiary-container: #ffdbcf;
-  --surface-variant: #eedee7;
-  --outline-variant: #d2c2cd;
+  --onPrimary: #ffffff;
+  --inversePrimary: #f4b2e3;
+  --onSurface: #201a1e;
+  --outline: #380fef;
+  --tertiaryContainer: #ffdbcf;
+  --surfaceVariant: #eedee7;
+  --outlineVariant: #d2c2cb;
 }
 
 * {
@@ -14,99 +15,118 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  background-image: url("..assets/poz.png");
+
+  background-image: url("../assets/poz.jpg");
+  display: flex;
+  flex-direction: column;
+}
+main {
+  width: 100%;
+  height: 90vh;
 }
 
 header {
-  position: fixed;
-  top: 0;
   width: 100%;
+  height: 10vh;
   background-color: var(--primary);
   opacity: 0.8;
-  color: var(--on-primary);
+  color: var(--onPrimary);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header h2 {
-  color: var(--on-primary);
+
+header img {
+  width: 10vh;
+  height: 10vh;
+  object-fit: contain;
 }
+
+header h2 {
+  color: var(--onPrimary);
+}
+
 header nav {
   margin-right: 1rem;
 }
+
 header ul {
   display: flex;
-  list-style: none;
+  list-style-type: none;
 }
+
 header ul li {
   margin-left: 1rem;
 }
+
 header a {
-  color: var(--on-primary);
+  color: var(--onPrimary);
   text-decoration: none;
 }
+
 header a:hover {
-  color: var(--inverse-primary);
+  color: var(--inversePrimary);
 }
+
 #header-container {
   display: flex;
   align-items: center;
 }
+
 section {
   margin: 10rem auto 1rem;
   padding: 1rem;
   width: 90%;
   text-align: center;
-  background-color: var(--surface-variant);
-  color: var(--on_surface);
+  color: var(--onSurface);
+  background-color: var(--surfaceVariant);
   border: 2px solid var(--primary);
   border-radius: 4px;
 }
+
+section h1 {
+  margin-bottom: 1rem;
+}
+
 #hamburger-icon {
   display: none;
   margin-right: 1rem;
 }
-.bar,
+
+.bar1,
 .bar2,
 .bar3 {
   width: 25px;
   height: 5px;
-  background-color: var(--on-primary);
+  background-color: var(--onPrimary);
   margin: 6px 0;
 }
+
 @media (max-width: 899px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav {
+    position: absolute;
+    top: 10vh;
+    right: 0px;
+    background-color: var(--primary);
+    opacity: 0.8;
+    padding: 1rem;
+    margin-right: 0px;
+  }
+
+  header ul li:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+
   #hamburger-icon {
     display: inline-block;
     cursor: pointer;
   }
-}
-header nav li {
-  display: none;
-}
-aside {
-  display: none;
-  background-color: var(--on-primary);
-  position: absolute;
-  top: 112.5px;
-  right: 0;
-  opacity: 0.8;
-  padding: 1rem;
-}
-aside ul {
-  list-style: none;
-}
-aside li {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-aside a {
-  color: var(--on-primary);
-  text-decoration: none;
-}
-
-aside a:hover {
-  color: var(--inverse-primary);
 }
