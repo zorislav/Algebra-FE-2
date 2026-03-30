@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V11_Objekti_Bonus</title>
+  </head>
+  <body>
+    <script>
+      const osoba = {
+        ime: "Ivan",
+        prezime: "Horvat",
+        toJson: function () {
+          return this.ime + this.prezime;
+        },
+      };
+      console.log(osoba.propertyIsEnumerable("ime"));
+      console.log(osoba.propertyIsEnumerable("length"));
+      console.log(Object.keys(osoba).length);
+
+      const datum = new Date();
+      console.log(datum.toString());
+      console.log(datum.toLocaleString());
+      console.log(osoba);
+      console.log(JSON.stringify(osoba));
+
+      const jsonAdress = { ulica: "Ilica", broj: 21, grad: "Zagreb" };
+
+      console.log(jsonAdress);
+      console.log(JSON.parse(jsonAdress));
+      const novaAdresa = JSON.parse(jsonAdress);
+      console.log(novaAdresa.ulica);
+    </script>
+  </body>
+</html>
