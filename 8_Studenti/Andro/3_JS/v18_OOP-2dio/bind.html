@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bind</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        num: 2,
+      };
+      function add(a) {
+        return this.num + a;
+      }
+
+      console.log(add.bind(obj, 3)());
+
+      var c = add.call(obj, 4);
+      console.log(c);
+    </script>
+  </body>
+</html>
