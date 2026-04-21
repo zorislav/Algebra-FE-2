@@ -101,3 +101,19 @@ h1 {
   font-weight: bold;
   cursor: pointer;
 }
+
+.li-conatiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.li-conatiner-int input {
+  margin: 20px;
+}
+
+.remove-button {
+  margin: 20px;
+  color: rgb(68, 69, 68);
+  font-weight: bold;
+  cursor: pointer;
+}
