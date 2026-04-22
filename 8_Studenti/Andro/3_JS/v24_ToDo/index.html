@@ -10,9 +10,9 @@
     <header>
       <h1>My Tasks</h1>
       <div class="button-group">
-        <button disabled>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+        <button id="button-all" disabled>All</button>
+        <button id="button-active">Active</button>
+        <button id="button-completed">Completed</button>
       </div>
     </header>
     <main>
@@ -21,10 +21,7 @@
           <input id="input-text" type="text" name="" />
           <input id="input-add" type="submit" value="Add" />
         </div>
-        <ul class="ul-todo">
-          <li>1</li>
-          <li>2</li>
-        </ul>
+        <ul class="ul-todo"></ul>
       </div>
       <div id="section-clear-completed">
         <button id="button-clear-completed">Clear completed</button>
