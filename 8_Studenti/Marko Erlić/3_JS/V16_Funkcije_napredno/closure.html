@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V16 Closure</title>
+  </head>
+  <body>
+    <script>
+      var globalnaVar = 5;
+
+      var vanjskaFn = (function () {
+        var lokalnaVar = 10;
+
+        return {
+          get: function () {
+            return lokalnaVar;
+          },
+          set: function (newValue) {
+            lokalnaVar = newValue;
+          },
+        };
+      })();
+
+      // console.log(lokalnaVar);
+      console.log(vanjskaFn.lokalnaVar);
+      console.log(vanjskaFn.get());
+      vanjskaFn.set(20);
+      console.log(vanjskaFn.get());
+    </script>
+  </body>
+</html>

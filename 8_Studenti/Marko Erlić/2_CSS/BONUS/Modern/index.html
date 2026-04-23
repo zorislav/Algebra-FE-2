@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern CSS</title>
+    <style>
+      /* CSS reset */
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* /custom property */
+      :root {
+        --scheme: dark;
+        --color-dark: #333;
+        --color-light: #f5f5f5;
+      }
+
+      body {
+        height: 100vh;
+        background: url("https://picsum.photos/1200/800") center/cover no-repeat;
+        padding: 2rem;
+      }
+
+      h1 {
+        margin: 0.5rem;
+        text-align: center;
+        font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+      }
+
+      .blur {
+        margin: 1rem auto;
+        padding: 10px;
+        border-radius: 12px;
+        /* Vendor prefixes Safari. 10px blur radius */
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+
+      .scale {
+        padding: 10px;
+        border-radius: 12px;
+        color: if(
+          style(--scheme: dark): var(--color-light) ; else: var(--color-dark)
+        );
+        background-color: if(
+          style(--scheme: dark): var(--color-dark) ; else: var(--color-light)
+        );
+        font-size: clamp(1rem, 1rem + 0.5vw, 1.25rem);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modern CSS</h1>
+    <p class="scale">
+      Et voluptate laboris incididunt consequat est nostrud commodo cupidatat
+      qui ea. Adipisicing ut non incididunt sint consectetur. Quis sint
+      adipisicing in ad veniam sunt est sunt pariatur cupidatat.
+    </p>
+    <div class="blur">
+      <p>
+        Deserunt duis exercitation magna sunt magna aliqua commodo ut minim
+        officia amet mollit.
+      </p>
+    </div>
+    <p>
+      Elit ad eiusmod adipisicing ipsum quis duis magna cillum. Amet consequat
+      culpa dolor velit occaecat eu velit enim aliqua nostrud. Voluptate quis
+      labore adipisicing incididunt occaecat ea incididunt qui. Est pariatur
+      sint officia culpa.
+    </p>
+    <div class="user_name"></div>
+  </body>
+</html>
