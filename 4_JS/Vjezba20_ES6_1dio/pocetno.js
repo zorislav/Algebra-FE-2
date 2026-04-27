@@ -2,8 +2,11 @@
 "use strict";
 a = 78;
 var b = 034;
+
 //delete a;
 //delete window.b;
+
+
 myObject = { property1: 1, property2: 2, property1: 1 };
 
 // 2.const
@@ -14,8 +17,10 @@ const users = [
 
 const user = { name: "Lorenzo", surname: "Verdi" };
 
+
 const allUsers = [...users, user];
 console.log(allUsers);
+
 
 // 3.
 for (let i = 0; i < 10; i++) {

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "algebra-fe-2": "file:../../../..",
+    "eslint": "^10.2.1"
+  }
+}
