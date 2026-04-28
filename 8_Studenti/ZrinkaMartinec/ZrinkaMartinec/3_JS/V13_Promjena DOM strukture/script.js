@@ -1,6 +1,6 @@
 //1
 
-var descriptionEl = document.querySelector("description");
+var descriptionEl = document.querySelector(".description");
 var h1El = document.createElement("h1");
 console.log(descriptionEl.parentNode);
 descriptionEl.parentNode.prepend(h1El);

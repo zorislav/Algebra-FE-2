@@ -38,10 +38,10 @@ console.log("Opcija 2a: " + isNum1(password));
 
 //2b
 
-function isNum(str) {
+function isNum2(str) {
   return str.charCodeAt(0);
   for (var i = 0; i < str.length; i++) {
-    if (str.charCodeAt(1) < 48 || str.charCodeAt(i) > 57) return false;
+    if (str.charCodeAt(i) < 48 || str.charCodeAt(i) > 57) return false;
   }
   return true;
 }

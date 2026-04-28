@@ -7,7 +7,7 @@ console.log("Visina prozora:" + window.innerHeight);
 
 //2
 console.log("Adresa:" + window.location.hostname);
-window.location.replace("http://www.google.com");
+//window.location.replace("http://www.google.com");
 
 //3
 window.confirm("Prihvaćate li coookies");

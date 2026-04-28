@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V11 Objekti Bonus</title>
+  </head>
+  <body>
+    <script>
+      const osoba = {
+        ime: "Ivan",
+        prezime: "Horvat",
+        toJSON: function () {
+          return this.ime + " " + this.prezime;
+        },
+      };
+
+      console.log(osoba.propertyIsEnumerable("ime")); // true - "ime" je enumerabilna
+      console.log(osoba.propertyIsEnumerable("length")); // false - "length" nije enumerabilna jer je svojstvo prototipa, a ne objekta
+      console.log(Object.keys(osoba).length); // 2 - Object.keys() vraća niz ključeva objekta, a "ime" i "prezime" su dva ključa
+
+      const datum = new Date();
+      console.log(datum.toString()); // prikazuje trenutni datum i vrijeme u obliku stringa
+      console.log(datum.toLocaleString());
+
+      console.log(osoba);
+      console.log(JSON.stringify(osoba)); // pretvara objekt u JSON string
+
+      const jsonAdresa = '{"ulica": "Ilica", "broj": "21", "grad": "Zagreb"}';
+      console.log(jsonAdresa);
+      console.log(JSON.parse(jsonAdresa));
+      const novaAdresa = JSON.parse(jsonAdresa);
+      console.log(novaAdresa.ulica); // Ilica
+
+      const tekst = "Ovo je primjer teksta";
+      const re = new RegExp("primjer");
+      // const re1 = /primjer/;
+
+      console.log(tekst);
+      console.log(tekst.replace(re, "nastavak")); // Ovo je nastavak teksta
+    </script>
+  </body>
+</html>

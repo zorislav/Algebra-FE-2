@@ -14,13 +14,14 @@
       if (text.trim().lenght !== 0) {
         var newItem = createListItem(text);
         list.appendChild(newItem);
+        input.value = "";
       } else {
         alert("Please enter todo!");
       }
     }
 
     function createListItem(text) {
-      var listItem = document.querySelector("ul");
+      var listItem = document.createElement("li");
       var div = document.createElement("div");
 
       div.classList.add("li-container");
@@ -38,12 +39,14 @@
     function addCheckBox(item) {
       var checkBox = document.createElement("input");
       checkBox.setAttribute("type", "checkbox");
+      checkBox.addEventListener("click", checkListItem);
       item.insertBefore(checkBox, item.firstChild);
     }
     function addRemoveButton(item) {
       var removeButton = document.createElement("div");
       removeButton.innerText = "X";
       removeButton.className = "remove-button";
+      removeButton.addEventListener("click", removeListItem);
       item.appendChild(removeButton);
     }
     function checkListItem(event) {
@@ -65,7 +68,7 @@
         listItems[i].style.display = "";
       }
       allButton.disabled = true;
-      activeButton.disabled = falses;
+      activeButton.disabled = false;
       completedButton.disabled = false;
     }
 
@@ -87,7 +90,7 @@
       var listItems = list.getElementsByTagName("li");
       for (var i = 0; i < listItems.length; i++) {
         var check = listItems[i].getElementsByTagName("input");
-        if (check[0].checked) {
+        if (!check[0].checked) {
           listItems[i].style.display = "none";
         } else {
           listItems[i].style.display = "";

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Visibility Demo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Syne:wght@400;700;800&display=swap');
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #5b7cf6;
+      --accent2: #e05c7a;
+      --text: #e4e4f0;
+      --muted: #666680;
+      --viewport-color: rgba(91, 124, 246, 0.12);
+      --viewport-border: #5b7cf6;
+      --div-color: rgba(224, 92, 122, 0.12);
+      --div-border: #e05c7a;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── LEFT PANEL ── */
+    .panel {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      padding: 24px 24px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .panel-header h1 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .panel-header p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .stats {
+      padding: 20px 24px;
+      display: grid;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: var(--bg);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .stat-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .stat-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .stat-value.blue {
+      color: var(--accent);
+    }
+
+    .stat-value.red {
+      color: var(--accent2);
+    }
+
+    /* live readouts */
+    .live-section {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .live-section h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .live-grid {
+      display: grid;
+      gap: 8px;
+    }
+
+    .live-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+    }
+
+    .live-key {
+      color: var(--muted);
+    }
+
+    .live-val {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* verdict */
+    .verdict {
+      margin: 20px 24px;
+      border-radius: 8px;
+      padding: 16px;
+      border: 1px solid;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .verdict.hidden-div {
+      background: rgba(224, 92, 122, 0.08);
+      border-color: var(--accent2);
+    }
+
+    .verdict.visible-div {
+      background: rgba(91, 246, 160, 0.08);
+      border-color: #5bf6a0;
+    }
+
+    .verdict-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      opacity: 0.7;
+    }
+
+    .verdict-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .verdict.hidden-div .verdict-text {
+      color: var(--accent2);
+    }
+
+    .verdict.visible-div .verdict-text {
+      color: #5bf6a0;
+    }
+
+    .verdict-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .scroll-hint {
+      padding: 16px 24px;
+      margin-top: auto;
+      font-size: 11px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    /* ── RIGHT PANEL (the scrollable "browser window") ── */
+    .browser {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .browser-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .url-bar {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* The viewport: fixed height = 730px but we cap it to available space */
+    .viewport-wrapper {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Label on the right side showing viewport bounds */
+    .viewport-label {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 52px;
+      pointer-events: none;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6px 0;
+    }
+
+    .vp-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--accent);
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 3px;
+      padding: 2px 5px;
+      opacity: 0.85;
+    }
+
+    /* Scrollable page inside viewport */
+    .page {
+      height: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+      /* total page height: something bigger than 1600px */
+      background: var(--bg);
+    }
+
+    /* The page's inner content - total 2000px tall */
+    .page-inner {
+      height: 2000px;
+      position: relative;
+      padding: 0 60px 0 20px;
+    }
+
+    /* grid lines in background */
+    .page-inner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    /* Ruler on the left */
+    .ruler {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 2000px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .ruler-tick {
+      position: absolute;
+      left: 0;
+      width: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .ruler-tick span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7px;
+      color: var(--muted);
+      padding-right: 2px;
+      line-height: 1;
+      transform: rotate(-90deg);
+      transform-origin: center;
+    }
+
+    /* Viewport highlight overlay (fixed relative to scroll container) */
+    .viewport-overlay {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      pointer-events: none;
+      z-index: 8;
+    }
+
+    .viewport-highlight {
+      position: absolute;
+      top: 0;
+      left: 18px;
+      right: 52px;
+      height: 730px;
+      border: 1.5px solid var(--viewport-border);
+      background: var(--viewport-color);
+      pointer-events: none;
+    }
+
+    .vp-top-label,
+    .vp-bottom-label {
+      position: absolute;
+      left: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--accent);
+      background: var(--bg);
+      padding: 1px 5px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .vp-top-label {
+      top: 0;
+      transform: translateY(-1px);
+    }
+
+    .vp-bottom-label {
+      top: 730px;
+      transform: translateY(-1px);
+    }
+
+    /* The div element */
+    #target-div {
+      position: absolute;
+      top: 1300px;
+      left: 20px;
+      right: 52px;
+      height: 300px;
+      background: var(--div-color);
+      border: 1.5px solid var(--div-border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.4s, border-color 0.4s;
+    }
+
+    #target-div .div-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent2);
+    }
+
+    #target-div .div-info {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    #target-div.in-view {
+      background: rgba(91, 246, 160, 0.1);
+      border-color: #5bf6a0;
+    }
+
+    #target-div.in-view .div-tag {
+      color: #5bf6a0;
+    }
+
+    /* Position labels for the div */
+    .div-offset-label {
+      position: absolute;
+      left: 20px;
+      top: 1300px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--accent2);
+      background: var(--bg);
+      padding: 1px 5px;
+      border-radius: 2px;
+      white-space: nowrap;
+      z-index: 9;
+      transform: translateY(-2px);
+    }
+
+    /* Some placeholder content blocks */
+    .content-block {
+      position: absolute;
+      left: 20px;
+      right: 60px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-size: 11px;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Scroll to div button */
+    .scroll-btn {
+      width: calc(100% - 48px);
+      margin: 0 24px 16px;
+      padding: 10px;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .scroll-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .scroll-btn.reset {
+      border-color: var(--muted);
+      color: var(--muted);
+    }
+
+    .scroll-btn.reset:hover {
+      background: var(--muted);
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT PANEL -->
+  <aside class="panel">
+    <div class="panel-header">
+      <h1>Scroll Visibility Demo</h1>
+      <p>Scroll the page right →</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-row">
+        <span class="stat-label">div height</span>
+        <span class="stat-value red">300px</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">div offsetTop</span>
+        <span class="stat-value red">1300px</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">div bottom edge</span>
+        <span class="stat-value red">1600px</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">screen height</span>
+        <span class="stat-value blue">730px</span>
+      </div>
+    </div>
+
+    <div class="live-section">
+      <h2>Live values</h2>
+      <div class="live-grid">
+        <div class="live-row">
+          <span class="live-key">scrollTop</span>
+          <span class="live-val" id="live-scroll">200px</span>
+        </div>
+        <div class="live-row">
+          <span class="live-key">viewport top</span>
+          <span class="live-val" id="live-vp-top">200px</span>
+        </div>
+        <div class="live-row">
+          <span class="live-key">viewport bottom</span>
+          <span class="live-val" id="live-vp-bottom">930px</span>
+        </div>
+        <div class="live-row">
+          <span class="live-key">div top</span>
+          <span class="live-val" style="color:var(--accent2)">1300px</span>
+        </div>
+        <div class="live-row">
+          <span class="live-key">div bottom</span>
+          <span class="live-val" style="color:var(--accent2)">1600px</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict hidden-div" id="verdict">
+      <div class="verdict-label">Visibility</div>
+      <div class="verdict-text" id="verdict-text">NOT VISIBLE</div>
+      <div class="verdict-sub" id="verdict-sub">div top (1300) &gt; viewport bottom (930)</div>
+    </div>
+
+    <button class="scroll-btn" onclick="scrollToDiv()">→ Scroll to div</button>
+    <button class="scroll-btn reset" onclick="resetScroll()">↺ Reset to scrollTop: 200</button>
+
+    <div class="scroll-hint">scroll the right panel to explore</div>
+  </aside>
+
+  <!-- RIGHT: BROWSER SIMULATION -->
+  <main class="browser">
+    <div class="browser-bar">
+      <div class="url-bar">localhost:3000/demo · page height: 2000px · viewport: 730px</div>
+    </div>
+
+    <div class="viewport-wrapper">
+      <!-- Sticky viewport highlight -->
+      <div class="viewport-overlay" id="vp-overlay">
+        <div class="viewport-highlight">
+          <div class="vp-top-label" id="vp-top-lbl">viewport top: 200px</div>
+          <div class="vp-bottom-label" id="vp-bot-lbl">viewport bottom: 930px</div>
+        </div>
+      </div>
+
+      <!-- The scrollable page -->
+      <div class="page" id="page">
+        <div class="page-inner">
+
+          <!-- Ruler ticks -->
+          <div class="ruler" id="ruler"></div>
+
+          <!-- Placeholder content blocks -->
+          <div class="content-block" style="top:60px;height:50px;">// header / navbar · y: 0</div>
+          <div class="content-block" style="top:140px;height:80px;">// hero section · y: 140</div>
+          <div class="content-block" style="top:260px;height:60px;">// content block A · y: 260</div>
+          <div class="content-block" style="top:360px;height:60px;">// content block B · y: 360</div>
+          <div class="content-block" style="top:460px;height:80px;">// content block C · y: 460</div>
+          <div class="content-block" style="top:580px;height:60px;">// content block D · y: 580</div>
+          <div class="content-block" style="top:680px;height:60px;">// content block E · y: 680</div>
+          <div class="content-block" style="top:800px;height:80px;">// content block F · y: 800</div>
+          <div class="content-block" style="top:920px;height:60px;">// content block G · y: 920</div>
+          <div class="content-block" style="top:1020px;height:60px;">// content block H · y: 1020</div>
+          <div class="content-block" style="top:1120px;height:60px;">// content block I · y: 1120</div>
+          <div class="content-block" style="top:1220px;height:40px;">// content block J · y: 1220</div>
+
+          <!-- offsetTop label for the div -->
+          <div class="div-offset-label">offsetTop: 1300px ↓</div>
+
+          <!-- THE TARGET DIV -->
+          <div id="target-div">
+            <div class="div-tag">&lt;div&gt;</div>
+            <div class="div-info">height: 300px · offsetTop: 1300px</div>
+          </div>
+
+          <div class="content-block" style="top:1640px;height:60px;">// content below div · y: 1640</div>
+          <div class="content-block" style="top:1740px;height:60px;">// footer · y: 1740</div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const page = document.getElementById('page');
+    const liveScroll = document.getElementById('live-scroll');
+    const liveVpTop = document.getElementById('live-vp-top');
+    const liveVpBottom = document.getElementById('live-vp-bottom');
+    const verdict = document.getElementById('verdict');
+    const verdictText = document.getElementById('verdict-text');
+    const verdictSub = document.getElementById('verdict-sub');
+    const targetDiv = document.getElementById('target-div');
+    const vpTopLbl = document.getElementById('vp-top-lbl');
+    const vpBotLbl = document.getElementById('vp-bot-lbl');
+
+    const SCREEN_H = 730;
+    const DIV_TOP = 1300;
+    const DIV_BOTTOM = 1600;
+
+    // Build ruler ticks
+    const ruler = document.getElementById('ruler');
+    for (let y = 0; y <= 2000; y += 100) {
+      const tick = document.createElement('div');
+      tick.className = 'ruler-tick';
+      tick.style.top = y + 'px';
+      tick.innerHTML = `<span>${y}</span>`;
+      ruler.appendChild(tick);
+    }
+
+    // Set initial scroll
+    page.scrollTop = 200;
+
+    function update() {
+      const st = Math.round(page.scrollTop);
+      const vpTop = st;
+      const vpBottom = st + SCREEN_H;
+
+      liveScroll.textContent = st + 'px';
+      liveVpTop.textContent = vpTop + 'px';
+      liveVpBottom.textContent = vpBottom + 'px';
+
+      vpTopLbl.textContent = 'viewport top: ' + vpTop + 'px';
+      vpBotLbl.textContent = 'viewport bottom: ' + vpBottom + 'px';
+
+      // Is div visible?
+      const visible = DIV_TOP < vpBottom && DIV_BOTTOM > vpTop;
+
+      targetDiv.classList.toggle('in-view', visible);
+      verdict.classList.toggle('hidden-div', !visible);
+      verdict.classList.toggle('visible-div', visible);
+
+      if (visible) {
+        verdictText.textContent = 'VISIBLE';
+        verdictSub.textContent = 'div overlaps viewport';
+      } else if (DIV_TOP >= vpBottom) {
+        verdictText.textContent = 'NOT VISIBLE';
+        verdictSub.textContent = `div top (${DIV_TOP}) > vp bottom (${vpBottom})`;
+      } else {
+        verdictText.textContent = 'NOT VISIBLE';
+        verdictSub.textContent = `div bottom (${DIV_BOTTOM}) < vp top (${vpTop})`;
+      }
+    }
+
+    page.addEventListener('scroll', update);
+    update();
+
+    function scrollToDiv() {
+      page.scrollTo({ top: 1300, behavior: 'smooth' });
+    }
+
+    function resetScroll() {
+      page.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+
+</html>
