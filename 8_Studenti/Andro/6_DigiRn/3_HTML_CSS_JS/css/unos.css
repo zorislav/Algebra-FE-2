@@ -6,16 +6,13 @@ section h1 {
   text-align: center;
 }
 
-textarea {
-  font: inherit;
-}
-
 input,
 textarea {
   padding: 4px;
   border: 1.5px solid var(--primary);
   border-radius: 2px;
   outline: none;
+  font: inherit;
 }
 
 input:active,

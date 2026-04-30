@@ -13,7 +13,10 @@ export function toggleNav(hamburgerEl, navEl) {
 export async function ucitajFirebase() {
   const tmpNalozi = [];
 
-  const response = await fetch();
+  const response = await fetch(
+    "https://algebra-andro-default-rtdb.europe-west1.firebasedatabase.app/digirn.json",
+    { method: "GET" },
+  );
 
   const data = await response.json();
 
@@ -22,4 +25,33 @@ export async function ucitajFirebase() {
   }
 
   return tmpNalozi[0];
+}
+
+export async function zapisiFirebase(nalozi) {
+  try {
+    await obrisiFirebase();
+    const response = await fetch(
+      "https://algebra-andro-default-rtdb.europe-west1.firebasedatabase.app/digirn.json",
+      {
+        method: "POST",
+        body: JSON.stringify(nalozi),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
+    );
+  } catch (error) {
+    alert(error);
+  }
+}
+
+async function obrisiFirebase() {
+  try {
+    const response = await fetch(
+      "https://algebra-andro-default-rtdb.europe-west1.firebasedatabase.app/digirn.json",
+      { method: "DELETE" },
+    );
+  } catch (error) {
+    alert(error);
+  }
 }
