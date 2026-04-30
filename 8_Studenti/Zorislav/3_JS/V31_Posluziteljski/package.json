@@ -1,0 +1,16 @@
+{
+  "name": "paketmojtest3",
+  "version": "1.0.0",
+  "description": "Demo npm modul 2",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "zorislav",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
+}
