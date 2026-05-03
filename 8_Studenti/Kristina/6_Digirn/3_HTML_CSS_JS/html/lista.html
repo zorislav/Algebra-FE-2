@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/osnovno.css" />
+    <link rel="stylesheet" href="../css/lista.css">
+    <title>DIGIRN</title>
+  </head>
+ <header>
+    <img src="../assets/digirn.png" width="150" heighht="150" alt="digirn logo">
+    <h2>DIGIRN</h2>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Glavna</a></li>
+        <li><a href="prikaz.html">Prikaz naloga</a></li>
+        <li><a href="unos.html">Unos naloga</a></li>
+        <li id="ucitaj"><a href="#">Učitaj naloge iz baze</a></li>
+        <li><a href="#">Spremi naloge u bazu</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Lista Radnih Naloga</h1>
+    </section>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>R.br.</th>
+            <th>Broj naloga</th>
+            <th>Datum naloga</th>
+            <th>Datum početka</th>
+            <th>Datum završetka</th>
+            <th>Naručitelj</th>
+            <th>Izvršitelj</th>
+            <th>Naslov</th>
+            <th>Spremi</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <p id ="nema-naloga">Nema Naloga. Upišite novi nalog ili učitajte naloge</p>
+    </section>
+  </main>
+  <script  type= "modul" src="./JS/shared/lista.js"></script>
+  </body>
+</html>

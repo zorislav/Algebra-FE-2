@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/osnovno.css" />
+    <link rel="stylesheet" href="../css/unos.css" />
+    <title>DIGIRN</title>
+  </head>
+  <body>
+    <header>
+      <div id="header-container">
+      <img
+        src="../assets/digirn.png"
+        alt="digrn logo"
+        width="150"
+        height="150"
+      />
+      <h2>DIGIRN</h2>
+      </div>
+    
+  
+    </header>
+    <main>
+   
+      <section>
+         <h1>Unos naloga</h1>
+        <form action="">
+          <label id "Broj_naloga"for="Broj_naloga">Broj naloga:</label>
+          <input
+            type="text"
+            id="Broj_naloga"
+            name=""
+            maxlength="10"
+            size="10"
+          />
+          <hr />
+          <div class="container">
+            <label id="" for="Narudžbenica">Narudžbenica:</label>
+            <input
+              type="text"
+              id="narudžbenica"
+              name=""
+              maxlength="10"
+              size="10"
+            />
+            <label id =  for="Datum_naloga">Datum otvaranja</label>
+            <input type="date" id="Datum_naloga" name="Datum_naloga" required />
+          </div>
+          <hr />
+          <div class="container">
+            <label  for="Naručitelj">Naručitelj:</label>
+            <input
+              type="text"
+              id="naručitelj"
+              name="naručitelj"
+              maxlength="15 "
+              size="15"
+            />
+          </div>
+          <hr />
+          <div class="container">
+            <label for="izvršitelj">Izvršitelj:</label>
+            <input
+              type="text"
+              id="izvršitelj"
+              name="izvršitelj"
+              maxlength="15"
+              size="15"
+            />
+          </div>
+          <hr />
+          <div class="container">
+            <label for="mjesto_troška">Mjesto troška:</label>
+            <input
+              type="text"
+              id="mjesto_troška"
+              name="mjesto_troška"
+              maxlength="15"
+              size="15"
+            />
+          </div>
+          <hr />
+          <div class="container">
+          <label for="nositelj_troška">Nositelj troška:</label>
+          <input
+            type="text"
+            id="nositelj_troška"
+            name="nositelj_troška"
+            maxlength="15"
+            size="15"
+          /></div>
+          <hr />
+          <div class="container">
+          <label for="">Datum početka</label>
+          <input type="date" name="datum_početka" id="datum_početka" />
+          <label for="vrijeme_  početka">Vrijeme početka</label>
+          <input type="time" name="vrijeme_početka" id="vrijeme_početka" />
+          </div>
+          <br />
+          <div class="container"></div>
+          <label for="">Datum završetka</label>
+          <input type="date" name="datum_završetka" id="datum_završetka" />
+          <label for="vrijeme_završetka">Vrijeme završetka</label>
+          <input type="time" name="vrijeme_završetka" id="vrijeme_završetka" />
+          </div>
+          <br />
+          <br />
+          <hr />
+          <div class="container">
+          <label for="naslov">Naslov</label>
+          <input type="text" name="naslov" id="naslov" />
+          </div>
+          <hr />
+          <div class="container">
+          <label for="opis">Opis</label>
+          <textarea name="opis" id="opis" maxlength="50"></textarea>
+          </div>
+          <hr />
+          <div class="button-container">
+            <button  id ="cacncel"type="submit">Uredu</button>
+            <button id = "ok" type="reset">Poništi</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="../JS/shared/unos.js"></script>
+  </body>
+</html>

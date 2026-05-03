@@ -1,0 +1,22 @@
+{"name": "mojpaket",
+  "version": "1.0.0",
+  "description": "Demo npm modul",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "console.log",
+    "data",
+    "type"
+  ],
+
+{
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
+}
+  "author": "Kristina Vujnović",
+  "license": "ISC"
+} 
