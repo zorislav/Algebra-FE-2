@@ -23,7 +23,7 @@ export const app = () => {
       if (retData.length !== 0) {
         for (let i in retData) {
           if (retData[i].artist && retData[i].song) {
-            const liElement = document.createElement("retData[i]");
+            const liElement = createElement("retData[i]");
             ulElement.appendChild(liElement);
           }
         }

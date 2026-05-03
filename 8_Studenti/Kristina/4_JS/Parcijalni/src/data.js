@@ -1,5 +1,5 @@
 export const fetchData = async (inputElValue) => {
-  const url = `https://itunes.apple.com/search?term=${inputElValue}&limit=25.json`;
+  const url = `https://itunes.apple.com/search?term=${inputElValue} &media=music`;
   console.log(url);
 
   try {
