@@ -1,4 +1,4 @@
-import { app } from "./src/main.js";
+import main from "./src/main.js";
 document.addEventListener("DOMContentLoaded", () => {
-  app();
+  main();
 });
