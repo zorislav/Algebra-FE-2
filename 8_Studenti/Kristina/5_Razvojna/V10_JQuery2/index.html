@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>JQuery2</title>
+  </head>
+  <body>
+    <script id="hb-template" type="text/x-handlebars-template">
+      <table class={{tableClass}}>
+        <tr>
+          <th class="col-sm-1 hidden-xs">#</th>
+          <th class="col-sm-11 col-xs-12">Ime</th>
+        </tr>
+        {{#each pokemon}}
+          <tr>
+            <td class="col-sm-1 hidden-xs">{{@index}}</td>
+            <td class="col-sm-11 col-xs-12"><a
+                data-trigger="hover"
+                data-toggle="popover"
+                data-content="Bok"
+                data-title="{{name}}"
+                href="{{url}}"
+              >{{name}}</a></td>
+          </tr>
+        {{/each}}
+      </table>
+    </script>
+    <div id="hb-result"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"
+      integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
