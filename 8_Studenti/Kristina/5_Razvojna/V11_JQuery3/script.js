@@ -117,7 +117,7 @@ $(document).ready(function () {
       hideElements.closest("tr").remove();
       addStripes();
 
-      $("<div><div>")
+      $("<div>")
         .insertAfter($("#hb-template"))
         .text("Skriveno: " + hideElements.length);
     }, 2000);
