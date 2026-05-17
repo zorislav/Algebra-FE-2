@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "handlebars": "^4.7.9"
+    "handlebars": "^4.7.9",
+    "jquery": "3.7.1"
   },
   "devDependencies": {
     "webpack": "^5.106.2",

@@ -2,22 +2,22 @@ $(document).ready(function () {
   const source = document.getElementById("hb-template").innerHTML;
   const template = Handlebars.compile(source);
   const destination = document.getElementById("hb-result");
+  let pokemons = [];
 
   function addStripes() {
-    //$("table tr)").removeClass("striped");
+    $("table tr)").removeClass("striped");
     $("table tr:nth-child(even)").addClass("striped");
   }
 
   function afterRender() {
     $("table th").css("color", "darkBlue");
-
+    addStripes();
     $("table tr").on("mouseenter", (event) => {
       $(event.currentTarget).css("background-color", "yellow");
     });
     $("table tr").on("mouseleave", (event) => {
       $(event.currentTarget).removeAttr("style");
     });
-
     addStripes();
     setTimeout(function () {
       const hideElements = $("table td a:contains(`p`)").filter(function () {
@@ -45,7 +45,7 @@ $(document).ready(function () {
       name: pokemon.name,
       url: pokemon.url,
       habitat: data.habitat.name ? data.habitat.name : "",
-      growthRate: data.growth_rate.name ? data.growth_rate.name : "",
+      growth_rate: data.growth_rate.name ? data.growth_rate.name : "",
     });
   }
 
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
       fillList(pokemons);
 
-      return data.pokemon_species.slice(0, 20);
+      //return data.pokemon_species.slice(0, 20);
     } catch (e) {
       console.log(e);
     }
@@ -75,13 +75,13 @@ $(document).ready(function () {
     const context = { pokemon: pokemons, tableClass: "table" };
     const html = template(context);
     destination.innerHTML = html;
-    //popover
+
     $(`[data-bs-toggle="popover"]`).popover();
 
     afterRender();
   }
   getPokemons();
-
+  //console.log(pokemons);
   $(window).resize(() => {
     console.log($(window).width());
   });

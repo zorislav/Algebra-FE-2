@@ -1,6 +1,9 @@
 const jqr = require("jquery");
+const hb = require("handlebars");
+
+require("bootstrap");
 
 window.$ = window.jQuery = jqr;
-window.Handlebars = require("handlebars");
-import "bootstrap";
-require("./src/script.js");
+window.Handlebars = hb;
+
+require("./script.js");
