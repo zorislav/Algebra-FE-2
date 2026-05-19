@@ -1,6 +1,6 @@
 function Komponenta1(){
 
-  return <p>Komponenta1<p>;
+  return <p>Komponenta1</p>;
 
 
 }
