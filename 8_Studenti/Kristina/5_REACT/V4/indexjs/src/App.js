@@ -1,14 +1,18 @@
-
-import './App.css';
+import "./App.css";
 //
-import {Komponenta1, Komponenta2,Komponenta3,Komponenta4} from"./components/index";
+import {
+  Komponenta1,
+  Komponenta2,
+  Komponenta3,
+  Komponenta4,
+} from "./components/index";
 function App() {
   return (
-    <div >
-<Komponenta1/>
-<Komponenta2/>
-<Komponenta3/>
-<Komponenta4/>
+    <div className="App">
+      <Komponenta1 />
+      <Komponenta2 />
+      <Komponenta3 />
+      <Komponenta4 />
     </div>
   );
 }
