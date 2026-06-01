@@ -15,8 +15,9 @@ class ClassKomponenta extends React.Component {
     const { ime, starost, grad, children, onAppSt } = this.props;
     return (
       <>
+        <br />
         {classStanje}
-        <h2>Class Komponenta</h2>
+        <h2>{children} komponenta</h2>
         <p>Ime: {ime}</p>
         <p>Starost: {starost}</p>
         <p>Grad: {grad}</p>
@@ -24,9 +25,11 @@ class ClassKomponenta extends React.Component {
           Promijeni lokalno stanje
         </button>
         <button
-          onClick={(event) => onAppSt("App novo stanje iz class komponente")}
+          onClick={(event) =>
+            onAppSt("App novo stanje iz class komponente", event)
+          }
         >
-          Promijeni app stanje
+          Promijeni App stanje
         </button>
       </>
     );
@@ -49,7 +52,9 @@ function FunkcijskaKomponenta({ ime, starost, grad, children, onAppSt }) {
       <p>Grad: {grad}</p>
       <button onClick={btnClickHandler}>Promijeni lokalno stanje</button>
       <button
-        onClick={(event) => onAppSt("App novo stanje iz funkcijske komponente")}
+        onClick={(event) =>
+          onAppSt("App novo stanje iz funkcijske komponente", event)
+        }
       >
         Promijeni App stanje
       </button>
@@ -60,8 +65,9 @@ function FunkcijskaKomponenta({ ime, starost, grad, children, onAppSt }) {
 function App() {
   const [appStanje, setAppStanje] = useState("App pocetno stanje");
 
-  function appStanjeHandler(novoStanje) {
+  function appStanjeHandler(novoStanje, event) {
     setAppStanje(novoStanje);
+    console.log(event.target);
   }
 
   return (
@@ -76,9 +82,14 @@ function App() {
       >
         Funkcijska
       </FunkcijskaKomponenta>
-      <ClassKomponenta ime="Marica" starost={33} grad="Pula" />
-      Class
-      <ClassKomponenta />
+      <ClassKomponenta
+        ime="Marica"
+        starost={33}
+        grad="Pula"
+        onAppSt={appStanjeHandler}
+      >
+        Class
+      </ClassKomponenta>
     </div>
   );
 }
