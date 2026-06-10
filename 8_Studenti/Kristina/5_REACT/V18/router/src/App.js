@@ -1,23 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import "./App.css";
+
+function Index() {
+  return (
+    <>
+      <h1>Welcome to router</h1>
+      <p>ovo je primjer korištenja React Router-a</p>
+      <p>Sad sam na prvoj stranici</p>
+    </>
+  );
+}
+
+function Komponenta1() {
+  return (
+    <>
+      <h1>Welcome to Router</h1>
+      <p>ovo je primjer korištenja React Router-a</p>
+      <p>Sad sam na Komponenti 1</p>
+    </>
+  );
+}
+function Komponenta2() {
+  const navigate = useNavigate();
+  function clickHandler() {
+    navigate("/");
+  }
+
+  return (
+    <>
+      <h1>Welcome to Router</h1>
+      <p>ovo je primjer korištenja React Router-a</p>
+      <p>Sad sam na Komponenti 2</p>
+      <button onClick={clickHandler}>Home</button>
+    </>
+  );
+}
+function NotFound() {
+  return (
+    <>
+      <h1>Welcome to Router</h1>
+      <p> 404 Stranica nije pronađena</p>
+    </>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        <ul style={{ listStyleType: "none" }}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/komponenta1">Komponenta 1</Link>
+          </li>
+          <li>
+            <Link to="/komponenta2">Komponenta 2</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/komponenta1" element={<Komponenta1 />} />
+        <Route path="/komponenta2" element={<Komponenta2 />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
